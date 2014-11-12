@@ -1,0 +1,4 @@
+;; windows dot_emacs
+(message "windows dot_emacs begin")  
+(load "D:/Documents/MyCloud/360Cloud/MyConfig/EmacsConfig/dot_emacs")
+(message "windows dot_emacs end")

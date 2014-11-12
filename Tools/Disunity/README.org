@@ -1,0 +1,2 @@
+更新disunity:
+到网站 https://github.com/ata4/disunity/releases 下载最新disunity，然后解压放置到disunity目录下。

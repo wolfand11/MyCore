@@ -1,0 +1,65 @@
+#export ANDROID_SDK_ROOT=/Users/guodong/MyApplication/MySDK/android-sdk-mac_x86/
+#export ANDROID_NDK_ROOT=/Users/guodong/MyApplication/MySDK/android-ndk-r7c
+#export COCOS2DX_ROOT=/Users/guodong/MyApplication/MySDK/cocos2d-1.0.1-x-0.12.0
+#export NDK_ROOT=/Users/guodong/MyApplication/MySDK/android-ndk-r7c
+#export PATH=$PATH:$ANDROID_SDK_ROOT
+#export PATH=$PATH:$ANDROID_NDK_ROOT
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+#export NDK_ROOT=/Users/guodong/Documents/MyProject/SDK/android-ndk-r9b
+
+# ---------------------------------------------------------
+## Support Chinese
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
+# -------------------------SHORTCUT-------------------------
+# apps aliases
+alias pngcrush="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/pngcrush -revert-iphone-optimizations "
+alias xemacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+alias suxemacs="sudo /Applications/Emacs.app/Contents/MacOS/Emacs"
+alias goagent="python ~/Documents/MyCloud/Dropbox/MyToolkit/MyGoAgent/MyGoAgent.py -r"
+
+# some more ls aliases
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+#
+#alias ls='ls -Fph --color=tty --group-directories-first '
+alias ~='cd ~'
+alias home='~'
+alias ..='cd ..'
+alias ....='cd ../..'
+alias 2.='....'
+alias ......='cd ../../..'
+alias 3.='......'
+alias ........='cd ../../../..'
+alias 4.='........'
+#
+# cd shortcut
+alias cd-desktop='cd ~/Desktop/'
+alias cd-res='    cd ~/Documents/MyResource'
+alias cd-doc='    cd ~/Documents/MyResource/Doc'
+alias cd-proj='   cd ~/Documents/MyProject/'
+alias cd-book='   cd ~/Documents/MyCloud/快盘/MyBook'
+
+# misc shortcut
+alias re='research'
+alias reboot='sudo reboot'
+
+#  misspellings
+alias exti="exit"
+alias les="less"
+
+# ------------------------Show SETTING--------------------
+
+# 欢迎文字
+echo "Smile to the world!" 
+
+# 设置默认启动目录
+cd ~
+
+# 设置默认的编辑器
+export EDITOR=xemacs
+
+# 设置Terminal路径显示
+#TODO:

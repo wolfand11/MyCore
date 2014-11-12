@@ -1,0 +1,15 @@
+#+Title: 关于Encrypter的使用
+
+*** Compiler & Run & Delete
+#+BEGIN_EXAMPLE
+Compiler: 运行make就会生成Encrypter可执行文件
+
+Run:      使用方式如下。需要说明的是，该工具加密和解密实际上是相同的流程，所以 --decode == --code
+Usage:---------------------------------------------
+DecodeFile:
+./Encrypter --decode keystring /User/guodong/..../file.lua
+CodeFile:
+./Encrypter --code keystring /User/guodong/..../file.lua
+
+Delete:   运行make clean可以清除编译生成的文件
+#+END_EXAMPLE
