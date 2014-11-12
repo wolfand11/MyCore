@@ -1,0 +1,47 @@
+unmapAll
+
+# scroll buff operation
+map <c-n> scrollDown
+map <c-p> scrollUp
+map <c-b> scrollLeft
+map <c-f> scrollRight
+map <c-v> scrollFullPageDown
+map <a-v> scrollFullPageUp
+map <a-<> scrollToTop
+map <a->> scrollToBottom
+
+map <c-w> copyCurrentUrl
+map <a-w> copyCurrentUrl
+map <c-k> copyCurrentUrl
+
+map r reload
+
+# open link (use default setting)
+map f LinkHints.activateMode
+map F LinkHints.activateModeToOpenInNewTab
+
+# find mode (use default setting)
+map / enterFindMode
+map <c-s> performFind
+map <c-r> performBackwardsFind
+          
+
+# new empty buffer
+map t createTab
+# open buffer
+map <c-x>b Vomnibar.activateTabSelection
+# open recently file
+map <c-x>f Vomnibar.activate
+# open file
+map <c-x><c-f> Vomnibar.activateBookmarksInNewTab
+# duplicate current buffer
+map <c-x>2 duplicateTab
+# close/restore current buffer
+map <c-x>k removeTab
+map X restoreTab
+# switch buffer
+map <a-n> nextTab
+map <a-p> previousTab
+
+# show help
+map ? showHelp
