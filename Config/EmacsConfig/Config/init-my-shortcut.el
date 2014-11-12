@@ -9,11 +9,12 @@
 
 ;; shortcut for my toolkit
 (eval-after-load "em-alias"
-  '(progn (eshell/alias "cd-dropbox" "cd ~/Documents/MyCloud/Dropbox/")
-	  (eshell/alias "cd-toolkit" "cd ~/Documents/MyCloud/Dropbox/MyToolkit")
-	  (eshell/alias "cd-config"  "cd ~/Documents/MyCloud/Dropbox/MyConfig")
+  '(progn (eshell/alias "cd-toolkit" "cd ~/Documents/MyToolkit")
+	  (eshell/alias "cd-config"  "cd ~/Documents/MyToolkit/Config")
+	  (eshell/alias "cd-tools"   "cd ~/Documents/MyToolkit/Tools")
+	  (eshell/alias "cd-res"     "cd ~/Documents/MyToolkit/Resource")	  
 	  (eshell/alias "cd-project" "cd ~/Documents/MyProject")
-	  (eshell/alias "goagent"    "python ~/Documents/MyCloud/Dropbox/MyToolkit/MyGoAgent/MyGoAgent.py $*")
+	  (eshell/alias "goagent"    "python ~/Documents/MyToolkit/GoAgent/MyGoAgent.py $*")
 	  ))
 
 (provide 'init-my-shortcut)

@@ -16,8 +16,7 @@ export LANG=en_US.UTF-8
 # apps aliases
 alias pngcrush="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/pngcrush -revert-iphone-optimizations "
 alias xemacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
-alias suxemacs="sudo /Applications/Emacs.app/Contents/MacOS/Emacs"
-alias goagent="python ~/Documents/MyCloud/Dropbox/MyToolkit/MyGoAgent/MyGoAgent.py -r"
+alias goagent="python ~/Documents/MyToolkit/Tools/GoAgent/MyGoAgent.py -r"
 
 # some more ls aliases
 alias ll='ls -l'
@@ -36,11 +35,15 @@ alias ........='cd ../../../..'
 alias 4.='........'
 #
 # cd shortcut
-alias cd-desktop='cd ~/Desktop/'
-alias cd-res='    cd ~/Documents/MyResource'
-alias cd-doc='    cd ~/Documents/MyResource/Doc'
-alias cd-proj='   cd ~/Documents/MyProject/'
-alias cd-book='   cd ~/Documents/MyCloud/快盘/MyBook'
+alias cd-desktop='    cd ~/Desktop/'
+alias cd-res='        cd ~/Documents/MyResource'
+alias cd-doc='        cd ~/Documents/MyResource/Doc'
+alias cd-proj='       cd ~/Documents/MyProject/'
+alias cd-book='       cd ~/Documents/MyCloud/快盘/MyBook'
+alias cd-toolkit='    cd ~/Documents/MyToolkit'
+alias cd-config='     cd ~/Documents/MyToolkit/Config'
+alias cd-tools='      cd ~/Documents/MyToolkit/Tools'
+alias cd-res='        cd ~/Documents/MyToolkit/Resource'
 
 # misc shortcut
 alias re='research'
