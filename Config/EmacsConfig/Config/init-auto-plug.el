@@ -143,4 +143,8 @@
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
 
+;; helm-projectile
+(require 'helm-projectile)
+(helm-projectile-on)
+
 (provide 'init-auto-plug)
