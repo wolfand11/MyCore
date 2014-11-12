@@ -1,0 +1,146 @@
+很悲剧，昨天更新我的Ubuntu，更新完成后，无法进入图像界面，依据网上的资料终于可以进入
+
+图形界面，但是鼠标、键盘都不能用（而且只有root用户可以进入图形界面，普通用户运行：startx就
+
+黑屏了，但是笔记本的指示灯正常）。后来，一怒之下就重装了…… 呵呵 本文会不断的更新，我会把自己
+
+平常用的不错的软件都记录下来，以后要是再动怒了   嘿嘿 最起码有装机文档可以参照了
+
+
+重新安装 Ubuntu 以后 该做的 事情 
+
+
+*** 0、最重要的事情
+
+ + 首先：
+
+自动挂载Resourse分区(就是你存储资源的那个分区)。挂载方法参看下面文中所介绍的方法：
+
+《ununtu 自动挂载分区》 http://hi.baidu.com/wolfand11/blog/item/a2629eee6e9ff5f1b3fb9597.html
+
+一般，我会在自己的用户目录下创建一个Resourse目录，然后将分区挂载在该目录下。
+（ /dev/sda6    /home/smile/Resource    ext4   defaults   0   0 ）
+
+ + 其次：
+
+设置桌面等的路径，设置方法看下面文中所介绍的方法：
+
+《转》改变Ubuntu桌面所在文件夹 http://hi.baidu.com/wolfand11/blog/item/b4bbe21f7a6659c4a68669cb.html
+
+一般，我自己的资源分区中都会创建Desktop、Documents、Downloads、Music、Pictures、Public、Templates、Videos
+
+等目录，我会将系统默认的路径改为Resourse下面的对应的路径。（我为什么要这么做呢？:-) 有一次忘记备份桌面的资料，就
+
+重新装系统了，后果可想而知。如果修改这些默认路径，就会将资料都保存在我的Resourse分区中了）。下面是我的设置代码：
+
+XDG_DESKTOP_DIR="$HOME/Resource/Desktop/"
+
+XDG_DOCUMENTS_DIR="$HOME/Resource/Documents"
+
+XDG_DOWNLOAD_DIR="$HOME/Resource/Downloads/"
+
+XDG_MUSIC_DIR="$HOME/Resource/Music"
+
+XDG_PICTURES_DIR="$HOME/Resource/Pictures"
+
+XDG_PUBLICSHARE_DIR="$HOME/Resource/Public"
+
+XDG_TEMPLATES_DIR="$HOME/Resource/Templates"
+
+XDG_VIDEOS_DIR="$HOME/Resource/Videos"
+
+
+*** 1、安装、配置编译环境
+
+刚装好的系统中已经有GCC了，但是这个GCC什么文件都不能编译，因为没有一些必须的头文件，所以要安装build-essential这个软件 包，安装了这个包会自动安装上g++,libc6-dev,l inux -libc-dev,libstdc++6-4.1-dev等一些必须的软件和头文件的库。可以在新立得里面搜索build-essential
+
+*** 2、配置Terminal使其符合自己使用习惯
+
+参考左边链接配置方法：http://hi.baidu.com/wolfand11/blog/item/bde7741b85ff6c158718bfd5.html
+
+*** 3、配置Gedit使其适合进行简单的编码。
+
+
+*** 4、安装配置QtCreator：（直接在Ubuntu Software Center中搜索安装） 
+
+
+（1）、设置代码自动补全快捷键为Shift+f； 
+
+在QtCreator 进入Tool菜单中Option，选择Environment/Keyboard,在右边对话框中找到
+
+TextEditor.CompleteThis选项进行设置。
+
+（2）、设置字体大小（对眼睛有好处）；
+
+（3）、修改Qt中example文件夹的访问权限，sudo chmod -R 777 examples
+
+
+*** 5、安装配置BoUML（UML工具），直接在Ubuntu Software Center中搜索安装 
+
+
+*** 6、安装Amaya http://www.w3.org/Amaya/Overview.html（Amaya官网） 
+
+Amaya是 一个具有浏览功能的WEB开发工具，是由万维网协会（W3C）成员开发的一个网络浏览器，同时也可以作为对W3C成果的测试工具。Amaya包括了一个 HTML编辑器和浏览器，用户可以免费到W3C的网站下载它，在linux和windows下都有对应的版本。Amaya起初只支持HTML和CSS的编 缉，现在已经添加了对XML、XHTML、MathML、SVG等的支持。 
+
+*** 7、安装VirtualBox（虚拟机）
+直接在Ubuntu Software Center中搜索安装 
+
+*** 8、安装StarDict（Linux下的金山词霸）
+直接在Ubuntu Software Center中搜索安装 
+
+*** 9、安装iptux（linux下的飞鸽）
+直接在Ubuntu Software Center中搜索安装 
+
+*** 10、安装libfetion（Linux下的飞信）http://www.libfetion.org/ 
+
+
+*** 11、 安装Kchmiewer
+
+这个是kde下出色一个chm阅读器，相比较于chmsee出现中文乱马的情况而言，这个可以说是完美了。
+
+安装：sudo apt-get install kchmviewer
+
+
+*** 12、安装XMind 
+
+XMIND 是一款非常实用的商业思维导图（Mindmap）软件，应用全球最先进 的Eclipse RCP 软件架构，全力打造易用、高效的可视化思维软件，强调软件的可扩展、跨平台、稳定性和性能，致力于使用先进的软件技术帮助用户真正意义上提高生产率。
+
+
+*** 13、修改最大化、最小化、关闭按钮的位置。
+
+请参考<转>如何将Ubuntu 10.04 LTS 的窗口控制按钮从左上角调整到右上角
+
+http://hi.baidu.com/wolfand11/blog/item/1adac00879b1983ce82488e8.html
+
+
+*** 14、设置Ibus
+
+如果你是KUbuntu那么你要安装ibus-gtk,这样才能在Gnome的软件中输入中文。
+
+如果你是Ubuntu那么你要安装ibus-qt4，这样你才能在KDE的软件中输入中文。
+
+设置ibus启动项，System --> Perference --> Startup Applications --> add ---> Name: ibus-daemon Command : /usr/bin/ibus-daemon -d --> Save
+
+*** 15、ubuntu 如何让桌面显示“我的电脑”及去掉桌面上的“磁盘图标”
+
+http://hi.baidu.com/wolfand11/blog/item/4f1ab1097a86afbe2fddd4d3.html?timeStamp=1290957426596
+
+
+*** 16、ubuntu 压缩文件为rar格式与解压rar格式文件
+ + 安装rar与unrar方法：
+    sudo apt-get install rar             
+    sudo apt-get install unrar
+ + 简单的使用方法：
+    + 压缩文件为rar格式
+      #+BEGIN_EXAMPLE
+      例:rar a test.rar file1.txt 若test.rar文件不存在，则打包file1.txt文件成test.rar
+      例:rar a test.rar file2.txt 若test.rar文件已经存在，则添加file2.txt文件到test.rar中
+      #+END_EXAMPLE
+    + 解压rar文件
+      #+BEGIN_EXAMPLE
+      例：unrar x -o- -y  test.rar   /home/test/    将test.rar解压到/home/test/ 目录下。
+      例：unrar  e-o- -y test.rar                   将test.rar解压到当前目录下。
+      #+END_EXAMPLE
+
+*** 17、跨平台的音乐播放器
+http://www.clementine-player.org/

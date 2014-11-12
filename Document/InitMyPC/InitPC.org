@@ -1,0 +1,47 @@
+* InitMyPC
+
+** 目录结构
+#+BEGIN_EXAMPLE
+0级目录
+--0--guodong
+
+1级目录
+--1--.emacs.d
+--1--.oh-my-zsh (window系统无该目录)
+--1--Applications
+--1--Desktop
+--1--Documents
+--1--Downloads
+--1--Movie
+--1--Music
+--1--Pictures        
+
+2级目录
+Documents
+--2--MyCloud
+--2--MyResource
+--2--MyProject
+--2--MyToolkit
+
+3级目录
+Documents--MyCloud
+--3--Yunio
+--3--百度云同步盘
+--3--快盘
+--3--SkyDrive
+Documents--MyProject
+--3--Public
+--3--Private
+--3--SDK
+Documents--MyToolkit
+--3--Config
+--3--Tools
+--3--Resource
+
+4级目录
+Documents--MyProject--Public
+--4--Life (wolfand11.github.com Document)
+--4--cocos2d (cocos2d-x_develop CocosBuilder_develop)
+--4--OpenSourceGame
+
+#+END_EXAMPLE

@@ -1,0 +1,36 @@
+* Init My MacBook Pro
+
+OSX 系统还是比较傻瓜的，基本上和windows差不多，尤其是appstore推出以后，基本上不需要
+对系统进行什么配置。下面记录下来我所使用的一些软件等等
+
+*** 1、NTFS磁盘工具
+默认情况下，在mac系统中，不能直接对ntfs文件系统进行写操作，[[link]OSXFuse]是一款开
+源的免费工具，用来打破这种限制。
+
+*** 2、EverNote
+最近一直在使用EverNote，这是一款多平台(硬件平台、操作系统平台)的笔记软件，所以使用比
+较方便。我主要用EverNote来做下面这些事情:
+ + 记录自己偶然想到的问题
+ + 记录自己最近想思考的问题，随后会在空闲的时间把零碎的思考写下来，为要思考的问题列出
+一个提纲来。等自己的思考成熟以后再将该问题写成博客，系统地记录下来。
+
+*** 3、GitHub
+使用GitHub来方便的在多台设备上访问自己的文档。我的计划是将自己常用的文档放在GitHub
+上面，比如:工具使用文档，操作系统配置文档。
+
+*** 4、SourceTree
+版本管理的客户端，支持svn、git、mercurial。
+
+*** 5、MacPorts
+之前用ubuntu一直用apt-get觉得很方便，到了mac下以后很多软件包的安装、管理很麻烦。MacPorts
+就是我要找的mac下的apt-get
+#+BEGIN_EXAMPLE
+注意:
+安装完毕以后，如果发现port命令不存在，请修改PATH环境变量如下:
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+#+END_EXAMPLE
+
+*** 6、Mac下的远程桌面
+TeamViewer可用来远程桌面。
+
+
