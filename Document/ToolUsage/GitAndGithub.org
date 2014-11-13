@@ -5,19 +5,24 @@
 
 ** 常用命令
 *** git
+**** project manager
 #+BEGIN_EXAMPLE
 克隆默认分支的代码 git clone git://github.com/cocos2d/CocosBuilder.git ./CocosBuilder_origin_default
 克隆指定分支的代码 git clone -b develop git://github.com/cocos2d/CocosBuilder.git ./CocosBuilder_origin_develop
-在本地初始化一个空仓库             git init
-获得本地分支信息                   git branch
-获得romote信息                     git remote (git remote -v)
-添加新的remote                     git remote add <remote_name> <remote_url>
-删除一个remote                     git remote rm <remote_name>
-重命名一个remote                   git remote rename <remote_old_name> <remote_new_name>
-以本地代码为基础创建新的remote分支     git push <remote_name> <local_branch>:<remote_branch>
-删除remote的一个分支                   git push <remote_name> :<remote_branch>
-添加子工程                             git submodule add 仓库地址 路径
+在本地初始化一个空仓库			git init
+获得本地分支信息                   	git branch
+获得romote信息                     	git remote (git remote -v)
+添加新的remote                     	git remote add <remote_name> <remote_url>
+删除一个remote                     	git remote rm <remote_name>
+重命名一个remote                   	git remote rename <remote_old_name> <remote_new_name>
+以本地代码为基础创建新的remote分支     	git push <remote_name> <local_branch>:<remote_branch>
+删除remote的一个分支                   	git push <remote_name> :<remote_branch>
+添加子工程                             	git submodule add 仓库地址 路径
 删除子工程
+#+END_EXAMPLE
+**** content manager
+#+BEGIN_EXAMPLE
+取消本地内容修改 			git reset --hard
 #+END_EXAMPLE
 *** git svn
 #+BEGIN_EXAMPLE
