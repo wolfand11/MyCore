@@ -12,3 +12,15 @@ mark the package for deletion by typing D
 execute by typing x
 
 #+END_EXAMPLE
+
+** vc-mode
+#+BEGIN_EXAMPLE
+运行命令     	ctrl+x v d，会进入vc-dired buffer
+Revert改变	ctrl+x v u 执行vc-revert
+#+END_EXAMPLE
+
+** org-mode
+#+BEGIN_EXAMPLE
+输入Tab：ctrl+q Tab
+#+END_EXAMPLE
+
