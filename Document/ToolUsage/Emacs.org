@@ -1,0 +1,14 @@
+* Emacs Usage
+
+** package
+#+BEGIN_EXAMPLE
+安装插件： 
+运行命令 M-x package-list-packages，会列出所有可下载的插件。选择插件，会有Install提示。
+
+卸载插件：
+M-x package-list-packages
+C-s need-remove-package
+mark the package for deletion by typing D
+execute by typing x
+
+#+END_EXAMPLE

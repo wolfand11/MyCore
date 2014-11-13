@@ -17,6 +17,7 @@
 以本地代码为基础创建新的remote分支     git push <remote_name> <local_branch>:<remote_branch>
 删除remote的一个分支                   git push <remote_name> :<remote_branch>
 添加子工程                             git submodule add 仓库地址 路径
+删除子工程
 #+END_EXAMPLE
 *** git svn
 #+BEGIN_EXAMPLE
