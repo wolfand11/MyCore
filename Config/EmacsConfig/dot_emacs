@@ -7,8 +7,8 @@
 (setq default-buffer-file-coding-system 'utf-8)
 
 ;; 设置EmacsConfig目录----------------------------------------
-(setq emacs_config_path "~/Documents/MyToolkit/Config/EmacsConfig/")
-(setq emacs_resource_path "~/Documents/MyToolkit/Resource/")
+(setq emacs_config_path "~/Documents/MyCore/Config/EmacsConfig/")
+(setq emacs_resource_path "~/Documents/MyCore/Config/Resource/")
 (add-to-list 'load-path emacs_config_path)
 (defun AppendToEmacsConfigPath (subpath)
     "concat emacs_config_path with subpath"
