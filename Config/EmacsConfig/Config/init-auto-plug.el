@@ -68,7 +68,14 @@
 ;; 设置sr-speedbar End --------------------------------
 
 ;; 设置auto-complete Begin ----------------------------
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories (AppendToEmacsResourcePath "ac-dict"))
 (ac-config-default)
+;;; set the trigger key so that it can work together with yasnippet on tab key,
+;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
+;;; activate, otherwise, auto-complete will
+(ac-set-trigger-key "TAB")
+(ac-set-trigger-key "<tab>")
 ;; 设置auto-complete End -------------------------------
 
 ;; batch-mode Start-----------------------------------
@@ -95,6 +102,10 @@
 (add-to-list 'interpreter-mode-alist '("json" . json-mode))
 (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'json-mode))
 ;; json-mode End  -----------------------------------
+
+;; js2-mode
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
 
 ;; MarkDown设置 Start-----------------------------------
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
