@@ -7,6 +7,7 @@ import sys
 import subprocess
 import ConfigParser
 import platform
+import shutil
 
 def ContainsAny(str, set):
     for c in set:
@@ -59,15 +60,15 @@ def InitGoAgent():
     goagent_config_path = os.path.join(goagent_path,"local/proxy.ini")
     my_goagent_config_path = os.path.join(script_path,"MyGoAgentConfig.ini")
 
-    old_cwd = os.getcwd()
+    old_cwd = os.getcwd()    
+    if os.path.exists(goagent_path):
+        shutil.rmtree(goagent_path)
+        os.makedirs(goagent_path)
+        
     os.chdir(goagent_path)
     sys_command_list = ["git"]
-    if os.path.exists(goagent_path):
-        sys_command_list.append("reset")
-        sys_command_list.append("HEAD^")
-    else:
-        sys_command_list.append("clone")
-        sys_command_list.append("git@github.com:goagent/goagent.git")
+    sys_command_list.append("clone")
+    sys_command_list.append("git@github.com:goagent/goagent.git")
     subprocess.call(sys_command_list)
     os.chdir(old_cwd)
 
