@@ -1,5 +1,0 @@
-#RANK 0  veryhard
-#RANK 1  hard
-#RANK 2  normal
-
-#RANK 3  easy
