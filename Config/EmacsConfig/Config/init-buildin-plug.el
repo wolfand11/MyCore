@@ -44,4 +44,10 @@
 (global-set-key (kbd "C-}") 'hs-hide-level)
 ;; hideshow-mode End   ----------------------------
 
+;; eshell config Begin ----------------------------
+(add-hook 'eshell-mode-hook
+	  (lambda ()
+	    (setq pcomplete-cycle-completions nil)))
+;; eshell config End   ----------------------------
+
 (provide 'init-buildin-plug)
