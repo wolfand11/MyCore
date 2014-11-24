@@ -28,6 +28,7 @@ emacs安装参考:http://emacs.sexy/
 配置文件列表:
 win_dot_emacs                 window平台的.emacs文件
 dot_emacs                     跨平台的.emacs文件
+dot_emacs.local               本地特化的emacs配置
 init-emacs-style.el           emacs显示风格
 init-environment-variable.el  emacs的环境变量  
 init-auto-plug.el             package管理的插件配置                 

@@ -21,5 +21,9 @@
 ;; 加载Emacs配置
 (load (AppendToEmacsConfigPath "emacs_config.el"))
 
+;; 加载local emacs配置
+(let ((emacs-local-config "~/.emacs.local"))
+  (if (file-exists-p emacs-local-config) (load emacs-local-config)))
+
 (message "common dot_emacs end")
 (put 'upcase-region 'disabled nil)
