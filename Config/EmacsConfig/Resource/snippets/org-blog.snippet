@@ -1,0 +1,14 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: org-blog
+# key: org-blog
+# binding: direct-keybinding
+# --
+---
+layout: post
+title: "${1:Title}"
+description: ""
+category: "${2:Category}"
+tags:[$3]
+---
+{% include JB/setup %}
+$0

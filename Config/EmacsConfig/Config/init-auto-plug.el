@@ -125,6 +125,8 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;; Yasnippet
+(require 'yasnippet)
+(add-to-list 'yas-snippet-dirs (AppendToEmacsResourcePath "snippet"))
 (yas-global-mode t)
 
 ;;

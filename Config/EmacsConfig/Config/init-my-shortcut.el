@@ -16,6 +16,7 @@
 	  (eshell/alias "cd-doc"     "cd ~/Documents/MyCore/Document")
 	  (eshell/alias "cd-toolkit" "cd ~/Documents/MyToolkit")	  
 	  (eshell/alias "cd-project" "cd ~/Documents/MyProject")
+	  (eshell/alias "cd-blog"    "cd ~/Documents/MyProject/Public/LifeProject/wolfand11.github.com/_my_blogs")
 	  (eshell/alias "goagent"    "python ~/Documents/MyCloud/360Cloud/MyToolkit/GoAgent/MyGoAgent.py $*")
 	  ))
 

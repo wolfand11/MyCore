@@ -8,7 +8,7 @@
 
 ;; 设置EmacsConfig目录----------------------------------------
 (setq emacs_config_path "~/Documents/MyCore/Config/EmacsConfig/")
-(setq emacs_resource_path "~/Documents/MyCore/Config/Resource/")
+(setq emacs_resource_path (AppendToEmacsConfigPath "Resource/"))
 (add-to-list 'load-path emacs_config_path)
 (defun AppendToEmacsConfigPath (subpath)
     "concat emacs_config_path with subpath"

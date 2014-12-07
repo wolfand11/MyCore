@@ -1,15 +1,8 @@
 ;;------------------- blog editor init
 
 ;;[1] Org Mode设置 Begin ---------------------------------------------------------
-(require 'org-install)
-(require 'org-publish)
+(require 'ox-publish)
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-(add-hook 'org-mode-hook 'turn-on-font-lock)
-(global-set-key [f6] 'toggle-truncate-lines)
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
-(global-set-key (kbd "<f8> p") 'org-publish)
 (setq org-publish-use-timestamps-flag nil)
 ;; 定义快捷插入操作
 (define-skeleton iexp
@@ -19,7 +12,6 @@
   _ "\n"
   "#+END_EXAMPLE"
   )
-(define-abbrev org-mode-abbrev-table "iexp" "" 'iexp)
 (define-skeleton isrc
   "Input #+begin_src #+end_src in org-mode"
   ""
@@ -27,7 +19,6 @@
   _ "\n"
   "</pre>\n#+END_HTML"
   )
-(define-abbrev org-mode-abbrev-table "isrc" "" 'isrc)
 (define-skeleton iprop
   "Input :PROPERTIES: :END: in org-mode"
   ""
@@ -35,7 +26,7 @@
   > _ "\n"
   >":END:"
   )
-(define-abbrev org-mode-abbrev-table "iprop" "" 'iprop)
+
 ;;消除行连接
 (add-hook 'org-mode-hook
     (lambda () (setq truncate-lines nil)))
@@ -70,13 +61,13 @@ tags : [tool, emacs]
   '(
     ("org-iGitBlog"
      ;; Path to your org files.
-     :base-directory "~/Documents/MyProject/Public/LifeProject/wolfand11.github.com/BlogContent/org/"
+     :base-directory "~/Documents/MyProject/Public/LifeProject/wolfand11.github.com/_my_blogs/org/"
      :base-extension "org"
      
      ;; Path to your Jekyll project.
      :publishing-directory "~/Documents/MyProject/Public/LifeProject/wolfand11.github.com/_posts/"
      :recursive t
-     :publishing-function org-publish-org-to-html
+     :publishing-function org-html-publish-to-html
      :headline-levels 4 
      :html-extension "html"
      :body-only t ;; Only export section between <body> </body>
