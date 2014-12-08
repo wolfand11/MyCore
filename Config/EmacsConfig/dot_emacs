@@ -7,16 +7,15 @@
 (setq default-buffer-file-coding-system 'utf-8)
 
 ;; 设置EmacsConfig目录----------------------------------------
-(setq emacs_config_path "~/Documents/MyCore/Config/EmacsConfig/")
-(setq emacs_resource_path (AppendToEmacsConfigPath "Resource/"))
-(add-to-list 'load-path emacs_config_path)
 (defun AppendToEmacsConfigPath (subpath)
     "concat emacs_config_path with subpath"
     (concat emacs_config_path subpath))
 (defun AppendToEmacsResourcePath (subpath)
     "concat emacs_config_path with subpath"
     (concat emacs_resource_path subpath))
-
+(setq emacs_config_path "~/Documents/MyCore/Config/EmacsConfig/")
+(setq emacs_resource_path (AppendToEmacsConfigPath "Resource/"))
+(add-to-list 'load-path emacs_config_path)
 
 ;; 加载Emacs配置
 (load (AppendToEmacsConfigPath "emacs_config.el"))
