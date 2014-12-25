@@ -4,6 +4,7 @@
   '(progn (eshell/alias "ll" "ls -lh $*")
 	  (eshell/alias "la" "ls -a $*")
 	  (eshell/alias "lla" "ls -alh $*")
+	  (eshell/alias "open" "find-file $*")
 	  ))
 
 
