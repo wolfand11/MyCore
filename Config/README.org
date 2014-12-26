@@ -7,13 +7,16 @@
 
 配置文件列表:
 dot_zshrc
+dot_zshrc.custom
 dot_zshrc.local
 Soliah.zsh-theme （主题配置）
 
 配置说明:
-所有的自定义配置都放在dot_zshrc.local中，dot_zshrc会加载dot_zshrc.local
+通用的自定义配置放在dot_zshrc.custom中，本地的自定义配置放在dot_zshrc.local中，
+dot_zshrc会加载dot_zshrc.custom和dot_zshrc.local
 调用下面的命令进行配置:
 cp dot_zshrc ~/.zshrc
+cp dot_zshrc.custom ~/.zshrc.custom
 cp dot_zshrc.local ~/.zshrc.local
 cp Soliah.zsh-theme ~/.oh-my-zsh/themes/Soliah.zsh-theme
 #+END_EXAMPLE

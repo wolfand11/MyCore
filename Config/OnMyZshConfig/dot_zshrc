@@ -48,7 +48,7 @@ xsource() {
 # modifications in ~/.zshrc.local
 zrclocal() {
     xsource "/etc/zsh/zshrc.local"
-    xsource "${ZDOTDIR:-${HOME}}/.zshrc.custom"
+    xsource "~/Documents/MyCore/Config/OnMyZshConfig/my_zshrc_config"
     xsource "${ZDOTDIR:-${HOME}}/.zshrc.local"
     return 0
 }
