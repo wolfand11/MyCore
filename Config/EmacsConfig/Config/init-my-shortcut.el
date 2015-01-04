@@ -4,13 +4,14 @@
   '(progn (eshell/alias "ll" "ls -lh $*")
 	  (eshell/alias "la" "ls -a $*")
 	  (eshell/alias "lla" "ls -alh $*")
-	  (eshell/alias "ff"  "find-file $*")
+	  (eshell/alias "ff"  "find-file $1")
 	  ))
 
 
 ;; shortcut for my toolkit
 (eval-after-load "em-alias"
-  '(progn (eshell/alias "cd-cloud"   "cd ~/Documents/MyCloud")
+  '(progn (eshell/alias "cd-desktop" "cd ~/Desktop")
+	  (eshell/alias "cd-cloud"   "cd ~/Documents/MyCloud")
 	  (eshell/alias "cd-test"    "cd ~/Documents/MyCloud/360Cloud/MyTestProject")	  	  
 	  (eshell/alias "cd-core"    "cd ~/Documents/MyCore")
 	  (eshell/alias "cd-config"  "cd ~/Documents/MyCore/Config")
