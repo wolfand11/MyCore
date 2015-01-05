@@ -32,5 +32,10 @@ export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 
 *** 6、Mac下的远程桌面
 TeamViewer可用来远程桌面。
-
-
+*** 7、键盘改键
+Karabiner
+https://pqrs.org/osx/karabiner/index.html.en
+Seil: change CapsLock key
+https://pqrs.org/osx/karabiner/seil.html
+OSX 系统改键
+SystemPreferences->Keyboard->ModifyKeys

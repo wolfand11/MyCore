@@ -1,4 +1,8 @@
 * Emacs Usage
+** normal usage
+#+BEGIN_EXAMPLE
+1 goto-line  M-g g
+#+END_EXAMPLE
 
 ** package
 #+BEGIN_EXAMPLE
@@ -26,5 +30,11 @@ Revert改变	ctrl+x v u 执行vc-revert
 
 ** helm
 #+BEGIN_EXAMPLE
-1 选中当前所有buffer M-a
+1 选中操作
+C-n 选中下一个
+C-p 选中前一个
+C-v 选中下个分页的第一个
+M-v 选中上个分页的第一个
+M-a 选中当前列表中的所有buffer 
+
 #+END_EXAMPLE

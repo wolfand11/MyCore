@@ -151,7 +151,11 @@
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-unset-key (kbd "C-x C-f"))
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-
+(global-unset-key (kbd "M-s o"))
+(global-set-key (kbd "M-s o") 'helm-occur)
+(setq helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match    t)
+(setq helm-M-x-fuzzy-match t)
 ;; projectile mode
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
