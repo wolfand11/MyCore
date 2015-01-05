@@ -24,3 +24,7 @@ Revert改变	ctrl+x v u 执行vc-revert
 输入Tab：ctrl+q Tab
 #+END_EXAMPLE
 
+** helm
+#+BEGIN_EXAMPLE
+1 选中当前所有buffer M-a
+#+END_EXAMPLE
