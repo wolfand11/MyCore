@@ -8,10 +8,10 @@
 ;;设置tabbar
 ;;(require 'tabbar)
 (tabbar-mode t)
-(global-set-key [(ctrl tab)] 'tabbar-forward)
-(global-set-key [(ctrl shift tab)] 'tabbar-backward)
-(global-set-key "\M-n" 'tabbar-forward)
-(global-set-key "\M-p" 'tabbar-backward) 
+(global-set-key (kbd "C-x n") 'tabbar-forward)
+(global-set-key (kbd "C-x p") 'tabbar-backward)
+(global-set-key (kbd "C-9") 'tabbar-backward-group)
+(global-set-key (kbd "C-0") 'tabbar-forward-group)
 ;;设置tabbar外观
 ;;设置默认主题: 字体, 背景和前景颜色，大小
 (set-face-attribute 'tabbar-default nil

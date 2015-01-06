@@ -40,8 +40,8 @@ map <c-x>2 duplicateTab
 map <c-x>k removeTab
 map X restoreTab
 # switch buffer
-map <a-n> nextTab
-map <a-p> previousTab
+map <c-0> nextTab
+map <c-9> previousTab
 
 # show help
 map ? showHelp
