@@ -169,4 +169,8 @@
 (autoload 'svn-update "dsvn" "Run `svn update'." t)
 (require 'vc-svn)
 
+;; undo tree
+(require 'undo-tree)
+(global-undo-tree-mode)
+
 (provide 'init-auto-plug)
