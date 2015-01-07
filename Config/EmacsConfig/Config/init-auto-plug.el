@@ -45,27 +45,34 @@
 ;; 设置sr-speedbar Begin -------------------------------
 ;;(load "sr-speedbar.el")
 ;;默认显示所有文件
-(custom-set-variables
- '(speedbar-show-unknown-files t)
-)
-;;sr-speedbar-right-side 把speedbar放在左侧位置
-;;sr-speedbar-skip-other-window-p 多窗口切换时跳过speedbar窗口
-;;sr-speedbar-max-width与sr-speedbar-width-x 设置宽度
-(custom-set-variables '(sr-speedbar-right-side nil)
-		      '(sr-speedbar-skip-other-window-p t)
-		      '(sr-speedbar-max-width 30)
-		      '(sr-speedbar-width-x 20))
-;; 绑定快捷键
-(global-set-key [f5] 'sr-speedbar-toggle)
+;; (custom-set-variables
+;;  '(speedbar-show-unknown-files t)
+;; )
+;; ;;sr-speedbar-right-side 把speedbar放在左侧位置
+;; ;;sr-speedbar-skip-other-window-p 多窗口切换时跳过speedbar窗口
+;; ;;sr-speedbar-max-width与sr-speedbar-width-x 设置宽度
+;; (custom-set-variables '(sr-speedbar-right-side nil)
+;; 		      '(sr-speedbar-skip-other-window-p t)
+;; 		      '(sr-speedbar-max-width 30)
+;; 		      '(sr-speedbar-width-x 20))
+;; ;; 绑定快捷键
+;; (global-set-key [f5] 'sr-speedbar-toggle)
 
-;; 设置sr-speedbar路径
-(add-hook 'speedbar-mode-hook
-          (lambda ()
-            (cd "~/Documents/")))
+;; ;; 设置sr-speedbar路径
+;; (add-hook 'speedbar-mode-hook
+;;           (lambda ()
+;;             (cd "~/Documents/")))
 
-;; 打开sr-speedbar
-(sr-speedbar-open)
+;; ;; 打开sr-speedbar
+;; (sr-speedbar-open)
 ;; 设置sr-speedbar End --------------------------------
+
+;; neotree Begin--------------------------------------
+(require 'neotree)
+(global-set-key [f5] 'neotree-toggle)
+;; neotree End  --------------------------------------
+
+
 
 ;; 设置auto-complete Begin ----------------------------
 (require 'auto-complete-config)
