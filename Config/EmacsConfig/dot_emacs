@@ -1,4 +1,5 @@
-;; -*- Emacs-Lisp -*-
+﻿;; -*- Emacs-Lisp -*-
+(message (concat "OS-TYPE IS " (symbol-name system-type)))
 (message "common dot_emacs begin")
 
 ;; 设置优先的编码系统，用于加载文件
