@@ -4,8 +4,6 @@
 (prefer-coding-system 'utf-8)
 ;; 设置默认编码,用于保存文件
 (setq default-buffer-file-coding-system 'utf-8)
-;; 设置custom config
-(setq custom-file "~/.emacs.custom.el")
 
 ;; 设置EmacsConfig目录----------------------------------------
 (defun AppendToEmacsConfigPath (subpath)
@@ -19,10 +17,14 @@
 (add-to-list 'load-path emacs_config_path)
 
 ;; 加载Emacs配置
+(message "=BEGINE= commoon_config.el")
 (load (AppendToEmacsConfigPath "common_config.el"))
 
 ;; 加载local emacs配置
 (let ((emacs-local-config "~/.emacs.local"))
-  (if (file-exists-p emacs-local-config) (load emacs-local-config)))
+  (if (file-exists-p emacs-local-config)
+      (progn
+	(message "=BEGINE= .emacs.local")
+	(load emacs-local-config))))
 
 (put 'upcase-region 'disabled nil)

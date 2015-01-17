@@ -24,6 +24,6 @@
 (load "init-blog-publish")
 ;; init-my-toolkit
 (load "init-my-shortcut")
- 
+
 (put 'upcase-region 'disabled nil)
 
