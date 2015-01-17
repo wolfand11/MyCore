@@ -1,11 +1,11 @@
-﻿;; -*- Emacs-Lisp -*-
-(message (concat "OS-TYPE IS " (symbol-name system-type)))
-(message "common dot_emacs begin")
+;; -*- Emacs-Lisp -*-
 
 ;; 设置优先的编码系统，用于加载文件
 (prefer-coding-system 'utf-8)
 ;; 设置默认编码,用于保存文件
 (setq default-buffer-file-coding-system 'utf-8)
+;; 设置custom config
+(setq custom-file "~/.emacs.custom.el")
 
 ;; 设置EmacsConfig目录----------------------------------------
 (defun AppendToEmacsConfigPath (subpath)
@@ -19,11 +19,10 @@
 (add-to-list 'load-path emacs_config_path)
 
 ;; 加载Emacs配置
-(load (AppendToEmacsConfigPath "emacs_config.el"))
+(load (AppendToEmacsConfigPath "common_config.el"))
 
 ;; 加载local emacs配置
 (let ((emacs-local-config "~/.emacs.local"))
   (if (file-exists-p emacs-local-config) (load emacs-local-config)))
 
-(message "common dot_emacs end")
 (put 'upcase-region 'disabled nil)

@@ -1,4 +1,0 @@
-;; windows dot_emacs
-(message "windows dot_emacs begin")  
-(load "D:/Documents/MyCore/Config/EmacsConfig/dot_emacs")
-(message "windows dot_emacs end")
