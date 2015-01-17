@@ -180,4 +180,10 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
+;; ergoemacs
+;;(setq ergoemacs-use-mac-command-as-meta nil)
+;;(setq ergoemacs-theme nil)
+;;(setq ergoemacs-keyboard-layout "us")
+;;(ergoemacs-mode 1)
+
 (provide 'init-auto-plug)
