@@ -1,10 +1,11 @@
 ;; ------------------------------------------------------------------------
 ;; 配置package.el管理的插件
 ;; ------------------------------------------------------------------------
-;;(add-to-list 'package-load-list 'tabbar)
-;;(add-to-list 'package-load-list ')
+(package-initialize)
 
 ;; 设置Tabbar Begin ------------------------------------
+;;(add-to-list 'package-load-list 'tabbar)
+;;(add-to-list 'package-load-list ')
 ;;设置tabbar
 ;;(require 'tabbar)
 (tabbar-mode t)
@@ -182,8 +183,9 @@
 
 ;; ergoemacs
 (setq ergoemacs-use-mac-command-as-meta nil)
-(setq ergoemacs-theme nil)
+(setq ergoemacs-theme nil)		
 (setq ergoemacs-keyboard-layout "us")
+(require 'ergoemacs-mode)
 (ergoemacs-mode 1)
 
 (provide 'init-auto-plug)
