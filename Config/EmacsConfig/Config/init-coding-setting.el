@@ -1,15 +1,4 @@
 ;; 常用按键绑定
-(global-set-key [(ctrl f9)] 'compile)
-(global-set-key [f9] 'gdb)
-;; 默认编译命令设定
-(setq-default compile-command "make")
-;; 编译成功后自动关闭窗口
-(setq compilation-finish-functions
-      (lambda (buf str)
-        (when (and (string= (buffer-name buf) "*compilation*")
-                   (not (string-match "exited abnormally" str)))
-          (run-at-time 0.5 nil 'delete-windows-on buf)
-          )))
 
 ;; 设置C++风格 Begin -----------------------------------
 

@@ -13,14 +13,14 @@
 (package-initialize)
 ;; Package 设置 End----------------------------------------------
 
-;; 设置ido Begin ----------------------------------------
-(require 'ido)
-(ido-mode t)
-(ido-everywhere t)
-;; disable ido faces to see flx highlights.
-(setq ido-enable-flex-matching t)
-(setq ido-use-faces nil)
-;; 设置ido End ------------------------------------------
+;; ;; 设置ido Begin ----------------------------------------
+;; (require 'ido)
+;; (ido-mode t)
+;; (ido-everywhere t)
+;; ;; disable ido faces to see flx highlights.
+;; (setq ido-enable-flex-matching t)
+;; (setq ido-use-faces nil)
+;; ;; 设置ido End ------------------------------------------
 
 ;; Rencentf 设置 Start----------------------------------------------
 (require 'recentf)

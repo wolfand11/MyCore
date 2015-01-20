@@ -149,7 +149,7 @@
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 
 ;; flx-ido mode
-(flx-ido-mode t)
+;;(flx-ido-mode t)
 
 ;; helm mode
 (require 'helm-config)
@@ -185,6 +185,8 @@
 (setq ergoemacs-use-mac-command-as-meta nil)
 (setq ergoemacs-theme nil)		
 (setq ergoemacs-keyboard-layout "us")
+(setq ergoemacs-helm-ido-style-return nil)
+(define-key key-translation-map (kbd "<f13>") (kbd "<menu>"))
 (require 'ergoemacs-mode)
 (ergoemacs-mode 1)
 
