@@ -35,6 +35,14 @@ C-n 选中下一个
 C-p 选中前一个
 C-v 选中下个分页的第一个
 M-v 选中上个分页的第一个
-M-a 选中当前列表中的所有buffer 
+M-a 选中当前列表中的所有buffer
 
+2 杂项
+C-t 切换 helm buffer位置
+M-D 关闭所有选中的buffer
+#+END_EXAMPLE
+
+** ergoemacs
+#+BEGIN_EXAMPLE
+C-. Quit
 #+END_EXAMPLE
