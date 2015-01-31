@@ -31,31 +31,18 @@ Revert改变	ctrl+x v u 执行vc-revert
 ** helm
 #+BEGIN_EXAMPLE
 1 选中操作
-C-n 			选中下一个
-C-p 			选中前一个
-C-v 			选中下个分页的第一个
-M-v 			选中上个分页的第一个
-M-a 		  	标记当前列表中的所有条目
-C-SPC			标记(解除标记)当前选中的条目
+C-n 选中下一个
+C-p 选中前一个
+C-v 选中下个分页的第一个
+M-v 选中上个分页的第一个
+M-a 选中当前列表中的所有buffer
 
 2 杂项
-C-t  			切换 helm buffer位置
-C-z  			helm-execute-persistent-action
-C-c C-i			将当前选中文本插入当前editor buffer
-C-w			yanks word at point into Helm mini-buffer
-M-y			yanks symbol at point into Helm mini-buffer
-			
-helm switch buffer
-M-D  			关闭所有选中的buffer
-
-helm find file
-M-p 			返回上级目录
-M-D 			删除选中的文件
+C-t 切换 helm buffer位置
+M-D 关闭所有选中的buffer
 #+END_EXAMPLE
 
 ** ergoemacs
 #+BEGIN_EXAMPLE
 C-. Quit
-M-` next frame
-M-~ pre  frame
 #+END_EXAMPLE
