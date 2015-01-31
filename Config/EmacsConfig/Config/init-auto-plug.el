@@ -73,18 +73,20 @@
 (global-set-key [f5] 'neotree-toggle)
 ;; neotree End  --------------------------------------
 
-
-
 ;; 设置auto-complete Begin ----------------------------
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories (AppendToEmacsResourcePath "ac-dict"))
-(ac-config-default)
+;;(require 'auto-complete-config)
+;;(add-to-list 'ac-dictionary-directories (AppendToEmacsResourcePath "ac-dict"))
+;;(ac-config-default)
 ;;; set the trigger key so that it can work together with yasnippet on tab key,
 ;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
 ;;; activate, otherwise, auto-complete will
-(ac-set-trigger-key "TAB")
-(ac-set-trigger-key "<tab>")
+;;(ac-set-trigger-key "TAB")
+;;(ac-set-trigger-key "<tab>")
 ;; 设置auto-complete End -------------------------------
+
+;; 设置company-mode Start----------------------------------- 
+(add-hook 'after-init-hook 'global-company-mode)
+;; 设置company-mode End  -----------------------------------
 
 ;; batch-mode Start-----------------------------------
 (add-to-list 'auto-mode-alist '("\\.bat$" . batch-mode))
@@ -104,12 +106,6 @@
 ;;add auto-completed
 (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'lua-mode))
 ;; lua-mode设置 End-------------------------------------
-
-;; json-mode Start-----------------------------------
-(add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
-(add-to-list 'interpreter-mode-alist '("json" . json-mode))
-(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'json-mode))
-;; json-mode End  -----------------------------------
 
 ;; js2-mode
 (add-hook 'js-mode-hook 'js2-minor-mode)
@@ -189,5 +185,6 @@
 (define-key key-translation-map (kbd "<f13>") (kbd "<menu>"))
 (require 'ergoemacs-mode)
 (ergoemacs-mode 1)
+(ergoemacs-ignore-prev-global)
 
 (provide 'init-auto-plug)
