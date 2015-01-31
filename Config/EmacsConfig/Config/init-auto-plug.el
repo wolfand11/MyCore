@@ -53,9 +53,10 @@
 ;;sr-speedbar-skip-other-window-p 多窗口切换时跳过speedbar窗口
 ;;sr-speedbar-max-width与sr-speedbar-width-x 设置宽度
 (custom-set-variables '(sr-speedbar-right-side nil)
-		      '(sr-speedbar-skip-other-window-p t)
+		      '(sr-speedbar-skip-other-window-p nil)
+		      '(sr-speedbar-width 25)
 		      '(sr-speedbar-max-width 30)
-		      '(sr-speedbar-width-x 15))
+		      '(sr-speedbar-width-x 25))
 ;; 绑定快捷键
 (global-set-key [f5] 'sr-speedbar-toggle)
 
