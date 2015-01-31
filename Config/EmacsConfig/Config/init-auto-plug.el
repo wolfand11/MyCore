@@ -55,7 +55,7 @@
 (custom-set-variables '(sr-speedbar-right-side nil)
 		      '(sr-speedbar-skip-other-window-p t)
 		      '(sr-speedbar-max-width 30)
-		      '(sr-speedbar-width-x 20))
+		      '(sr-speedbar-width-x 15))
 ;; 绑定快捷键
 (global-set-key [f5] 'sr-speedbar-toggle)
 
@@ -65,12 +65,12 @@
             (cd "~/Documents/")))
 
 ;; 打开sr-speedbar
-;;(sr-speedbar-open)
+(sr-speedbar-open)
 ;;设置sr-speedbar End --------------------------------
 
 ;; neotree Begin--------------------------------------
-;;(require 'neotree)
-;;(global-set-key [f5] 'neotree-toggle)
+;; (require 'neotree)
+;; (global-set-key [f5] 'neotree-toggle)
 ;; neotree End  --------------------------------------
 
 ;; 设置auto-complete Begin ----------------------------
