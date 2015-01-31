@@ -44,44 +44,43 @@
 ;; 设置Tabbar End --------------------------------------
 
 ;; 设置sr-speedbar Begin -------------------------------
-;;(load "sr-speedbar.el")
+(require 'sr-speedbar)
 ;;默认显示所有文件
-;; (custom-set-variables
-;;  '(speedbar-show-unknown-files t)
-;; )
-;; ;;sr-speedbar-right-side 把speedbar放在左侧位置
-;; ;;sr-speedbar-skip-other-window-p 多窗口切换时跳过speedbar窗口
-;; ;;sr-speedbar-max-width与sr-speedbar-width-x 设置宽度
-;; (custom-set-variables '(sr-speedbar-right-side nil)
-;; 		      '(sr-speedbar-skip-other-window-p t)
-;; 		      '(sr-speedbar-max-width 30)
-;; 		      '(sr-speedbar-width-x 20))
-;; ;; 绑定快捷键
-;; (global-set-key [f5] 'sr-speedbar-toggle)
+(custom-set-variables
+ '(speedbar-show-unknown-files t)
+)
+;;sr-speedbar-right-side 把speedbar放在左侧位置
+;;sr-speedbar-skip-other-window-p 多窗口切换时跳过speedbar窗口
+;;sr-speedbar-max-width与sr-speedbar-width-x 设置宽度
+(custom-set-variables '(sr-speedbar-right-side nil)
+		      '(sr-speedbar-skip-other-window-p t)
+		      '(sr-speedbar-max-width 30)
+		      '(sr-speedbar-width-x 20))
+;; 绑定快捷键
+(global-set-key [f5] 'sr-speedbar-toggle)
 
-;; ;; 设置sr-speedbar路径
-;; (add-hook 'speedbar-mode-hook
-;;           (lambda ()
-;;             (cd "~/Documents/")))
+;; 设置sr-speedbar路径
+(add-hook 'speedbar-mode-hook
+          (lambda ()
+            (cd "~/Documents/")))
 
-;; ;; 打开sr-speedbar
-;; (sr-speedbar-open)
-;; 设置sr-speedbar End --------------------------------
+;; 打开sr-speedbar
+;;(sr-speedbar-open)
+;;设置sr-speedbar End --------------------------------
 
 ;; neotree Begin--------------------------------------
-(require 'neotree)
-(global-set-key [f5] 'neotree-toggle)
+;;(require 'neotree)
+;;(global-set-key [f5] 'neotree-toggle)
 ;; neotree End  --------------------------------------
 
 ;; 设置auto-complete Begin ----------------------------
-;;(require 'auto-complete-config)
-;;(add-to-list 'ac-dictionary-directories (AppendToEmacsResourcePath "ac-dict"))
-;;(ac-config-default)
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories (AppendToEmacsResourcePath "ac-dict"))
+(ac-config-default)
 ;;; set the trigger key so that it can work together with yasnippet on tab key,
 ;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
 ;;; activate, otherwise, auto-complete will
-;;(ac-set-trigger-key "TAB")
-;;(ac-set-trigger-key "<tab>")
+(ac-set-trigger-key "<tab>")
 ;; 设置auto-complete End -------------------------------
 
 ;; 设置company-mode Start----------------------------------- 
@@ -186,5 +185,9 @@
 (require 'ergoemacs-mode)
 (ergoemacs-mode 1)
 (ergoemacs-ignore-prev-global)
+
+;; e2wm
+;;(require 'e2wm)
+;;(global-set-key (kbd "M-+") 'e2wm:start-management)
 
 (provide 'init-auto-plug)
