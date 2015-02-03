@@ -4,16 +4,9 @@
 (package-initialize)
 
 ;; 设置Tabbar Begin ------------------------------------
-;;(add-to-list 'package-load-list 'tabbar)
-;;(add-to-list 'package-load-list ')
-;;设置tabbar
-;;(require 'tabbar)
+(require 'tabbar)
 (tabbar-mode t)
-(global-set-key (kbd "C-x n") 'tabbar-forward)
-(global-set-key (kbd "C-x p") 'tabbar-backward)
-(global-set-key (kbd "C-9") 'tabbar-backward-group)
-(global-set-key (kbd "C-0") 'tabbar-forward-group)
-;;设置tabbar外观
+(setq tabbar-use-images nil)
 ;;设置默认主题: 字体, 背景和前景颜色，大小
 (set-face-attribute 'tabbar-default nil
                     :family "微软雅黑"
@@ -148,9 +141,11 @@
 ;; flx-ido mode
 ;;(flx-ido-mode t)
 
-;; helm mode
+;; Helm Projectile Mode End ----------------------------------------
 (require 'helm-config)
 (helm-mode t)
+(global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-unset-key (kbd "C-x c"))
 ;;(global-set-key (kbd "C-c h") 'helm-mini)
 (global-unset-key (kbd "C-x C-b"))
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
@@ -159,15 +154,23 @@
 (global-unset-key (kbd "M-s o"))
 (global-set-key (kbd "M-s o") 'helm-occur)
 (setq helm-buffers-fuzzy-matching t
-      helm-recentf-fuzzy-match    t)
-(setq helm-M-x-fuzzy-match t)
+      helm-recentf-fuzzy-match    t
+      helm-M-x-fuzzy-match t
+      helm-semantic-fuzzy-match t
+      helm-imenu-fuzzy-match    t
+      helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
+      helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
+      helm-ff-file-name-history-use-recentf t)
 ;; projectile mode
 (projectile-global-mode)
-(setq projectile-completion-system 'helm)
-
+(setq projectile-completion-system 'helm
+      projectile-indexing-method 'alien
+      projectile-switch-project-action 'projectile-dired
+      projectile-enable-caching t)
 ;; helm-projectile
 (require 'helm-projectile)
 (helm-projectile-on)
+;; Helm Projectile Mode End ----------------------------------------
 
 ;; dsvn
 (autoload 'svn-status "dsvn" "Run `svn status'." t)
