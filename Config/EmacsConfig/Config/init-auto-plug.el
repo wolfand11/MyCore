@@ -53,6 +53,7 @@
 ;;sr-speedbar-skip-other-window-p 多窗口切换时跳过speedbar窗口
 ;;sr-speedbar-max-width与sr-speedbar-width-x 设置宽度
 (custom-set-variables '(sr-speedbar-right-side nil)
+		      '(speedbar-use-images nil)
 		      '(sr-speedbar-skip-other-window-p nil)
 		      '(sr-speedbar-width 25)
 		      '(sr-speedbar-max-width 30)
@@ -85,7 +86,7 @@
 ;; 设置auto-complete End -------------------------------
 
 ;; 设置company-mode Start----------------------------------- 
-(add-hook 'after-init-hook 'global-company-mode)
+;; (add-hook 'after-init-hook 'global-company-mode)
 ;; 设置company-mode End  -----------------------------------
 
 ;; batch-mode Start-----------------------------------
