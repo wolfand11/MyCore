@@ -102,8 +102,16 @@
 ;; lua-mode设置 End-------------------------------------
 
 ;; js2-mode
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
+
+;; smartparens mode Start-----------------------------------
+(require 'smartparens-config)
+(smartparens-global-mode t)
+;; highlights matching pairs
+(show-smartparens-global-mode t)
+;; smartparens mode End  -----------------------------------
 
 ;; MarkDown设置 Start-----------------------------------
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
