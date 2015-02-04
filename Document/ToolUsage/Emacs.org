@@ -40,6 +40,10 @@ M-a 选中当前列表中的所有buffer
 2 杂项
 C-t 切换 helm buffer位置
 M-D 关闭所有选中的buffer
+
+3 功能快捷键
+prefix + C-c SPC	显示mark列表
+prefix + M-y		显示kill ring列表
 #+END_EXAMPLE
 
 ** ergoemacs
