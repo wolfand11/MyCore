@@ -89,21 +89,21 @@
 ;; batch-mode End  -----------------------------------
 
 ;; Protobuff-mode Start-----------------------------------
-(add-to-list 'auto-mode-alist '("\\.proto$" . protobuf-mode))
+(add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode))
 (add-to-list 'interpreter-mode-alist '("bat" . protobuf-mode))
 (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'protobuf-mode))
 ;; Protobuff-mode End  -----------------------------------
 
 ;; lua-mode设置 Start-----------------------------------
-(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 ;;add auto-completed
 (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'lua-mode))
 ;; lua-mode设置 End-------------------------------------
 
 ;; js2-mode
-(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
-(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . js2-mode))
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 
 ;; smartparens mode Start-----------------------------------
@@ -178,6 +178,8 @@
 ;; helm-projectile
 (require 'helm-projectile)
 (helm-projectile-on)
+;; projectile-speedbar
+(require 'projectile-speedbar)
 ;; Helm Projectile Mode End ----------------------------------------
 
 ;; dsvn
