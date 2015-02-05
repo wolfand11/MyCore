@@ -178,8 +178,6 @@
 ;; helm-projectile
 (require 'helm-projectile)
 (helm-projectile-on)
-;; projectile-speedbar
-(require 'projectile-speedbar)
 ;; Helm Projectile Mode End ----------------------------------------
 
 ;; dsvn
