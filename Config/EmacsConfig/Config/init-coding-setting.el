@@ -1,12 +1,11 @@
 ;; 常用按键绑定
 
-;; 设置C++风格 Begin -----------------------------------
-
 ;; 设置自动缩进
-(setq indent-tabs-mode nil)
-(setq default-tab-width 8)
-(setq tab-width 8)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 8)
 (setq tab-stop-list ())
+
+;; 设置C++风格 Begin -----------------------------------
 ;; Google C++ Style
 (eval-when-compile (require 'cc-defs))
 (defun google-c-lineup-expression-plus-4 (langelem)
