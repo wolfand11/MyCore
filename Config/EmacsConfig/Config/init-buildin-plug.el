@@ -37,11 +37,7 @@
 (add-hook 'javascript-mode-hook 'hs-minor-mode)
 (add-hook 'json-mode-hook 'hs-minor-mode)
 (add-hook 'java-mode-hook 'hs-minor-mode)
-(global-set-key (kbd "C--") 'hs-hide-block)    
-(global-set-key (kbd "C-=") 'hs-show-block)    
-(global-set-key (kbd "C-<") 'hs-hide-all)    
-(global-set-key (kbd "C->") 'hs-show-all)
-(global-set-key (kbd "C-}") 'hs-hide-level)
+(add-hook 'js2-mode-hook  'hs-minor-mode)
 ;; hideshow-mode End   ----------------------------
 
 ;; eshell config Begin ----------------------------

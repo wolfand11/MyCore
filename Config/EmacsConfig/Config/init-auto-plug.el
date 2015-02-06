@@ -1,8 +1,3 @@
-;; ------------------------------------------------------------------------
-;; 配置package.el管理的插件
-;; ------------------------------------------------------------------------
-(package-initialize)
-
 ;; 设置Tabbar Begin ------------------------------------
 (require 'tabbar)
 (tabbar-mode t)
@@ -76,6 +71,9 @@
 ;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
 ;;; activate, otherwise, auto-complete will
 (ac-set-trigger-key "<tab>")
+(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'batch-mode))
+(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'protobuf-mode))
+(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'lua-mode))
 ;; 设置auto-complete End -------------------------------
 
 ;; 设置company-mode Start----------------------------------- 
@@ -85,20 +83,17 @@
 ;; batch-mode Start-----------------------------------
 (add-to-list 'auto-mode-alist '("\\.bat$" . batch-mode))
 (add-to-list 'interpreter-mode-alist '("bat" . batch-mode))
-(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'batch-mode))
 ;; batch-mode End  -----------------------------------
 
 ;; Protobuff-mode Start-----------------------------------
 (add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode))
 (add-to-list 'interpreter-mode-alist '("bat" . protobuf-mode))
-(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'protobuf-mode))
 ;; Protobuff-mode End  -----------------------------------
 
 ;; lua-mode设置 Start-----------------------------------
 (add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 ;;add auto-completed
-(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'lua-mode))
 ;; lua-mode设置 End-------------------------------------
 
 ;; js2-mode
@@ -117,13 +112,6 @@
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 ;; MarkDown设置 End-------------------------------------
 
-;; 设置高亮 Begin ----------------------------------------
-;;(load "highlight-symbol.el")
-(global-set-key [(control f3)] 'highlight-symbol-at-point)
-(global-set-key [f3] 'highlight-symbol-next)
-(global-set-key [(meta f3)] 'highlight-symbol-prev)
-;; 设置高亮 End ----------------------------------------
-
 ;; multiple cursors
 ;;(require 'multiple-cursors)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
@@ -132,7 +120,7 @@
 
 ;; Yasnippet
 (require 'yasnippet)
-(add-to-list 'yas-snippet-dirs (AppendToEmacsResourcePath "snippet"))
+(add-to-list 'yas-snippet-dirs (AppendToEmacsResourcePath "snippets"))
 (yas-global-mode t)
 
 ;;
