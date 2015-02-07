@@ -1,35 +1,39 @@
-;; 设置Tabbar Begin ------------------------------------
-(require 'tabbar)
-(tabbar-mode t)
-(setq tabbar-use-images nil)
-;;设置默认主题: 字体, 背景和前景颜色，大小
-(set-face-attribute 'tabbar-default nil
-                    :family "微软雅黑"
-                    :background "grey30"
-                    :foreground "sky blue"
-                    :height 1.0
-                    )
-;; 设置左边按钮外观：外框框边大小和颜色
-(set-face-attribute 'tabbar-button nil
-                    :inherit 'tabbar-default
-                    :box '(:line-width 1 :color "gray30")
-                    )
-;; 设置当前tab外观：颜色，字体，外框大小和颜色
-(set-face-attribute 'tabbar-selected nil
-                    :inherit 'tabbar-default
-                    :foreground "yellow"
-                    :background "grey30"
-                    :box '(:line-width 2 :color "gray70")
-                    ;; :overline "black"
-                    ;; :underline "black"
-                    :weight 'bold
-                    )
-;; 设置非当前tab外观：外框大小和颜色
-(set-face-attribute 'tabbar-unselected nil
-                    :inherit 'tabbar-default
-                    :box '(:line-width 2 :color "gray70")
-                    )
-;; 设置Tabbar End --------------------------------------
+;;
+;; emacs theme
+(load-theme 'solarized-dark t)
+
+;; ;; 设置Tabbar Begin ------------------------------------
+;; (require 'tabbar)
+;; (tabbar-mode t)
+;; (setq tabbar-use-images nil)
+;; ;;设置默认主题: 字体, 背景和前景颜色，大小
+;; (set-face-attribute 'tabbar-default nil
+;;                     :family "微软雅黑"
+;;                     :background "grey30"
+;;                     :foreground "sky blue"
+;;                     :height 1.0
+;;                     )
+;; ;; 设置左边按钮外观：外框框边大小和颜色
+;; (set-face-attribute 'tabbar-button nil
+;;                     :inherit 'tabbar-default
+;;                     :box '(:line-width 1 :color "gray30")
+;;                     )
+;; ;; 设置当前tab外观：颜色，字体，外框大小和颜色
+;; (set-face-attribute 'tabbar-selected nil
+;;                     :inherit 'tabbar-default
+;;                     :foreground "yellow"
+;;                     :background "grey30"
+;;                     :box '(:line-width 2 :color "gray70")
+;;                     ;; :overline "black"
+;;                     ;; :underline "black"
+;;                     :weight 'bold
+;;                     )
+;; ;; 设置非当前tab外观：外框大小和颜色
+;; (set-face-attribute 'tabbar-unselected nil
+;;                     :inherit 'tabbar-default
+;;                     :box '(:line-width 2 :color "gray70")
+;;                     )
+;; ;; 设置Tabbar End --------------------------------------
 
 ;; 设置sr-speedbar Begin -------------------------------
 (require 'sr-speedbar)
@@ -58,26 +62,26 @@
 ;;(sr-speedbar-open)
 ;;设置sr-speedbar End --------------------------------
 
-;; neotree Begin--------------------------------------
-;; (require 'neotree)
-;; (global-set-key [f5] 'neotree-toggle)
-;; neotree End  --------------------------------------
+;; ;; neotree Begin--------------------------------------
+;; ;; (require 'neotree)
+;; ;; (global-set-key [f5] 'neotree-toggle)
+;; ;; neotree End  --------------------------------------
 
-;; 设置auto-complete Begin ----------------------------
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories (AppendToEmacsResourcePath "ac-dict"))
-(ac-config-default)
-;;; set the trigger key so that it can work together with yasnippet on tab key,
-;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
-;;; activate, otherwise, auto-complete will
-(ac-set-trigger-key "<tab>")
-(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'batch-mode))
-(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'protobuf-mode))
-(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'lua-mode))
-;; 设置auto-complete End -------------------------------
+;; ;; 设置auto-complete Begin ----------------------------
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories (AppendToEmacsResourcePath "ac-dict"))
+;; (ac-config-default)
+;; ;;; set the trigger key so that it can work together with yasnippet on tab key,
+;; ;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
+;; ;;; activate, otherwise, auto-complete will
+;; (ac-set-trigger-key "<tab>")
+;; (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'batch-mode))
+;; (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'protobuf-mode))
+;; (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'lua-mode))
+;; ;; 设置auto-complete End -------------------------------
 
 ;; 设置company-mode Start----------------------------------- 
-;; (add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'after-init-hook 'global-company-mode)
 ;; 设置company-mode End  -----------------------------------
 
 ;; batch-mode Start-----------------------------------
@@ -85,10 +89,10 @@
 (add-to-list 'interpreter-mode-alist '("bat" . batch-mode))
 ;; batch-mode End  -----------------------------------
 
-;; Protobuff-mode Start-----------------------------------
-(add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode))
-(add-to-list 'interpreter-mode-alist '("bat" . protobuf-mode))
-;; Protobuff-mode End  -----------------------------------
+;; ;; Protobuff-mode Start-----------------------------------
+;; (add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode))
+;; (add-to-list 'interpreter-mode-alist '("bat" . protobuf-mode))
+;; ;; Protobuff-mode End  -----------------------------------
 
 ;; lua-mode设置 Start-----------------------------------
 (add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode))
@@ -112,11 +116,11 @@
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 ;; MarkDown设置 End-------------------------------------
 
-;; multiple cursors
-;;(require 'multiple-cursors)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+;; ;; multiple cursors
+;; ;;(require 'multiple-cursors)
+;; (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+;; (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+;; (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;; Yasnippet
 (require 'yasnippet)
@@ -134,8 +138,8 @@
   '(ace-jump-mode-enable-mark-sync))
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 
-;; flx-ido mode
-;;(flx-ido-mode t)
+;; ;; flx-ido mode
+;; ;;(flx-ido-mode t)
 
 ;; Helm Projectile Mode End ----------------------------------------
 (require 'helm-config)
@@ -165,9 +169,9 @@
       projectile-enable-caching t)
 ;; helm-projectile
 (require 'helm-projectile)
-(helm-projectile-on)
+;;(helm-projectile-on)
 ;; Helm Projectile Mode End ----------------------------------------
-
+                        
 ;; dsvn
 (autoload 'svn-status "dsvn" "Run `svn status'." t)
 (autoload 'svn-update "dsvn" "Run `svn update'." t)
@@ -187,11 +191,11 @@
 (ergoemacs-mode 1)
 (ergoemacs-ignore-prev-global)
 
-;; e2wm
-;;(require 'e2wm)
-;;(global-set-key (kbd "M-+") 'e2wm:start-management)
+;; ;; e2wm
+;; ;;(require 'e2wm)
+;; ;;(global-set-key (kbd "M-+") 'e2wm:start-management)
 
-;; package utils
-(require 'package-utils)
+;; ;; package utils
+;; (require 'package-utils)
 
 (provide 'init-auto-plug)

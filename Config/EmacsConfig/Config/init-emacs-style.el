@@ -7,8 +7,6 @@
   (set-fontset-font (frame-parameter nil 'font)
                     charset
                     (font-spec :family "Microsoft YaHei" :size 18)))
-;; 设置主题
-(load-theme 'solarized-dark t)
 ;; 显示设置 End ------------------------------------------
 
 ;; Emacs细节配置 Begin -----------------------------------
