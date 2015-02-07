@@ -6,8 +6,9 @@
 (setq package-user-dir  (AppendToEmacsConfigPath "Plugin/elpa"))
 
 ;; 添加插件源
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa-stable" . "http://stable.melpa.org/packages/")))
 
 ;; package init
 (package-initialize)
@@ -39,6 +40,9 @@
 (add-hook 'java-mode-hook 'hs-minor-mode)
 (add-hook 'js2-mode-hook  'hs-minor-mode)
 ;; hideshow-mode End   ----------------------------
+
+;; speedbar
+(require 'semantic/sb)
 
 ;; eshell config Begin ----------------------------
 (add-hook 'eshell-mode-hook

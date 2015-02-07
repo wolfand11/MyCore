@@ -55,7 +55,7 @@
             (cd "~/Documents/")))
 
 ;; 打开sr-speedbar
-(sr-speedbar-open)
+;;(sr-speedbar-open)
 ;;设置sr-speedbar End --------------------------------
 
 ;; neotree Begin--------------------------------------
