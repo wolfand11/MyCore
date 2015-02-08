@@ -6,10 +6,12 @@
 (setq package-user-dir  (AppendToEmacsConfigPath "Plugin/elpa"))
 
 ;; 添加插件源
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")
-                         ("melpa-stable" . "http://stable.melpa.org/packages/")))
-
+(setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
+                           ("gnu" . "http://elpa.gnu.org/packages/")
+                           ("melpa" . "http://melpa.org/packages/")
+                           ("melpa-stable" . "http://stable.melpa.org/packages/")
+                           ("marmalade" . "http://marmalade-repo.org/packages/")
+                           ))
 ;; package init
 (package-initialize)
 ;; Package 设置 End----------------------------------------------

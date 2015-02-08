@@ -1,6 +1,8 @@
-;;
-;; emacs theme
+;; Init Plugins managed with package.el
+
+;; solarized-theme Begin ------------------------------------
 (load-theme 'solarized-dark t)
+;; solarized-theme End   ------------------------------------
 
 ;; ;; 设置Tabbar Begin ------------------------------------
 ;; (require 'tabbar)
