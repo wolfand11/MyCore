@@ -15,7 +15,7 @@
                   "/opt/local/sbin"
                   )))
   (when (string-equal system-type "windows-nt")
-    (setq special-path '(
+    (setq special-path (list
                          (expand-file-name (AppendToEmacsResourcePath "diffutils/bin"))
                          )))
   (when (string-equal system-type "gnu/linux")
