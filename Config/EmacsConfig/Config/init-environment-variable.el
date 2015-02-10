@@ -5,17 +5,25 @@
 ;; 设置 custom config path
 (setq custom-file "~/.custom.el")
 
-;; 设置PATH变量，这样就可以调用系统的bin了
-(add-to-list 'exec-path "/usr/local/bin")
-(add-to-list 'exec-path "/usr/bin")
-(add-to-list 'exec-path "/opt/local/bin")
-(add-to-list 'exec-path "/opt/local/sbin")
-
-(when (string-equal system-type "windows-nt")
-  (progn
-    (setq diff-path (expand-file-name (AppendToEmacsResourcePath "diffutils/bin")))
-    (setenv "PATH"
-	    (concat diff-path ";"))
-    (add-to-list 'exec-path '(diff-path))))
+(let ((common-path)
+      (special-path)
+      (env-str (getenv "PATH"))
+      )
+  (when (string-equal system-type "darwin")   ;; osx
+    (setq special-path '(
+                  "/opt/local/bin"
+                  "/opt/local/sbin"
+                  )))
+  (when (string-equal system-type "windows-nt")
+    (setq special-path '(
+                         (expand-file-name (AppendToEmacsResourcePath "diffutils/bin"))
+                         )))
+  (when (string-equal system-type "gnu/linux")
+    (setq special-path '(
+                         )))
+  (setq env-str (concat (mapconcat 'identity special-path path-separator) path-separator env-str))
+  (setenv "PATH" env-str)
+  (setq exec-path (append special-path exec-path))
+  )
 
 (message "init-env-variable SUCCESSFULL!")
