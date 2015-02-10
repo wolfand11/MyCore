@@ -5,7 +5,7 @@
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/projectile
 ;; Keywords: project, convenience
-;; Version: 20150207.1416
+;; Version: 20150209.542
 ;; X-Original-Version: 0.11.0
 ;; Package-Requires: ((dash "1.5.0") (pkg-info "0.4"))
 
@@ -225,7 +225,7 @@ and `projectile-buffers-with-file-or-process'."
 (defcustom projectile-project-root-files-top-down-recurring
   '(".svn" ; Svn VCS root dir
     "CVS"  ; Csv VCS root dir
-    )
+    "Makefile")
   "A list of files considered to mark the root of a project.
 This root files pattern stops at the parentmost match."
   :group 'projectile
@@ -1026,9 +1026,10 @@ Only buffers not visible in windows are returned."
 
 (defun projectile-paths-to-ignore ()
   "Return a list of ignored project paths."
-  (--mapcat (and (string-prefix-p "/" it)
-                 (directory-file-name it))
-            (cdr (projectile-parse-dirconfig-file))))
+  (-non-nil (--map (and (string-prefix-p "/" it)
+                        ;; remove the leading /
+                        (substring it 1))
+                   (cdr (projectile-parse-dirconfig-file)))))
 
 (defun projectile-patterns-to-ignore ()
   "Return a list of relative file patterns."
