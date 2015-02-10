@@ -47,6 +47,24 @@ init-coding-setting.el        方便编码的一些配置
 cp dot_emacs.el ~/.emacs
 ;; you can change .emacs.local context for local
 cp dot_emacs_local.el ~/.emacs.local
+
+插件功能配置:
+*** projectile ctags支持
+1 osx配置
+(1) install Exuberant Ctags 
+sudo port -v install ctags
+(2) check ctags version
+ctags --version
+==> Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
+which tags
+==> /opt/local/bin/ctags 
+*** projectile Ag支持
+1 osx配置
+(1) install the silver searcher
+port install the_silver_searcher
+(2) check Ag 
+which ag
+==> /opt/local/bin/ag
 #+END_EXAMPLE
 ** SSH配置
 #+BEGIN_EXAMPLE
