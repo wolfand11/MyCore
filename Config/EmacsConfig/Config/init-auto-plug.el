@@ -160,15 +160,16 @@
       helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
       helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
       helm-ff-file-name-history-use-recentf t)
+;; helm-projectile
+(require 'helm-projectile)
+(helm-projectile-on)
 ;; projectile mode
+;; tips : projectile should behind helm-projectile,otherwise config will be rewrite by helm-projectile
 (projectile-global-mode)
 (setq projectile-completion-system 'helm
       projectile-indexing-method 'alien
       projectile-switch-project-action 'projectile-dired
       projectile-enable-caching t)
-;; helm-projectile
-(require 'helm-projectile)
-(helm-projectile-on)
 ;; Helm Projectile Mode End ----------------------------------------
                         
 ;; dsvn
