@@ -99,10 +99,10 @@
 ;;add auto-completed
 ;; lua-mode设置 End-------------------------------------
 
-;; js2-mode
+;; js2-mode ac-js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json\\'" . js2-mode))
-;;(add-hook 'js2-mode-hook 'ac-js2-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
 
 ;; smartparens mode Start-----------------------------------
 (require 'smartparens-config)
