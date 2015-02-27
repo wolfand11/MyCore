@@ -17,6 +17,7 @@
 (add-to-list 'load-path emacs_config_path)
 
 ;; 加载Emacs配置
+(message "=== BEGINE Loading Config ===")
 (message "=BEGINE= commoon_config.el")
 (load (AppendToEmacsConfigPath "common_config.el"))
 
@@ -27,4 +28,5 @@
 	(message "=BEGINE= .emacs.local")
 	(load emacs-local-config))))
 
+(message "=== END Loading Config ===")
 (put 'upcase-region 'disabled nil)
