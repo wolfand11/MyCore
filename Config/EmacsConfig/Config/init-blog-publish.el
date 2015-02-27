@@ -1,7 +1,10 @@
 ;;------------------- blog editor init
 
+(if (version< emacs-version "24.4")
+    (progn (message "Warnning: emacs version less than 24.4"))
+  (progn (require 'ox-publish) ))
+
 ;;[1] Org Mode设置 Begin ---------------------------------------------------------
-(require 'ox-publish)
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (setq org-publish-use-timestamps-flag nil)
 ;; 定义快捷插入操作

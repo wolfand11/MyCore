@@ -1,6 +1,8 @@
 ;; .emacs config
 ;; check os type and load config
 (message (concat "==== OS-TYPE IS " (symbol-name system-type) " ===="))
+(message (concat "==== Emacs Version is " emacs-version " ===="))
+
 (message "---- load dot_emacs begin ----")
 
 (let ((main-config-path (concat (cond

@@ -10,7 +10,7 @@
 (setq tabbar-use-images nil)
 ;;设置默认主题: 字体, 背景和前景颜色，大小
 (set-face-attribute 'tabbar-default nil
-                    :family "微软雅黑"
+                    :family "Microsoft YaHei"
                     :background "#002B36"
                     :foreground "#879A00"                    
                     :height 1.0
