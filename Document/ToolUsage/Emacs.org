@@ -26,6 +26,8 @@ Revert改变	ctrl+x v u 执行vc-revert
 ** org-mode
 #+BEGIN_EXAMPLE
 输入Tab：ctrl+q Tab
+插入图片：[[./image-path.png]]
+显示插入的图片：M-x org-toggle-inline-images (C-c C-x C-v)
 #+END_EXAMPLE
 
 ** helm
