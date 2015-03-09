@@ -7,6 +7,7 @@
 ;;[1] Org Mode设置 Begin ---------------------------------------------------------
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (setq org-publish-use-timestamps-flag nil)
+(auto-image-file-mode t)
 ;; 定义快捷插入操作
 (define-skeleton iexp
   "Input #+BEGIN_EXAMPLE #+END_EXAMPLE in org-mode"
