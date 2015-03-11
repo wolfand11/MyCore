@@ -43,6 +43,11 @@
 (add-hook 'js2-mode-hook  'hs-minor-mode)
 ;; hideshow-mode End   ----------------------------
 
+;; Semantic
+(global-semanticdb-minor-mode 1)
+(global-semantic-idle-scheduler-mode 1)
+(semantic-mode 1)
+
 ;; speedbar
 (require 'semantic/sb)
 
