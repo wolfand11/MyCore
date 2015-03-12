@@ -44,12 +44,10 @@
 ;; hideshow-mode End   ----------------------------
 
 ;; Semantic
+(require 'semantic/sb)
 (global-semanticdb-minor-mode 1)
 (global-semantic-idle-scheduler-mode 1)
 (semantic-mode 1)
-
-;; speedbar
-(require 'semantic/sb)
 
 ;; eshell config Begin ----------------------------
 (add-hook 'eshell-mode-hook
