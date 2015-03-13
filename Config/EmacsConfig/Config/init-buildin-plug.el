@@ -33,14 +33,7 @@
 
 ;; hideshow-mode Begin ----------------------------
 (load-library "hideshow")
-(add-hook 'c-mode-hook      'hs-minor-mode)
-(add-hook 'c++-mode-hook    'hs-minor-mode)
-(add-hook 'go-mode-hook     'hs-minor-mode)
-(add-hook 'python-mode-hook 'hs-minor-mode)
-(add-hook 'javascript-mode-hook 'hs-minor-mode)
-(add-hook 'json-mode-hook 'hs-minor-mode)
-(add-hook 'java-mode-hook 'hs-minor-mode)
-(add-hook 'js2-mode-hook  'hs-minor-mode)
+(add-hook 'prog-mode 'hs-minor-mode)
 ;; hideshow-mode End   ----------------------------
 
 ;; Semantic
