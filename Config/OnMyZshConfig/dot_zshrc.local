@@ -1,3 +1,11 @@
 # local config
+# tips:
+# 1 error: alias cd-x=  "~/path-x"
+#   right: alias cd-x="~/path-x"
+# 2 error: alias cd-y="~/root/path y"
+#   right: alias cd-y="~/root/path\ y"
+#
+#
+
 alias xemacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
 alias cd-toolkit='    cd ~/Documents/MyToolkit'
