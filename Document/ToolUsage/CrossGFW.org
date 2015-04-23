@@ -1,0 +1,28 @@
+* Cross GFW
+
+** Tools
+
+*** OpenVPV工具
+**** ios
+EasyOvpn 能够获取到免费OpenVPN配置
+OpenVPN  可以利用OpenVPN配置翻墙
+
+**** mac
+Tunnelblick 能够利用OpenVPN配置翻墙
+
+*** VPN工具
+ios:
+ArkVPN ios上免费的VPN工具
+
+*** GoAgent
+
+*** Shadowsocks
+ios:
+Shadowsocks 利用Shadowsocks上网的浏览器
+
+
+** Free VPN WEB
+http://www.flyvpn.com/cn/
+http://www.vpngate.net/cn/
+http://www.vpnbook.com/freevpn
+http://freevpn.me/accounts
