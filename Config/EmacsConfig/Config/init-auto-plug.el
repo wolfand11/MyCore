@@ -182,6 +182,9 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
+;; visual-regexp
+(require 'visual-regexp)
+
 ;; ergoemacs
 (setq ergoemacs-use-mac-command-as-meta nil)
 (setq ergoemacs-theme nil)		
@@ -191,12 +194,23 @@
 (require 'ergoemacs-mode)
 (ergoemacs-mode 1)
 (ergoemacs-ignore-prev-global)
-
+                
 ;; ;; e2wm
 ;; ;;(require 'e2wm)
 ;; ;;(global-set-key (kbd "M-+") 'e2wm:start-management)
 
 ;; ;; package utils
 ;; (require 'package-utils)
+
+;; ace-isearch-mode
+(require 'ace-isearch)
+(ace-isearch-mode +1)
+(global-ace-isearch-mode +1)
+
+(custom-set-variables
+ '(ace-isearch-input-length 7)
+ '(ace-isearch-jump-delay 0.25)
+ '(ace-isearch-function 'avy-goto-char)
+ '(ace-isearch-use-jump 'printing-char))
 
 (provide 'init-auto-plug)
