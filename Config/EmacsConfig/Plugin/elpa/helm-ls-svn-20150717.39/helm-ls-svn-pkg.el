@@ -1,0 +1,1 @@
+(define-package "helm-ls-svn" "20150717.39" "helm extension to list svn files" '((emacs "24.1") (helm "1.7.0") (cl-lib "0.5")) :url "https://svn.macports.org/repository/macports/users/chunyang/helm-ls-svn.el/helm-ls-svn.el" :keywords '("helm" "svn"))

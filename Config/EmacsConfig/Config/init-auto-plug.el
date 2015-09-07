@@ -161,6 +161,10 @@
       helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
       helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
       helm-ff-file-name-history-use-recentf t)
+;; helm-ls-svn-ls
+(require 'helm-ls-svn)
+;; helm-ls-git-ls
+(require 'helm-ls-git)
 ;; helm-projectile
 (require 'helm-projectile)
 (helm-projectile-on)
