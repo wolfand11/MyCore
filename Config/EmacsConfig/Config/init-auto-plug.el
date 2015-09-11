@@ -207,15 +207,8 @@
 ;; ;; package utils
 ;; (require 'package-utils)
 
-;; guide-key
-(require 'guide-key)
-;;(setq guide-key/guide-key-sequence '("C-c h" "C-c p"))
-(setq guide-key/guide-key-sequence t)
-(guide-key-mode 1)  ; Enable guide-key-mode
-
-;; xah-fly-key
-(require 'xah-fly-keys)
-;;(xah-fly-keys 1)
+;; custom keybinding
+(global-set-key (kbd "M-<f11>") 'toggle-frame-fullscreen)
 
 ;; ergoemacs
 (setq ergoemacs-use-mac-command-as-meta nil)

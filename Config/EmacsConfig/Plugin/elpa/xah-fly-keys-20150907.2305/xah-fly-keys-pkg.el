@@ -1,1 +1,0 @@
-(define-package "xah-fly-keys" "20150907.2305" "A efficient modal keybinding set minor mode based on ergonomics." 'nil :url "http://ergoemacs.org/misc/ergoemacs_vi_mode.html" :keywords '("convenience" "emulations" "vim" "ergoemacs"))
