@@ -52,3 +52,7 @@ prefix + M-y		显示kill ring列表
 #+BEGIN_EXAMPLE
 C-. Quit
 #+END_EXAMPLE
+** projectile
+#+BEGIN_EXAMPLE
+
+#+END_EXAMPLE
