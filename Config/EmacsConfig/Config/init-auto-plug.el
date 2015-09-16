@@ -196,6 +196,10 @@
  '(ace-isearch-function 'avy-goto-char)
  '(ace-isearch-use-jump 'printing-char))
 
+;; highlight-thing
+(require 'highlight-thing)
+(global-highlight-thing-mode)
+
 ;; ;; e2wm
 ;; ;;(require 'e2wm)
 ;; ;;(global-set-key (kbd "M-+") 'e2wm:start-management)
