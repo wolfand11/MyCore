@@ -198,7 +198,8 @@
 
 ;; highlight-thing
 (require 'highlight-thing)
-(global-highlight-thing-mode)
+;; (global-highlight-thing-mode)
+(add-hook 'prog-mode-hook 'highlight-thing-mode)
 
 ;; ;; e2wm
 ;; ;;(require 'e2wm)
