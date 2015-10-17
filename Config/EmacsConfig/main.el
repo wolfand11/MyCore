@@ -5,8 +5,7 @@
 ;; 设置默认编码,用于保存文件
 (setq default-buffer-file-coding-system 'utf-8)
 ;; 设置是否使用Spacemacs
-;; (setq is-using-spacemacs t)
-(setq is-using-spacemacs nil)
+(setq is-using-spacemacs t)
 
 ;; 设置EmacsConfig目录----------------------------------------
 (defun AppendToEmacsConfigPath (subpath)

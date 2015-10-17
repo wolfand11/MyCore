@@ -6,7 +6,7 @@
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
                     charset
-                    (font-spec :family "Microsoft YaHei" :size 18)))
+                    (font-spec :family "Microsoft YaHei" :size 16)))
 ;; 显示设置 End ------------------------------------------
 
 ;; Emacs细节配置 Begin -----------------------------------
