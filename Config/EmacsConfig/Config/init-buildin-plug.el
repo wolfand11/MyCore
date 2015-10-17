@@ -2,9 +2,6 @@
 ;; 加载 package
 (require 'package)
 
-;; 设置插件安装路径
-(setq package-user-dir  (AppendToEmacsConfigPath "Plugin/elpa"))
-
 ;; 添加插件源
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
                            ("gnu" . "http://elpa.gnu.org/packages/")

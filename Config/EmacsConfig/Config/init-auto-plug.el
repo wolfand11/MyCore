@@ -5,33 +5,33 @@
 ;; solarized-theme End   ------------------------------------
 
 ;; 设置Tabbar Begin ------------------------------------
-(require 'tabbar)
-(tabbar-mode t)
-(setq tabbar-use-images nil)
-;;设置默认主题: 字体, 背景和前景颜色，大小
-(set-face-attribute 'tabbar-default nil
-                    :family "Microsoft YaHei"
-                    :background "#002B36"
-                    :foreground "#879A00"                    
-                    :height 1.0
-                    )
-;; 设置左边按钮外观：外框框边大小和颜色
-(set-face-attribute 'tabbar-button nil
-                    :inherit 'tabbar-default
-                    :box '(:line-width 1 :color "#879A00")
-                    )
-;; 设置当前tab外观：颜色，字体，外框大小和颜色
-(set-face-attribute 'tabbar-selected nil
-                    :inherit 'tabbar-default
-                    :foreground "yellow"
-                    :box '(:line-width 2 :color "yellow")
-                    :weight 'bold
-                    )
-;; 设置非当前tab外观：外框大小和颜色
-(set-face-attribute 'tabbar-unselected nil
-                    :inherit 'tabbar-default
-                    :box '(:line-width 1 :color "#879A00")
-                    )
+;; (require 'tabbar)
+;; (tabbar-mode t)
+;; (setq tabbar-use-images nil)
+;; ;;设置默认主题: 字体, 背景和前景颜色，大小
+;; (set-face-attribute 'tabbar-default nil
+;;                     :family "Microsoft YaHei"
+;;                     :background "#002B36"
+;;                     :foreground "#879A00"                    
+;;                     :height 1.0
+;;                     )
+;; ;; 设置左边按钮外观：外框框边大小和颜色
+;; (set-face-attribute 'tabbar-button nil
+;;                     :inherit 'tabbar-default
+;;                     :box '(:line-width 1 :color "#879A00")
+;;                     )
+;; ;; 设置当前tab外观：颜色，字体，外框大小和颜色
+;; (set-face-attribute 'tabbar-selected nil
+;;                     :inherit 'tabbar-default
+;;                     :foreground "yellow"
+;;                     :box '(:line-width 2 :color "yellow")
+;;                     :weight 'bold
+;;                     )
+;; ;; 设置非当前tab外观：外框大小和颜色
+;; (set-face-attribute 'tabbar-unselected nil
+;;                     :inherit 'tabbar-default
+;;                     :box '(:line-width 1 :color "#879A00")
+;;                     )
 ;; 设置Tabbar End --------------------------------------
 
 ;; 设置sr-speedbar Begin -------------------------------

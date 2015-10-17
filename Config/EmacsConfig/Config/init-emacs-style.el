@@ -1,7 +1,7 @@
 ;; 显示设置 Begin ----------------------------------------
 ;; 设置英文字体
 (set-face-attribute
- 'default nil :font "Consolas 18")
+ 'default nil :font "Source Code Pro 18")
 ;; 设置中文字体
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)

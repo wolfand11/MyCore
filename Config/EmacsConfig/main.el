@@ -4,6 +4,9 @@
 (prefer-coding-system 'utf-8)
 ;; 设置默认编码,用于保存文件
 (setq default-buffer-file-coding-system 'utf-8)
+;; 设置是否使用Spacemacs
+;; (setq is-using-spacemacs t)
+(setq is-using-spacemacs nil)
 
 ;; 设置EmacsConfig目录----------------------------------------
 (defun AppendToEmacsConfigPath (subpath)
@@ -14,7 +17,15 @@
     (concat emacs_resource_path subpath))
 (setq emacs_config_path "~/Documents/MyCore/Config/EmacsConfig/")
 (setq emacs_resource_path (AppendToEmacsConfigPath "Resource/"))
+
+;; 加载基本目录
 (add-to-list 'load-path emacs_config_path)
+(add-to-list 'load-path (AppendToEmacsConfigPath "Config/"))
+(if is-using-spacemacs
+    (progn (setq package-user-dir  (AppendToEmacsConfigPath "Plugin/Spacemacs/elpa"))
+           (add-to-list 'load-path (AppendToEmacsConfigPath "Plugin/Spacemacs/")))
+  (progn (setq package-user-dir  (AppendToEmacsConfigPath "Plugin/Normal/elpa"))
+         (add-to-list 'load-path (AppendToEmacsConfigPath "Plugin/Normal/"))))
 
 ;; 加载Emacs配置
 (message "=== BEGINE Loading Config ===")
