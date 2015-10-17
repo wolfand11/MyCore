@@ -6,6 +6,7 @@
 (setq default-buffer-file-coding-system 'utf-8)
 ;; 设置是否使用Spacemacs
 (setq is-using-spacemacs t)
+;;(setq is-using-spacemacs nil)
 
 ;; 设置EmacsConfig目录----------------------------------------
 (defun AppendToEmacsConfigPath (subpath)
@@ -23,7 +24,8 @@
 (if is-using-spacemacs
     (progn (setq package-user-dir  (AppendToEmacsConfigPath "Plugin/Spacemacs/elpa"))
            (add-to-list 'load-path (AppendToEmacsConfigPath "Plugin/Spacemacs/")))
-  (progn (setq package-user-dir  (AppendToEmacsConfigPath "Plugin/Normal/elpa"))
+  (progn (setq user-emacs-directory "~/.my.emacs.d")
+         (setq package-user-dir  (AppendToEmacsConfigPath "Plugin/Normal/elpa"))
          (add-to-list 'load-path (AppendToEmacsConfigPath "Plugin/Normal/"))))
 
 ;; 加载Emacs配置
