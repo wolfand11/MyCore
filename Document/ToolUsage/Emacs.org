@@ -6,7 +6,7 @@
 
 ** package
 #+BEGIN_EXAMPLE
-安装插件： 
+安装插件：
 运行命令 M-x package-list-packages，会列出所有可下载的插件。选择插件，会有 Install 提示。
 
 卸载插件：
@@ -60,9 +60,9 @@ C-. Quit
 *** normal usage
 #+BEGIN_EXAMPLE
 1 selected
-	SPC-v 可用来选中一个单词、一句话、一段话
-	v $   选中当前字符到当前行尾的字符	
-  v 0   选中当前字符到当前行首的字符	
+  SPC-v 可用来选中一个单词、一句话、一段话
+    v $   选中当前字符到当前行尾的字符
+    v 0   选中当前字符到当前行首的字符
   Ctrl-v 开启列选中
 2 editing
   c 修改
@@ -71,9 +71,10 @@ C-. Quit
   D 删除到行末尾
   y 复制
   Y 复制到行末尾
-	p 粘贴到当前光标位置之后
+  p 粘贴到当前光标位置之后
   P 粘贴到当前光标位置之前
-  
+  SPC-x-d-w 删除空格
+
   在 insert 模式下：
     Ctrl-y 复制上一行相同位置的字符
     Ctrl-e 复制下一行相同位置的字符
@@ -94,7 +95,7 @@ C-. Quit
     z ENTER 保持光标位于滚动屏幕顶部
     z -     保持光标位于滚动屏幕底部
     z .     保持光标位于滚动屏幕中部
-    
+
     SPC t - 保持光标位于屏幕中间
 #+END_EXAMPLE
 *** org-mode

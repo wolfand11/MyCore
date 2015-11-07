@@ -165,6 +165,7 @@ before layers configuration."
 layers configuration."
   (setq powerline-default-separator 'bar)
   (spacemacs//set-monospaced-font   "Source Code Pro" "Microsoft YaHei" 18 16)
+  (setq dotspacemacs-enable-paste-micro-state t)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
