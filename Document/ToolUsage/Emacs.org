@@ -7,7 +7,7 @@
 ** package
 #+BEGIN_EXAMPLE
 安装插件： 
-运行命令 M-x package-list-packages，会列出所有可下载的插件。选择插件，会有Install提示。
+运行命令 M-x package-list-packages，会列出所有可下载的插件。选择插件，会有 Install 提示。
 
 卸载插件：
 M-x package-list-packages
@@ -19,13 +19,13 @@ execute by typing x
 
 ** vc-mode
 #+BEGIN_EXAMPLE
-运行命令     	ctrl+x v d，会进入vc-dired buffer
-Revert改变	ctrl+x v u 执行vc-revert
+运行命令     	ctrl+x v d，会进入 vc-dired buffer
+Revert 改变	ctrl+x v u 执行 vc-revert
 #+END_EXAMPLE
 
 ** org-mode
 #+BEGIN_EXAMPLE
-输入Tab：ctrl+q Tab
+输入 Tab：ctrl+q Tab
 插入图片：[[./image-path.png]]
 显示插入的图片：M-x org-toggle-inline-images (C-c C-x C-v)
 #+END_EXAMPLE
@@ -37,15 +37,15 @@ C-n 选中下一个
 C-p 选中前一个
 C-v 选中下个分页的第一个
 M-v 选中上个分页的第一个
-M-a 选中当前列表中的所有buffer
+M-a 选中当前列表中的所有 buffer
 
 2 杂项
-C-t 切换 helm buffer位置
-M-D 关闭所有选中的buffer
+C-t 切换 helm buffer 位置
+M-D 关闭所有选中的 buffer
 
 3 功能快捷键
-prefix + C-c SPC	显示mark列表
-prefix + M-y		显示kill ring列表
+prefix + C-c SPC	显示 mark 列表
+prefix + M-y		显示 kill ring 列表
 #+END_EXAMPLE
 
 ** ergoemacs
@@ -56,3 +56,45 @@ C-. Quit
 #+BEGIN_EXAMPLE
 
 #+END_EXAMPLE
+** spacemacs
+*** normal usage
+#+BEGIN_EXAMPLE
+1 selected
+	SPC-v 可用来选中一个单词、一句话、一段话
+	v $   选中当前字符到当前行尾的字符	
+  v 0   选中当前字符到当前行首的字符	
+  Ctrl-v 开启列选中
+2 editing
+  c 修改
+  C 修改到行末尾
+  d 删除
+  D 删除到行末尾
+  y 复制
+  Y 复制到行末尾
+	p 粘贴到当前光标位置之后
+  P 粘贴到当前光标位置之前
+  
+  在 insert 模式下：
+    Ctrl-y 复制上一行相同位置的字符
+    Ctrl-e 复制下一行相同位置的字符
+    Ctrl-t 增加缩进
+    Ctrl-d 减少缩进
+    Ctrl-o 下一个 normal 模式的命令结束后回到 insert 模式
+    Ctrl-f 先前移动光标
+    Ctrl-b 先后移动光标
+3 move cursor
+    h j k l 左下上右移动光标
+    Ctrl-b  向上翻一屏
+    Ctrl-f  向下翻一屏
+    Ctrl-u  向上翻半屏
+    Ctrl-d  向下翻半屏
+    H M L   将光标移动到屏幕 高 中 底部
+    ``      回到光标的上一个位置
+4 move screen
+    z ENTER 保持光标位于滚动屏幕顶部
+    z -     保持光标位于滚动屏幕底部
+    z .     保持光标位于滚动屏幕中部
+    
+    SPC t - 保持光标位于屏幕中间
+#+END_EXAMPLE
+*** org-mode
