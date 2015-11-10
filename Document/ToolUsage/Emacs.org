@@ -97,5 +97,11 @@ C-. Quit
     z .     保持光标位于滚动屏幕中部
 
     SPC t - 保持光标位于屏幕中间
+5 search find
+	在 normal 模式下
+		* 						搜索当前光标处的单词
+		/ 						开启搜索，输入需要搜索的文字
+		SPC-s-l				列出文件中的所有变量和函数
+		SPC-s-s				开启 helm-swoop 搜索
 #+END_EXAMPLE
 *** org-mode
