@@ -21,7 +21,6 @@
      ;; better-defaults
      chinese
      cscope
-     emacs-lisp
      git
      markdown
      org
@@ -31,6 +30,10 @@
             shell-default-position 'bottom)
      ;; syntax-checking
      version-control
+     ;; -- From here is language support -- 
+     emacs-lisp
+     javascript
+     python
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -53,7 +56,7 @@ before layers configuration."
   (setq-default
    ;; Either `vim' or `emacs'. Evil is always enabled but if the variable
    ;; is `emacs' then the `holy-mode' is enabled at startup.
-   dotspacemacs-editing-style 'holy-mode
+   dotspacemacs-editing-style 'hybrid-mode
    ;; If non nil output loading progress in `*Messages*' buffer.
    dotspacemacs-verbose-loading nil
    ;; Specify the startup banner. Default value is `official', it displays
