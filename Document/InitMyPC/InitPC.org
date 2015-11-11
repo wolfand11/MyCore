@@ -2,12 +2,12 @@
 
 ** 目录结构
 #+BEGIN_EXAMPLE
-0级目录
+0 级目录
 --0--guodong
 
-1级目录
+1 级目录
 --1--.emacs.d
---1--.oh-my-zsh (window系统无该目录)
+--1--.oh-my-zsh (window 系统无该目录)
 --1--Applications
 --1--Desktop
 --1--Documents
@@ -16,14 +16,16 @@
 --1--Music
 --1--Pictures        
 
-2级目录
+2 级目录
 Documents
 --2--MyCloud
 --2--MyResource
 --2--MyProject
 --2--MyCore
+--2--MyToolkit (this is a microsoft CodePlex svn project)
+--2--MyGTD (this is a bitbucket git project)
 
-3级目录
+3 级目录
 Documents--MyCloud
 --3--360Cloud
 --3--百度云同步盘
@@ -36,14 +38,14 @@ Documents--MyProject
 Documents--MyCore
 --3--Config
 --3--Resource
+--3--Document
 
-4级目录
+4 级目录
 Documents--MyProject--Public
---4--Life (wolfand11.github.com Document)
+--4--Life (github-wolfand11.github.com)
 --4--cocos2d (cocos2d-x_develop CocosBuilder_develop)
 --4--OpenSourceGame
 Documents--MyCloud--360Cloud
 --4--MyTestProject
---4--MyToolkit
 --4--MyResource
 #+END_EXAMPLE
