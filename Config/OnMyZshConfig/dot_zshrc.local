@@ -9,3 +9,4 @@
 
 alias xemacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
 alias cd-toolkit='    cd ~/Documents/MyToolkit'
+alias cd-gtd='        cd ~/Documents/MyGTD'
