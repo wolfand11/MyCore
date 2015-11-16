@@ -5,7 +5,7 @@
 #+END_EXAMPLE
 
 ** package
-#+BEGIN_EXAMPLE
+#+begin_EXAMPLE
 安装插件：
 运行命令 M-x package-list-packages，会列出所有可下载的插件。选择插件，会有 Install 提示。
 
@@ -15,7 +15,18 @@ C-s need-remove-package
 mark the package for deletion by typing D
 execute by typing x
 
-#+END_EXAMPLE
+插件加载：
+	1 直接加载 需要写文件的完整路径
+		(load-file "elisp-file-path")
+	2 require 方式加载 不需要对每个需要加载的 plug 都指定完整的路径
+  	(provide 'my-plug)
+  	(require 'my-plug)
+    (add-to-list 'load-path "my-plug-dir")
+	3 autoload 方式加载 指定调用某个函数时先加载对应的文件。只用调用该函数的时候才真正加载该函数。否则指定定义一个空的该函数。
+		eval-after-load 用于加载完某个插件后的初始化
+  	(autoload 'some-function "function-file-path")
+    (eval-after-load 'my-plug '(progn ...))
+#+end_EXAMPLE
 
 ** vc-mode
 #+BEGIN_EXAMPLE
@@ -91,6 +102,8 @@ C-. Quit
     Ctrl-d  向下翻半屏
     H M L   将光标移动到屏幕 高 中 底部
     ``      回到光标的上一个位置
+    123G / 123gg / :123 
+    				移动到 123 行 
 4 move screen
     z ENTER 保持光标位于滚动屏幕顶部
     z -     保持光标位于滚动屏幕底部

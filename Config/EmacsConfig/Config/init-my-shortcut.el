@@ -17,9 +17,9 @@
 	  (eshell/alias "cd-config"  "cd ~/Documents/MyCore/Config")
 	  (eshell/alias "cd-doc"     "cd ~/Documents/MyCore/Document")
 	  (eshell/alias "cd-toolkit" "cd ~/Documents/MyToolkit")	  
+	  (eshell/alias "cd-gtd"     "cd ~/Documents/MyGTD")
 	  (eshell/alias "cd-project" "cd ~/Documents/MyProject")
 	  (eshell/alias "cd-blog"    "cd ~/Documents/MyProject/Public/LifeProject/wolfand11.github.com/_my_blogs")
-	  (eshell/alias "goagent"    "python ~/Documents/MyToolkit/GoAgent/MyGoAgent.py $*")
 	  ))
 
 (provide 'init-my-shortcut)

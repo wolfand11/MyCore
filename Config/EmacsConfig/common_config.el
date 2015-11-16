@@ -18,10 +18,10 @@
     ;; init-coding-setting
     (load "init-coding-setting")
     ))
-; init-utility-function
+;; init-plug-org
+;; (load "init-plug-org")
+;; ; init-utility-function
 (load "init-utility-function")
-;; init-blog-publish
-(load "init-blog-publish")
 ;; init-my-toolkit
 (load "init-my-shortcut")
 

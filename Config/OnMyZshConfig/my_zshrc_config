@@ -37,6 +37,7 @@ alias cd-core='       cd ~/Documents/MyCore'
 alias cd-config='     cd ~/Documents/MyCore/Config'
 alias cd-doc='        cd ~/Documents/MyCore/Document'
 alias cd-toolkit='    cd ~/Documents/MyToolkit'
+alias cd-gtd='        cd ~/Documents/MyGTD'
 
 # misc shortcut
 alias re='research'
