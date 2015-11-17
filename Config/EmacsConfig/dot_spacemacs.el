@@ -7,7 +7,7 @@
   (setq-default
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layer-path '(emacs_layers_path)
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -30,6 +30,7 @@
             shell-default-position 'bottom)
      ;; syntax-checking
      version-control
+     wolfand11
      ;; -- From here is language support -- 
      emacs-lisp
      javascript

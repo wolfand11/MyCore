@@ -5,7 +5,8 @@
 ;; init-environment variable
 (load "init-environment-variable.el")
 (if is-using-spacemacs
-    (load (concat user-emacs-directory "init.el"))
+    (progn
+      (load (concat user-emacs-directory "init.el")))
   (progn
     ;; init-buildin-plug
     (load "init-buildin-plug.el")
@@ -17,9 +18,9 @@
     (load "init-emacs-style")
     ;; init-coding-setting
     (load "init-coding-setting")
+    ;; init-plug-org
+    (load "init-plug-org")
     ))
-;; init-plug-org
-;; (load "init-plug-org")
 ;; ; init-utility-function
 (load "init-utility-function")
 ;; init-my-toolkit
