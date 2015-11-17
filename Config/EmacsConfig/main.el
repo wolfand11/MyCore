@@ -17,7 +17,6 @@
     (concat emacs_resource_path subpath))
 (setq emacs_config_path "~/Documents/MyCore/Config/EmacsConfig/")
 (setq emacs_resource_path (AppendToEmacsConfigPath "Resource/"))
-(setq emacs_layers_path (AppendToEmacsConfigPath "Plugin/Spacemacs/my-layers/"))
 
 ;; 加载基本目录
 (add-to-list 'load-path emacs_config_path)

@@ -48,32 +48,32 @@
         ))
     (ad-activate 'find-file-in-project)))
 
-(defun guanghui/post-init-org ()
+(defun wolfand11/post-init-org ()
   ;; define the refile targets
-  (setq org-agenda-files (quote ("~/MyGTD" )))
-  (setq org-default-notes-file "~/MyGTD/gtd.org")
+  (setq org-agenda-files (quote ("~/Documents/MyGTD" )))
+  (setq org-default-notes-file "~/Documents/MyGTD/gtd.org")
 
   ;; the %i would copy the selected text into the template
   ;;http://www.howardism.org/Technical/Emacs/journaling-org.html
   ;;add multi-file journal
   (setq org-capture-templates
-        '(("t" "Todo" entry (file+headline "~/MyGTD/gtd.org" "Daily Tasks")
+        '(("t" "Todo" entry (file+headline "~/Documents/MyGTD/gtd.org" "Daily Tasks")
            "* TODO %?\n  %i\n"
            :empty-lines 1)
-          ("n" "notes" entry (file+headline "~/MyGTD/notes.org" "Quick notes")
+          ("n" "notes" entry (file+headline "~/Documents/MyGTD/notes.org" "Quick notes")
            "* TODO [#C] %?\n  %i\n %U"
            :empty-lines 1)
-          ("b" "Blog Ideas" entry (file+headline "~/MyGTD/notes.org" "Blog Ideas")
+          ("b" "Blog Ideas" entry (file+headline "~/Documents/MyGTD/notes.org" "Blog Ideas")
            "* TODO %?\n  %i\n %U"
            :empty-lines 1)
-          ("w" "work" entry (file+headline "~/MyGTD/gtd.org" "Work")
+          ("w" "work" entry (file+headline "~/Documents/MyGTD/gtd.org" "Work")
            "* TODO %?\n  %i\n %U"
            :empty-lines 1)
-          ("l" "links" entry (file+headline "~/MyGTD/notes.org" "Quick notes")
+          ("l" "links" entry (file+headline "~/Documents/MyGTD/notes.org" "Quick notes")
            "* TODO %?\n  %i\n %a \n %U"
            :empty-lines 1)
           ("j" "Journal Entry"
-           entry (file+datetree "~/MyGTD/journal.org")
+           entry (file+datetree "~/Documents/MyGTD/journal.org")
            "* %?"
            :empty-lines 1)))
 
@@ -141,6 +141,4 @@
       (unless noinsert
         (insert output-string))
       output-string))
-
-  (setq org-mobile-directory "~/MyGTD/org")
   )
