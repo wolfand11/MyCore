@@ -20,7 +20,7 @@
 
 (defun wolfand11/post-init-find-file-in-project ()
   (progn
-    
+
     ;; If you use other VCS (subversion, for example), enable the following option
     ;;(setq ffip-project-file ".svn")
     ;; in MacOS X, the search file command is CMD+p
@@ -98,7 +98,7 @@
     "switch entry to done when all subentries are done, to todo otherwise."
     (let (org-log-done org-log-states)  ; turn off logging
       (org-todo (if (= n-not-done 0) "done" "todo"))))
-  
+
   (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
   ;; used by org-clock-sum-today-by-tags
   (defun filter-by-tags ()
@@ -141,4 +141,8 @@
       (unless noinsert
         (insert output-string))
       output-string))
+
+  (evil-leader/set-key
+    "oaoa" 'org-agenda
+    "oaoc" 'org-capture)
   )

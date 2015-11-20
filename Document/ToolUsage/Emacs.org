@@ -1,7 +1,11 @@
 * Emacs Usage
 ** normal usage
 #+BEGIN_EXAMPLE
-1 goto-line  M-g g
+goto-line  M-g g
+emacs -q   不加载配置文件启动 emacs
+Esc x  		 在命令行模式下调用 M-x (可以设置 Terminal alt 键转化为 Esc 键
+M->				 到达文件末尾位置
+M-<        到达文件起始位置
 #+END_EXAMPLE
 
 ** package
@@ -122,5 +126,8 @@ C-. Quit
 		/ 						开启搜索，输入需要搜索的文字
 		SPC-s-l				列出文件中的所有变量和函数
 		SPC-s-s				开启 helm-swoop 搜索
+6 folder
+	在 normal 模式下
+  	z a 					折叠或打开当前所在区域
 #+END_EXAMPLE
 *** org-mode
