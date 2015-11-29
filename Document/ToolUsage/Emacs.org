@@ -73,14 +73,13 @@ C-. Quit
 #+END_EXAMPLE
 ** spacemacs
 *** normal usage
-#+BEGIN_EXAMPLE
-1 selected
+**** 1 selected
   SPC-v 可用来选中一个单词、一句话、一段话
     v $   选中当前字符到当前行尾的字符
     v 0   选中当前字符到当前行首的字符
   Ctrl-v 开启列选中
-2 editing
-  在 normal 模式下：
+**** 2 editing
+***** 在 normal 模式下：
     c 修改
     C 修改到行末尾
     d 删除
@@ -93,8 +92,8 @@ C-. Quit
     < 减少缩进
     > 增加缩进
     SPC ;  注释或取消注释
-
-  在 insert 模式下：
+    gu/gU  大小写转换
+***** 在 insert 模式下：
     Ctrl-y 复制上一行相同位置的字符
     Ctrl-e 复制下一行相同位置的字符
     Ctrl-t 增加缩进
@@ -104,8 +103,10 @@ C-. Quit
     Ctrl-b 先后移动光标
     Alt-f  先前移动光标到下一个单词
     Alt-b	 先后移动光标到下一个单词
-3 move cursor
+**** 3 move cursor
     h j k l 左下上右移动光标
+    0       移动到行首
+    $				移动到行尾
     Ctrl-b  向上翻一屏
     Ctrl-f  向下翻一屏
     Ctrl-u  向上翻半屏
@@ -114,20 +115,23 @@ C-. Quit
     ``      回到光标的上一个位置
     123G / 123gg / :123 
     				移动到 123 行 
-4 move screen
+**** 4 move screen
     z ENTER 保持光标位于滚动屏幕顶部
     z -     保持光标位于滚动屏幕底部
     z .     保持光标位于滚动屏幕中部
 
     SPC t - 保持光标位于屏幕中间
-5 search find
-	在 normal 模式下
+**** 5 search find
+***** 在 normal 模式下
 		* 						搜索当前光标处的单词
 		/ 						开启搜索，输入需要搜索的文字
 		SPC-s-l				列出文件中的所有变量和函数
 		SPC-s-s				开启 helm-swoop 搜索
-6 folder
-	在 normal 模式下
+**** 6 folder
+***** 在 normal 模式下
   	z a 					折叠或打开当前所在区域
-#+END_EXAMPLE
 *** org-mode
+*** TIPS
+#+BEGIN_EXAMPLE
+1 使用 python layer 需要安装 pip
+#+END_EXAMPLE

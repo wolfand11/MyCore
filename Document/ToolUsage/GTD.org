@@ -1,7 +1,0 @@
-#+TITLE: Organize life with org-mode
-#+AUTHOR: wolfand11
-
-如何利用使用 org-mode 组织生活？
-目前遇到的需求有：
-+ 收集需要做的事情
-+ 
