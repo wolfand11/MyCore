@@ -10,23 +10,27 @@
 
 ;; 设置EmacsConfig目录----------------------------------------
 (defun AppendToEmacsConfigPath (subpath)
-    "concat emacs_config_path with subpath"
-    (concat emacs_config_path subpath))
+  "concat emacs_config_path with subpath"
+  (concat emacs_config_path subpath))
 (defun AppendToEmacsResourcePath (subpath)
-    "concat emacs_config_path with subpath"
-    (concat emacs_resource_path subpath))
+  "concat emacs_config_path with subpath"
+  (concat emacs_resource_path subpath))
 (setq emacs_config_path "~/Documents/MyCore/Config/EmacsConfig/")
 (setq emacs_resource_path (AppendToEmacsConfigPath "Resource/"))
 
 ;; 加载基本目录
 (add-to-list 'load-path emacs_config_path)
-(add-to-list 'load-path (AppendToEmacsConfigPath "Config/"))
+(add-to-list 'load-path
+             (AppendToEmacsConfigPath "Config/"))
 (if is-using-spacemacs
-    (progn (setq package-user-dir  (AppendToEmacsConfigPath "Plugin/Spacemacs/elpa"))
-           (add-to-list 'load-path (AppendToEmacsConfigPath "Plugin/Spacemacs/")))
-  (progn (setq user-emacs-directory "~/.my.emacs.d")
-         (setq package-user-dir  (AppendToEmacsConfigPath "Plugin/Normal/elpa"))
-         (add-to-list 'load-path (AppendToEmacsConfigPath "Plugin/Normal/"))))
+    (progn
+      (add-to-list 'load-path
+                   (AppendToEmacsConfigPath "Plugin/Spacemacs/")))
+  (progn
+    (setq user-emacs-directory "~/.my.emacs.d")
+    (setq package-user-dir (AppendToEmacsConfigPath "Plugin/Normal/elpa"))
+    (add-to-list 'load-path
+                 (AppendToEmacsConfigPath "Plugin/Normal/"))))
 
 ;; 加载Emacs配置
 (message "=== BEGINE Loading Config ===")
@@ -37,8 +41,8 @@
 (let ((emacs-local-config "~/.emacs.local"))
   (if (file-exists-p emacs-local-config)
       (progn
-	(message "=BEGINE= .emacs.local")
-	(load emacs-local-config))))
+        (message "=BEGINE= .emacs.local")
+        (load emacs-local-config))))
 
 (message "=== END Loading Config ===")
 (put 'upcase-region 'disabled nil)
