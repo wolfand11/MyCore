@@ -41,29 +41,41 @@ def InitOhMyZsh():
     shutil.copy(src_dot_zsh,des_dot_zsh)
     shutil.copy(src_dot_zsh_local,des_dot_zsh_local)
 
+def RunOptByArg(arg_str):
+    pass
+
 def ShowHelper():
     cmd_prefix = " python ./core_mgr.py "
     print("usage :")
     print(cmd_prefix+"-i                     #init core")
-    print(cmd_prefix+"-i no-spacemacs-elpa   #init core except spacemacs-elpa")
-    print(cmd_prefix+"-i only-spacemacs-elpa #init core only spacemacs-elpa")
+    print(cmd_prefix+"-i (se)spacemacs-elpa  #init spacemacs-elpa")
+    print(cmd_prefix+"-i (omz)ohmyzsh        #init ohmyzsh")
     print(cmd_prefix+"-u                     #update core")
-    print(cmd_prefix+"-u no-spacemacs-elpa   #update core except spacemacs-elpa")
-    print(cmd_prefix+"-u only-spacemacs-elpa #update core only spacemacs-elpa")
+    print(cmd_prefix+"-u (se)spacemacs-elpa  #update core spacemacs-elpa")
     print(cmd_prefix+"-c                     #commit core")
-    print(cmd_prefix+"-c no-spacemacs-elpa   #commit core except spacemacs-elpa")
-    print(cmd_prefix+"-c only-spacemacs-elpa #commit core only spacemacs-elpa")
+    print(cmd_prefix+"-c (se)spacemacs-elpa  #commit core spacemacs-elpa")
     pass
 
 ## Logic Start
+print(sys.argv)
 if len(sys.argv)<2:
     ShowHelper()
 else:
     opt_type = sys.argv[1]
     if opt_type=="-i":
-        print("++++ START INIT MY CORE")
-        InitEmacs(True)
-        InitOhMyZsh()
-        print("---- END INIT MY CORE")
-    else:
-        print("UNSUPPORT!")
+        if len(sys.argv)==2:
+            print("++++ START INIT MY CORE")
+            InitEmacs(True)
+            InitOhMyZsh()
+            print("---- END INIT MY CORE")
+        elif len(sys.argv)==3:
+            opt_arg = sys.argv[2]
+            if opt_arg=="se" or opt_arg=="spacemacs-elpa":
+                InitEmacs(True)
+            elif opt_arg=="omz" or opt_arg=="ohmyzsh":
+                InitOhMyZsh()
+            pass
+    elif opt_type=="-u":
+        print("UNSUPPORT -u!")
+    elif opt_type=="-c":
+        print("UNSUPPORT -c!")
