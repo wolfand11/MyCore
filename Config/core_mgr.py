@@ -6,30 +6,35 @@ import shutil
 import subprocess
 
 g_config_abs_path = os.path.split(os.path.realpath(__file__))[0]
+g_emacs_config_abs_path = os.path.join(g_config_abs_path,"EmacsConfig")
+g_dot_emacs_abs_path = os.path.expanduser("~")
 
-def InitEmacs(is_spacemacs):
-    emacs_config_abs_path = os.path.join(g_config_abs_path,"EmacsConfig")
-    dot_emacs_abs_path = os.path.expanduser("~")
-    src_dot_emacs = os.path.join(emacs_config_abs_path,"dot_emacs.el")
-    des_dot_emacs = os.path.join(dot_emacs_abs_path,".emacs")
-    src_dot_emacs_local = os.path.join(emacs_config_abs_path,"dot_emacs_local.el")
-    des_dot_emacs_local = os.path.join(dot_emacs_abs_path,".emacs.local")
+def InitEmacs():
+    InitEmacsConfig()
+    InitSpacemacsElpa()
+
+def InitEmacsConfig():
+    src_dot_emacs = os.path.join(g_emacs_config_abs_path,"dot_emacs.el")
+    des_dot_emacs = os.path.join(g_dot_emacs_abs_path,".emacs")
+    src_dot_emacs_local = os.path.join(g_emacs_config_abs_path,"dot_emacs_local.el")
+    des_dot_emacs_local = os.path.join(g_dot_emacs_abs_path,".emacs.local")
     shutil.copy(src_dot_emacs,des_dot_emacs)
     shutil.copy(src_dot_emacs_local,des_dot_emacs_local)
-    if is_spacemacs:
-        src_dot_spacemacs = os.path.join(emacs_config_abs_path,"dot_spacemacs.el")
-        des_dot_spacemacs = os.path.join(dot_emacs_abs_path,".spacemacs")
-        shutil.copy(src_dot_spacemacs,des_dot_spacemacs)
 
-        spacemacs_elpa = os.path.join(os.path.expanduser("~"),".emacs.d/elpa")
-        os.chdir(spacemacs_elpa)
-        if os.path.exists(os.path.join(spacemacs_elpa,".git")):
-            result = subprocess.check_output("git pull origin master:master",shell=True)
-            result_list = result.decode("utf-8").split(' ')
-            print(result_list)
-        else:
-            result = subprocess.check_output("git clone https://github.com/wolfand11/_spacemacs_elpa.git ./")
-        os.chdir(g_config_abs_path)
+def InitSpacemacsElpa():
+    src_dot_spacemacs = os.path.join(g_emacs_config_abs_path,"dot_spacemacs.el")
+    des_dot_spacemacs = os.path.join(g_dot_emacs_abs_path,".spacemacs")
+    shutil.copy(src_dot_spacemacs,des_dot_spacemacs)
+
+    spacemacs_elpa = os.path.join(os.path.expanduser("~"),".emacs.d/elpa")
+    os.chdir(spacemacs_elpa)
+    if os.path.exists(os.path.join(spacemacs_elpa,".git")):
+        result = subprocess.check_output("git pull origin master:master",shell=True)
+        result_list = result.decode("utf-8").split(' ')
+        print(result_list)
+    else:
+        result = subprocess.check_output("git clone https://github.com/wolfand11/_spacemacs_elpa.git ./")
+    os.chdir(g_config_abs_path)
 
 def InitOhMyZsh():
     ohmyzsh_config_abs_path = os.path.join()
@@ -41,19 +46,17 @@ def InitOhMyZsh():
     shutil.copy(src_dot_zsh,des_dot_zsh)
     shutil.copy(src_dot_zsh_local,des_dot_zsh_local)
 
-def RunOptByArg(arg_str):
-    pass
-
 def ShowHelper():
     cmd_prefix = " python ./core_mgr.py "
     print("usage :")
     print(cmd_prefix+"-i                     #init core")
+    print(cmd_prefix+"-i (ec)emacs-config    #init core")
     print(cmd_prefix+"-i (se)spacemacs-elpa  #init spacemacs-elpa")
     print(cmd_prefix+"-i (omz)ohmyzsh        #init ohmyzsh")
     print(cmd_prefix+"-u                     #update core")
-    print(cmd_prefix+"-u (se)spacemacs-elpa  #update core spacemacs-elpa")
+    print(cmd_prefix+"-u (se)spacemacs-elpa  #update spacemacs-elpa")
     print(cmd_prefix+"-c                     #commit core")
-    print(cmd_prefix+"-c (se)spacemacs-elpa  #commit core spacemacs-elpa")
+    print(cmd_prefix+"-c (se)spacemacs-elpa  #commit spacemacs-elpa")
     pass
 
 ## Logic Start
@@ -65,14 +68,16 @@ else:
     if opt_type=="-i":
         if len(sys.argv)==2:
             print("++++ START INIT MY CORE")
-            InitEmacs(True)
+            InitEmacs()
             InitOhMyZsh()
             print("---- END INIT MY CORE")
         elif len(sys.argv)==3:
             opt_arg = sys.argv[2]
-            if opt_arg=="se" or opt_arg=="spacemacs-elpa":
-                InitEmacs(True)
-            elif opt_arg=="omz" or opt_arg=="ohmyzsh":
+            if opt_arg=="ec":
+                InitEmacsConfig()
+            elif opt_arg=="se":
+                InitSpacemacsElpa()
+            elif opt_arg=="omz":
                 InitOhMyZsh()
             pass
     elif opt_type=="-u":
