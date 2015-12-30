@@ -14,15 +14,15 @@ def InitEmacs():
     InitSpacemacsElpa()
 
 def InitEmacsConfig():
-    src_dot_emacs = os.path.join(g_emacs_config_abs_path,"dot_emacs.el")
-    des_dot_emacs = os.path.join(g_dot_emacs_abs_path,".emacs")
-    src_dot_emacs_local = os.path.join(g_emacs_config_abs_path,"dot_emacs_local.el")
-    des_dot_emacs_local = os.path.join(g_dot_emacs_abs_path,".emacs.local")
+    src_dot_emacs = os.path.join(g_emacs_config_abs_path,"dot.emacs.el")
+    des_dot_emacs = os.path.join(g_dot_emacs_abs_path,".emacs.el")
+    src_dot_emacs_local = os.path.join(g_emacs_config_abs_path,"dot.emacs.local.el")
+    des_dot_emacs_local = os.path.join(g_dot_emacs_abs_path,".emacs.local.el")
     shutil.copy(src_dot_emacs,des_dot_emacs)
     shutil.copy(src_dot_emacs_local,des_dot_emacs_local)
 
 def InitSpacemacsElpa():
-    src_dot_spacemacs = os.path.join(g_emacs_config_abs_path,"dot_spacemacs.el")
+    src_dot_spacemacs = os.path.join(g_emacs_config_abs_path,"dot.spacemacs.el")
     des_dot_spacemacs = os.path.join(g_dot_emacs_abs_path,".spacemacs")
     shutil.copy(src_dot_spacemacs,des_dot_spacemacs)
 

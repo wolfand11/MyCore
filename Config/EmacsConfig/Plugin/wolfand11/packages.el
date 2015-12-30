@@ -172,4 +172,4 @@
                 (eshell/alias "cd-blog"    "cd ~/Documents/MyProject/Public/LifeProject/wolfand11.github.com/_my_blogs")
                 (eshell/alias "cd-study"   "cd ~/Documents/MyProject/Public/StudyProjects")
                 )))
-    (wolfand11/init-eshell-atlas))
+    (wolfand11/init-eshell-atlas)))

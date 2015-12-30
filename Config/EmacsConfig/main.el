@@ -19,19 +19,25 @@
 (add-to-list 'load-path emacs_config_path)
 (add-to-list 'load-path
              (AppendToEmacsConfigPath "Config/"))
-(add-to-list 'load-path (AppendToEmacsConfigPath "Plugin/"))
+(add-to-list 'load-path
+             (AppendToEmacsConfigPath "Plugin/"))
 
 ;; 加载Emacs配置
-(message "=== BEGINE Loading Config ===")
-(message "=BEGINE= commoon_config.el")
-(load (AppendToEmacsConfigPath "common_config.el"))
+(message "=== BEGIN Loading Config ===")
+(message "=BEGIN= spacemacs-init.el")
+(load (concat user-emacs-directory "init.el"))
 
-;; 加载local emacs配置
-(let ((emacs-local-config "~/.emacs.local"))
-  (if (file-exists-p emacs-local-config)
-      (progn
-        (message "=BEGINE= .emacs.local")
-        (load emacs-local-config))))
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (message "=BEGIN= custom_init.el")
+            (load (AppendToEmacsConfigPath "custom_init.el"))
+            ;; 加载local emacs配置
+            (let ((emacs-local-config "~/.emacs.local.el"))
+              (if (file-exists-p emacs-local-config)
+                  (progn
+                    (message "=BEGIN= .emacs.local.el")
+                    (load emacs-local-config))))
+            (message "=== END Loading Config ===")))
 
-(message "=== END Loading Config ===")
+
 (put 'upcase-region 'disabled nil)
