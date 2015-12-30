@@ -7,6 +7,7 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 ;;(package-initialize)
+;; WINDOWS BUG FIXED: dont remove before comments
 
 (message (concat "==== OS-TYPE IS "
                  (symbol-name system-type)
