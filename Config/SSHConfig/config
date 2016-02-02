@@ -1,5 +1,2 @@
-Host github.com
-     IdentityFile ~/.ssh/github_rsa
-
-Host 192.168.24.80
-     IdentityFile ~/.ssh/dz3gz_rsa     
+Host *
+     IdentityFile ~/.ssh/id_rsa
