@@ -8,6 +8,7 @@
 ;; You may delete these explanatory comments.
 ;;(package-initialize)
 ;; WINDOWS BUG FIXED: dont remove before comments
+(package-initialize)
 
 (message (concat "==== OS-TYPE IS "
                  (symbol-name system-type)
