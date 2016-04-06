@@ -131,6 +131,8 @@ C-. Quit
 ***** 在 normal 模式下
   	z a 					折叠或打开当前所在区域
 *** org-mode
+**** org-mode doc
+[[file:~/.emacs.d/layers/org/README.org][org-mode doc]]
 *** TIPS
 #+BEGIN_EXAMPLE
 1 使用 python layer 需要安装 pip
