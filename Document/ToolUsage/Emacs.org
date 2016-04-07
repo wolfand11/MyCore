@@ -134,6 +134,9 @@ C-. Quit
 *** org-mode
 **** org-mode doc
 [[file:~/.emacs.d/layers/org/README.org][org-mode doc]]
+*** version control
+**** git doc
+[[file:~/.emacs.d/layers/+source-control/git/README.org][git doc]]
 *** TIPS
 #+BEGIN_EXAMPLE
 1 使用 python layer 需要安装 pip
