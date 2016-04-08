@@ -72,6 +72,8 @@ C-. Quit
 
 #+END_EXAMPLE
 ** spacemacs
+*** spacemacs-doc
+[[file:~/.emacs.d/doc/DOCUMENTATION.org][spacemacs-doc]]
 *** normal usage
 **** 1 selected
   SPC-v 可用来选中一个单词、一句话、一段话
@@ -131,6 +133,14 @@ C-. Quit
 **** 6 folder
 ***** 在 normal 模式下
   	z a 					折叠或打开当前所在区域
+*** file dir operation
+**** open file
+SPC-f-f			helm open file from cur dir
+SPC-f-r			helm open recent file
+SPC-p-r			projectile open recent file
+SPC-f-F			open file under point
+**** get file path
+SPC-f-y			show and copy cur file abs path
 *** org-mode
 **** org-mode doc
 [[file:~/.emacs.d/layers/org/README.org][org-mode doc]]
