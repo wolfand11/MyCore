@@ -144,6 +144,24 @@ SPC-f-y			show and copy cur file abs path
 *** org-mode
 **** org-mode doc
 [[file:~/.emacs.d/layers/org/README.org][org-mode doc]]
+**** usage
+***** Priorities 
+org-mode 支持 ABC 三个优先级，默认创建的 task 优先级为 B
+S-<up> 		org-priority-up
+S-<down>	org-priority-down
+***** matching tags and properties
+http://orgmode.org/manual/Matching-tags-and-properties.html#Matching-tags-and-properties
+http://orgmode.org/manual/Tag-hierarchy.html#Tag-hierarchy
++work-boss   							选择 tag 为 work 但不为 boss 的项目
+work+TODO="WAITING"				选择 tag 为 work 并且 TODO 状态为 WAITING 的项目
+work/WAITING 							等价于 work+TODO="WAITING"
+***** checkbox
+在 headline 上添加[/] [%]可以将项目标记为 checkbox
+在 headline 上执行 C-c # 可以更新项目的进度
+***** time date
+, I			org-clock-in
+, O			org-clock-out
+, q			org-clock-cancel
 *** version control
 **** git doc
 [[file:~/.emacs.d/layers/+source-control/git/README.org][git doc]]
