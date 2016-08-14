@@ -12,7 +12,7 @@
 
 ;; List of all packages to install and/or initialize. Built-in packages
 ;; which require an initialization must be listed explicitly in the list.
-(setq wolfand11-packages '(eshell org find-file-in-project))
+(setq wolfand11-packages '(eshell org find-file-in-project prodigy))
 
 (defun wolfand11/post-init-find-file-in-project ()
   (progn
@@ -120,3 +120,18 @@
            (eshell/alias "cd-blog" "cd ~/Documents/MyProject/Public/LifeProject/wolfand11.github.com/_my_blogs")
            (eshell/alias "cd-study" "cd ~/Documents/MyProject/Public/StudyProjects"))))
     (wolfand11/init-eshell-atlas)))
+
+(defun wolfand11/post-init-prodigy ()
+  (progn
+    (prodigy-define-service :name "Hexo Server"
+                            :command "hexo"
+                            :args '("server"):cwd
+                            "~/Documents/MyProject/Public/wolfand11"
+                            :tags '(hexo server):kill-signal'sigkill
+                            :kill-process-buffer-on-stop t)
+    (prodigy-define-service :name "Hexo Deploy"
+                            :command "hexo"
+                            :args '("deploy" "--generate"):cwd
+                            "~/Documents/MyProject/Public/wolfand11"
+                            :tags '(hexo deploy):kill-signal'sigkill
+                            :kill-process-buffer-on-stop t)))
