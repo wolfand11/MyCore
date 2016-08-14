@@ -22,7 +22,6 @@ cp Soliah.zsh-theme ~/.oh-my-zsh/themes/Soliah.zsh-theme
 #+END_EXAMPLE
 
 ** emacs 配置
-#+BEGIN_EXAMPLE
 emacs 安装参考:http://emacs.sexy/
 字体配置:
 英文字体使用--http://openfontlibrary.org/en/font/fantasque-sans-mono
@@ -76,4 +75,4 @@ password:******gh
 
 * 使用与维护
 ** emacs
-*** package.el使用
+*** package.el 使用

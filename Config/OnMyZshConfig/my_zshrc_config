@@ -5,6 +5,11 @@ export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/bin
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
+# ---------------------------------------------------------
+## Support nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 # -------------------------SHORTCUT-------------------------
 # apps aliases
 alias pngcrush="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/pngcrush -revert-iphone-optimizations "
