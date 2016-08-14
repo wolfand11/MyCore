@@ -1,5 +1,0 @@
-* Init Windows OS
-
-*** 1、键盘改键
-AutoHotkey
-http://www.autohotkey.com/
