@@ -117,21 +117,27 @@
            (eshell/alias "cd-toolkit" "cd ~/Documents/MyToolkit")
            (eshell/alias "cd-gtd" "cd ~/Documents/MyGTD")
            (eshell/alias "cd-project" "cd ~/Documents/MyProject")
-           (eshell/alias "cd-blog" "cd ~/Documents/MyProject/Public/LifeProject/wolfand11.github.com/_my_blogs")
+           (eshell/alias "cd-blog" "cd ~/Documents/MyProject/Public/wolfand11/source/_posts")
            (eshell/alias "cd-study" "cd ~/Documents/MyProject/Public/StudyProjects"))))
     (wolfand11/init-eshell-atlas)))
 
 (defun wolfand11/post-init-prodigy ()
   (progn
     (prodigy-define-service :name "Hexo Server"
-                            :command "hexo"
-                            :args '("server"):cwd
-                            "~/Documents/MyProject/Public/wolfand11"
-                            :tags '(hexo server):kill-signal'sigkill
-                            :kill-process-buffer-on-stop t)
+      :command "hexo"
+      :args '("server"):cwd
+      "~/Documents/MyProject/Public/wolfand11"
+      :tags '(hexo server):kill-signal'sigkill
+      :kill-process-buffer-on-stop t)
+    (prodigy-define-service :name "Hexo Clean"
+      :command "hexo"
+      :args '("clean"):cwd
+      "~/Documents/MyProject/Public/wolfand11"
+      :tags '(hexo clean):kill-signal'sigkill
+      :kill-process-buffer-on-stop t)
     (prodigy-define-service :name "Hexo Deploy"
-                            :command "hexo"
-                            :args '("deploy" "--generate"):cwd
-                            "~/Documents/MyProject/Public/wolfand11"
-                            :tags '(hexo deploy):kill-signal'sigkill
-                            :kill-process-buffer-on-stop t)))
+      :command "hexo"
+      :args '("deploy" "--generate"):cwd
+      "~/Documents/MyProject/Public/wolfand11"
+      :tags '(hexo deploy):kill-signal'sigkill
+      :kill-process-buffer-on-stop t)))
