@@ -31,11 +31,13 @@
      ;; syntax-checking
      version-control
      wolfand11
+     prodigy
      ;; -- From here is language support -- 
      emacs-lisp
      javascript
      python
      csharp
+     lua
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
