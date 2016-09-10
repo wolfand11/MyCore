@@ -2,9 +2,7 @@
 ;; 设置默认目录
 (setenv default-directory "~/Documents/")
 
-;; 设置 custom config path
-(setq custom-file "~/.custom.el")
-
+;; 设置PATH环境变量
 (let ((common-path)
       (special-path)
       (env-str (getenv "PATH")))
