@@ -22,6 +22,7 @@
      chinese
      cscope
      git
+     gtags
      markdown
      org
      semantic
