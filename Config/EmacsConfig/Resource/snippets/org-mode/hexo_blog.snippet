@@ -1,0 +1,20 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: hexo_blog
+# key: blog
+# binding: direct-keybinding
+# --
+
+#+TITLE: ${1:Title}
+#+DATE: `(format-time-string "<%Y-%m-%d %a>" (current-time))`
+#+TAGS: ${2:Tags}
+#+LAYOUT: post
+#+CATEGORIES: ${3:Categories}
+#+OPTIONS: ^:{}
+#+OPTIONS: \n:t
+
+* $1
+#+BEGIN_HTML
+<!-- more -->
+#+END_HTML
+
+$0

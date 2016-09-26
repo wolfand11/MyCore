@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: header
+# key: header
+# binding: direct-keybinding
+# --
+`(apply 'concat (make-list 64 (string-trim comment-start)))`
+`(apply 'concat (make-list 2 (string-trim comment-start)))` @author `(user-full-name)`
+`(apply 'concat (make-list 2 (string-trim comment-start)))` @email  `(format "%s" user-mail-address)`
+`(apply 'concat (make-list 2 (string-trim comment-start)))` @date   `(format-time-string "<%Y-%m-%d %a>" (current-time))`
+`(apply 'concat (make-list 64 (string-trim comment-start)))`
+
+$0
