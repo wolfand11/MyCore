@@ -54,3 +54,11 @@
     (when (and from-path to-path)
       (message "From %s to %s" (file-name-nondirectory from-path) (file-name-nondirectory to-path))
       (copy-file from-path to-path t))))
+
+(defun wolfand11/get-comment-str(count)
+  (let ((coment-str))
+    (if comment-start
+        (setq comment-str comment-start)
+      (setq comment-str "//"))
+    (apply 'concat (make-list count (string-trim comment-str)))))
+
