@@ -1,14 +1,26 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
-" æ˜¾ç¤ºè®¾ç½®
+" ÏÔÊ¾ÉèÖÃ
 """"""""""""""""""""""""""""""""""""""""""""""""
-"" ä¸æ˜¾ç¤ºä¹Œå¹²è¾¾å„¿ç«¥
+"" ²»ÏÔÊ¾ÎÚ¸É´ï¶ùÍ¯
 set shortmess=atI 	
 set nu
 syntax on
-""ä¸æ˜¾ç¤ºå›¾å½¢æŒ‰é’®
+"" ²»ÏÔÊ¾Í¼ĞÎ°´Å¥
 set go=      		
+"" ÉèÖÃ±àÂë
+set encoding=utf-8  
+set termencoding=utf-8  
+set fileencoding=chinese 
+set fileencodings=ucs-bom,utf-8,chinese   
+set langmenu=zh_CN.utf-8  
+language messages zh_cn.utf-8   
+source $VIMRUNTIME/delmenu.vim  
+source $VIMRUNTIME/menu.vim  
+"" ÉèÖÃ±³¾°ÑÕÉ«
+:highlight Normal guibg=Gray
+
 """"""""""""""""""""""""""""""""""""""""""""""""
-" é”®ç›˜å‘½ä»¤
+" ¼üÅÌÃüÁî
 """"""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=" "
 
@@ -27,11 +39,11 @@ nmap <leader>bb :tabe<Space>
 nmap <leader>ff :e<Space>
 "" close cur file
 nmap <leader>bd :tabc<CR>
+"" quit vim
+nmap <leader>qq :q<CR>
 
 "-------- insert mode --------
 "------ move cursor
-iunmap <M-b>
-iunmap <M-f>
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 inoremap <C-b> <Left>
@@ -57,4 +69,3 @@ cnoremap <C-n> <Down>
 "------ edit content
 cnoremap <C-d> <Del>
 cnoremap <M-d> <C-o>dw
-
