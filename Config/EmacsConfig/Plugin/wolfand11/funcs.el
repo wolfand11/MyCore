@@ -39,7 +39,7 @@
 
 (defun wolfand11/sync-dotspacemacs (choice)
   "sync .spacemacs and dot.spacemacs"
-  (interactive "cSync from (d).spacemacs or (D)dot.spacemacs to another")
+  (interactive "cSync from (.).spacemacs or (D)dot.spacemacs to another")
   (let ((-spacemacs-path "~/.spacemacs")
         (dotspacemacs-path "~/Documents/MyCore/Config/EmacsConfig/dot.spacemacs.el")
         (from-path)
