@@ -15,6 +15,10 @@
     (setq shell-file-name (expand-file-name "~/Applications/cygwin/bin/bash.exe")))
   (when (string-equal system-type "gnu/linux")
     (setq special-path '()))
+
+  ;; set cross platform tools path
+  (setq special-path (append special-path (list (expand-file-name "~/Documents/MyCore/Config/EmacsConfig/Resource"))))
+
   (setq env-str (concat (mapconcat 'identity special-path path-separator)
                         path-separator
                         env-str))
