@@ -49,6 +49,8 @@
 ;; Organize Your Life In Plain Text!
 ;; http://doc.norang.ca/org-mode.html
 (defun wolfand11/post-init-org ()
+  ;; enable org indent
+  (setq org-startup-indented t)
   ;; define the refile targets
   (setq org-agenda-files (quote ("~/Documents/MyGTD")))
   (setq org-default-notes-file "~/Documents/MyGTD/gtd.org")
