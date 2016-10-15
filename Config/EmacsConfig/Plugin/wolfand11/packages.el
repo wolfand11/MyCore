@@ -12,7 +12,12 @@
 
 ;; List of all packages to install and/or initialize. Built-in packages
 ;; which require an initialization must be listed explicitly in the list.
-(setq wolfand11-packages '(eshell org find-file-in-project prodigy))
+(setq wolfand11-packages '(eshell
+                           org
+                           lua-mode
+                           find-file-in-project
+                           prodigy
+                           company))
 
 (defun wolfand11/post-init-find-file-in-project ()
   (progn
@@ -80,14 +85,14 @@
                                      ))
 
   (setq org-tag-persistent-alist '((:startgroup . nil)
-                        ("WORK" . ?w) ("PROJECT" . ?p)
-                        (:endgroup . nil)
-                        (:startgroup . nil)
-                        ("DAILY" . ?x) ("MONTHLY" . ?y) ("YEARLY" . ?z)
-                        (:endgroup . nil)
-                        (:startgroup . nil)
-                        ("PERSONAL" . ?P) ("STUDY" . ?s) ("LIFE" . ?l)
-                        (:endgroup . nil)))
+                                   ("WORK" . ?w) ("PROJECT" . ?p)
+                                   (:endgroup . nil)
+                                   (:startgroup . nil)
+                                   ("DAILY" . ?x) ("MONTHLY" . ?y) ("YEARLY" . ?z)
+                                   (:endgroup . nil)
+                                   (:startgroup . nil)
+                                   ("PERSONAL" . ?P) ("STUDY" . ?s) ("LIFE" . ?l)
+                                   (:endgroup . nil)))
 
   ;; define myself todo state
   (setq org-todo-keywords (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
@@ -96,6 +101,25 @@
 
   (evil-leader/set-key "oaoa" 'org-agenda "oaoc"
     'org-capture))
+
+(defun wolfand11/post-init-lua-mode ()
+  (progn
+    (add-hook 'lua-mode-hook 'evil-matchit-mode)
+    (add-hook 'lua-mode-hook 'smartparens-mode)
+    (setq lua-indent-level 4)
+
+;;; add lua language, basic, string and table keywords.
+    (with-eval-after-load 'lua-mode
+      (require 'company-keywords)
+      (push '(lua-mode  "setmetatable" "local" "function" "and" "break" "do" "else" "elseif" "self" "resume" "yield"
+                        "end" "false" "for" "function" "goto" "if" "nil" "not" "or" "repeat" "return" "then" "true"
+                        "until" "while" "__index" "dofile" "getmetatable" "ipairs" "pairs" "print" "rawget" "status"
+                        "rawset" "select" "_G" "assert" "collectgarbage" "error" "pcall" "coroutine"
+                        "rawequal" "require" "load" "tostring" "tonumber" "xpcall" "gmatch" "gsub"
+                        "rep" "reverse" "sub" "upper" "concat" "pack" "insert" "remove" "unpack" "sort"
+                        "lower") company-keywords-alist))
+
+    ))
 
 (defun wolfand11/post-init-eshell ()
   (progn
@@ -143,3 +167,20 @@
       "~/Documents/MyProject/Public/wolfand11"
       :tags '(hexo deploy):kill-signal'sigkill
       :kill-process-buffer-on-stop t)))
+
+(defun wolfand11/post-init-company ()
+  (progn
+    (setq company-minimum-prefix-length 1
+          company-idle-delay 0.08)
+
+    (when (configuration-layer/package-usedp 'company)
+      (spacemacs|add-company-hook shell-script-mode)
+      (spacemacs|add-company-hook makefile-bsdmake-mode)
+      (spacemacs|add-company-hook sh-mode)
+      (spacemacs|add-company-hook lua-mode)
+      (spacemacs|add-company-hook nxml-mode)
+      (spacemacs|add-company-hook conf-unix-mode)
+      (spacemacs|add-company-hook json-mode)
+      (spacemacs|add-company-hook graphviz-dot-mode)
+      )
+    ))
