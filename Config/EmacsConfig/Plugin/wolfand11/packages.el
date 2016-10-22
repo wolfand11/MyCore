@@ -15,6 +15,7 @@
 (setq wolfand11-packages '(eshell
                            org
                            lua-mode
+                           emacs-lisp
                            find-file-in-project
                            prodigy
                            company))
@@ -121,6 +122,9 @@
                         "lower") company-keywords-alist))
 
     ))
+
+(defun wolfand11/post-init-emacs-lisp ()
+  (remove-hook 'emacs-lisp-mode-hook 'auto-compile-mode))
 
 (defun wolfand11/post-init-eshell ()
   (progn
