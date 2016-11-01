@@ -69,7 +69,7 @@ user-custom|User custom plugin parser:\
 #
 exuberant-ctags|plugin-example|setting to use Exuberant Ctags plug-in parser:\
 	:tc=common:\
-	:ctagscom=/opt/local/bin/ctags:\
+	:ctagscom=$HOME/Applications/ctags/exuberant-ctags/ctags:\
 	:ctagslib=$libdir/gtags/exuberant-ctags.la:\
 	:tc=common-ctags-maps:
 #
@@ -165,7 +165,7 @@ common-ctags-maps:\
 #
 universal-ctags|setting to use Universal Ctags plug-in parser:\
 	:tc=common:\
-	:ctagscom=/usr/local/bin/ctags:\
+	:ctagscom=$HOME/Applications/ctags/universal-ctags/ctags:\
 	:ctagslib=$libdir/gtags/universal-ctags.la:\
 	:tc=common-ctags-maps:\
 	:langmap=Ada\:.adb.ads.Ada:\
