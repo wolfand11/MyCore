@@ -3,5 +3,3 @@
 (setq user-mail-address "smile_guodong@163.com")
 
 (spacemacs|defvar-company-backends lua-mode)
-(spacemacs|defvar-company-backends org-mode)
-
