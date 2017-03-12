@@ -123,6 +123,11 @@
 
     ))
 
+(defun wolfand11/post-init-nxml-mode ()
+  (progn
+    (push 'company-dabbrev company-backends-nxml-mode)
+    (push 'company-etags company-backends-nxml-mode)))
+
 (defun wolfand11/post-init-emacs-lisp ()
   (remove-hook 'emacs-lisp-mode-hook 'auto-compile-mode))
 
