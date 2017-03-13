@@ -16,6 +16,8 @@
                            org
                            lua-mode
                            emacs-lisp
+                           csharp-mode
+                           shader-mode
                            find-file-in-project
                            prodigy
                            company))
@@ -128,6 +130,39 @@
     (push 'company-dabbrev company-backends-nxml-mode)
     (push 'company-etags company-backends-nxml-mode)))
 
+(defun wolfand11/init-csharp-mode ()
+  (use-package csharp-mode
+    :defer t
+    :mode ("\\.cs\\'" . csharp-mode)
+    :init
+    (progn
+      (setq csharp-indent-level 4)
+      (electric-pair-local-mode 1)
+      (push 'company-dabbrev company-backends-csharp-mode)
+      (push 'company-etags company-backends-csharp-mode))))
+
+(defun wolfand11/init-shader-mode ()
+  (use-package shader-mode
+    :defer t
+    :mode ("\\.shader\\'" . shader-mode)
+    :init
+    (progn
+      (setq shader-indent-level 4)
+      (electric-pair-local-mode 1)
+      (push 'company-dabbrev company-backends-shader-mode)
+      (push 'company-etags company-backends-shader-mode))))
+
+
+(defun lua/post-init-company ()
+  (add-hook 'lua-mode-hook 'company-mode))
+
+(defun lua/post-init-ggtags ()
+  (add-hook 'lua-mode-local-vars-hook #'spacemacs/ggtags-mode-enable))
+
+(defun lua/post-init-helm-gtags ()
+  (spacemacs/helm-gtags-define-keys-for-mode 'lua-mode))
+
+
 (defun wolfand11/post-init-emacs-lisp ()
   (remove-hook 'emacs-lisp-mode-hook 'auto-compile-mode))
 
@@ -188,6 +223,8 @@
       (spacemacs|add-company-hook makefile-bsdmake-mode)
       (spacemacs|add-company-hook sh-mode)
       (spacemacs|add-company-hook lua-mode)
+      (spacemacs|add-company-hook csharp-mode)
+      (spacemacs|add-company-hook shader-mode)
       (spacemacs|add-company-hook nxml-mode)
       (spacemacs|add-company-hook conf-unix-mode)
       (spacemacs|add-company-hook json-mode)
