@@ -14,6 +14,7 @@
 ;; which require an initialization must be listed explicitly in the list.
 (setq wolfand11-packages '(eshell
                            org
+                           cc-mode
                            lua-mode
                            emacs-lisp
                            csharp-mode
@@ -104,6 +105,9 @@
 
   (evil-leader/set-key "oaoa" 'org-agenda "oaoc"
     'org-capture))
+
+(defun wolfand11/post-init-cc-mode ()
+  (setq c-basic-offset 4))
 
 (defun wolfand11/post-init-lua-mode ()
   (progn
