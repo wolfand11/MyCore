@@ -1,1 +1,17 @@
 source D:\_vimrc
+
+"------ open file
+noremap <leader>ff :action GotoFile<CR>
+noremap <leader>fr :action RecentFiles<CR>
+
+"------ folding code
+noremap zo :action ExpandRegion<CR>
+noremap zr :action ExpandAllRegions<CR>
+noremap zc :action CollapseRegion<CR>
+noremap zm :action CollapseAllRegions<CR>
+
+"------ file structure
+noremap <leader>sj :action FileStructurePopup<CR>
+
+"------ find symble
+noremap <leader>sgp :action FindInPath<CR>
