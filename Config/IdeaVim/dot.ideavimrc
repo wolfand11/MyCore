@@ -4,6 +4,9 @@ source D:\_vimrc
 noremap <leader>ff :action GotoFile<CR>
 noremap <leader>fr :action RecentFiles<CR>
 
+"------ open folder
+noremap <leader>fo :action ShowFilePath<CR>
+
 "------ folding code
 noremap zo :action ExpandRegion<CR>
 noremap zr :action ExpandAllRegions<CR>
