@@ -10,9 +10,9 @@
     (setq special-path '("/usr/local/bin" "/opt/local/bin" "/opt/local/sbin"))
     (setq shell-file-name "/bin/zsh"))
   (when (string-equal system-type "windows-nt")
-    (setq special-path (list (expand-file-name "~/Applications/cygwin/")
-                             (expand-file-name "~/Applications/cygwin/bin/")))
-    (setq shell-file-name (expand-file-name "~/Applications/cygwin/bin/bash.exe")))
+    (setq special-path (list (expand-file-name "~/Applications/babun/.babun/cygwin/")
+                             (expand-file-name "~/Applications/babun/.babun/cygwin/bin/")))
+    (setq shell-file-name (expand-file-name "~/Applications/babun/.babun/cygwin/bin/bash.exe")))
   (when (string-equal system-type "gnu/linux")
     (setq special-path '()))
 
