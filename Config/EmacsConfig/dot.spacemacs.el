@@ -100,7 +100,7 @@ before layers configuration."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 18
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -188,7 +188,7 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
   (setq powerline-default-separator 'bar)
-  (spacemacs//set-monospaced-font   "Source Code Pro" "Microsoft YaHei" 18 16)
+  (spacemacs//set-monospaced-font   "Source Code Pro" "Microsoft YaHei" 14 16)
   (setq dotspacemacs-enable-paste-micro-state t)
   (setq tab-width 4)
   (setq default-tab-width 4)
