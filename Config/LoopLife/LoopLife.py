@@ -2,7 +2,7 @@
 import os
 import sys
 from optparse import OptionParser
-log_module_path = os.path.split(os.path.realpath(__file__))[0] + "./../../Tools/PyTools/log.py"
+log_module_path = os.path.dirname(__file__) + "/../../Tools/PyTools/log.py"
 import imp
 imp.load_source("log", log_module_path)
 from log import *
@@ -61,6 +61,4 @@ if __name__ == '__main__':
     print(options)
     print(args)
     log_info("END   LOOP-LIFE Python Stage")
-    log_error("TEST ERROR")
-    log_warning("TEST WARNING")
 
