@@ -2,10 +2,9 @@
 import os
 import sys
 from optparse import OptionParser
-#log_module_path = os.path.split(os.path.realpath(__file__))[0] + "./../../Tools/PyTools/"
-#sys.path.append(log_module_path)
+log_module_path = os.path.split(os.path.realpath(__file__))[0] + "./../../Tools/PyTools/log.py"
 import imp
-imp.load_source("log", "./../../Tools/PyTools/log.py")
+imp.load_source("log", log_module_path)
 from log import *
 import subprocess
 
