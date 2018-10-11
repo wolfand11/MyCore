@@ -6,3 +6,5 @@
 (spacemacs|defvar-company-backends nxml-mode)
 (spacemacs|defvar-company-backends csharp-mode)
 (spacemacs|defvar-company-backends shader-mode)
+
+(add-to-list 'auto-mode-alist '("\\.bytes\\'" . lua-mode))
