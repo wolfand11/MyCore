@@ -33,7 +33,7 @@
 	(open-cmd-str (cond ((eq system-type 'darwin) "open")
 			((eq system-type 'windows-nt) "explorer")
 			((eq system-type 'gnu/linux "nautilus"))
-			(t ""))))    
+			(t ""))))
     (if (not (string-equal open-cmd-str ""))
 	(shell-command (format "%s %s" open-cmd-str (file-name-directory name))))))
 
@@ -61,4 +61,3 @@
         (setq comment-str comment-start)
       (setq comment-str "//"))
     (apply 'concat (make-list count (string-trim comment-str)))))
-

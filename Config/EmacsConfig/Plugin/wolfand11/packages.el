@@ -21,7 +21,8 @@
                            shader-mode
                            find-file-in-project
                            prodigy
-                           company))
+                           company
+                           org-page))
 
 (defun wolfand11/post-init-find-file-in-project ()
   (progn
@@ -54,6 +55,18 @@
         ;; (setq-default ffip-prune-patterns '(".git" ".hg" "*.svn" "node_modules" "bower_components" "obj"))
         ))
     (ad-activate 'find-file-in-project)))
+
+(defun wolfand11/init-org-page ()
+  (use-package org-page
+    :defer t
+    :init
+    (progn
+      (require 'org-page)
+      (spacemacs/declare-prefix "aa" "org-page")
+      (spacemacs/set-leader-keys
+        "aap" 'op/do-publication
+        "aas" 'op/do-publication-and-preview-site
+        "aan" 'op/new-post))))
 
 ;; Organize Your Life In Plain Text!
 ;; http://doc.norang.ca/org-mode.html
@@ -156,7 +169,6 @@
       (push 'company-dabbrev company-backends-shader-mode)
       (push 'company-etags company-backends-shader-mode))))
 
-
 (defun lua/post-init-company ()
   (add-hook 'lua-mode-hook 'company-mode))
 
@@ -165,7 +177,6 @@
 
 (defun lua/post-init-helm-gtags ()
   (spacemacs/helm-gtags-define-keys-for-mode 'lua-mode))
-
 
 (defun wolfand11/post-init-emacs-lisp ()
   (remove-hook 'emacs-lisp-mode-hook 'auto-compile-mode))

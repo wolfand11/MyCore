@@ -37,8 +37,11 @@ def OptUnityProjs(options, path_arr):
     pass
 
 def RebootComputer(options, delay_time):
-    cmd_str = "shutdown -r -f {0}".format(delay_time)
+    cmd_str = "shutdown -r -f -t {0}".format(delay_time)
     os.system(cmd_str)
+
+def OptSvnProjs(options, path_arr):
+    pass
 
 def ParseOption():
     parser = OptionParser(usage="%prog [options]")
