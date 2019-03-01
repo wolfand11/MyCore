@@ -22,7 +22,9 @@
                            find-file-in-project
                            prodigy
                            company
-                           org-page))
+                           htmlize
+                           ox-publish
+                           ox-html))
 
 (defun wolfand11/post-init-find-file-in-project ()
   (progn
@@ -56,17 +58,17 @@
         ))
     (ad-activate 'find-file-in-project)))
 
-(defun wolfand11/init-org-page ()
-  (use-package org-page
-    :defer t
-    :init
-    (progn
-      (require 'org-page)
-      (spacemacs/declare-prefix "aa" "org-page")
-      (spacemacs/set-leader-keys
-        "aap" 'op/do-publication
-        "aas" 'op/do-publication-and-preview-site
-        "aan" 'op/new-post))))
+(defun wolfand11/init-htmlize()
+  (use-package htmlize
+    :defer t))
+
+(defun wolfand11/init-ox-publish()
+  (use-package ox-publish
+    :defer t))
+
+(defun wolfand11/init-ox-html()
+  (use-package ox-html
+    :defer t))
 
 ;; Organize Your Life In Plain Text!
 ;; http://doc.norang.ca/org-mode.html
@@ -110,6 +112,73 @@
                                    (:startgroup . nil)
                                    ("PERSONAL" . ?P) ("STUDY" . ?s) ("LIFE" . ?l)
                                    (:endgroup . nil)))
+
+  (setq org-publish-project-alist
+        '(
+          ("blog-notes"
+           :base-directory "~/Documents/MyProject/Public/wolfand11/_post/"
+           :base-extension "org"
+           :publishing-directory "~/Documents/MyProject/Public/wolfand11/_site/"
+           :recursive t
+           :publishing-function org-html-publish-to-html
+           :html-link-home "https://wolfand11.coding.me"
+           :html-link-org-files-as-html org-html-link-org-files-as-html
+           :headline-levels 5
+           :with-author nil
+           :with-email nil
+           :with-creator nil
+           :with-timestamps nil
+           :htmlized-source t
+           :section-numbers nil
+
+           ;; --------------------
+           ;; remove default html-head, use custom html-head
+           ;;
+           :html-head-include-default-style nil
+           :html-head "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" />
+           <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+           <link rel=\"stylesheet\" title=\"Standard\" href=\"https://wolfand11.coding.me/res/css/worg.css\" type=\"text/css\" />
+           <link rel=\"alternate stylesheet\" title=\"Zenburn\" href=\"https://wolfand11.coding.me/res/css/worg-zenburn.css\" type=\"text/css\" />
+           <link rel=\"alternate stylesheet\" title=\"Classic\" href=\"https://wolfand11.coding.me/res/css/worg-classic.css\" type=\"text/css\" />
+           <link rel=\"icon\" href=\"http://wolfand11.coding.me/res/favicon.ico\" type=\"image/ico\" />"
+           ;;https://wolfand11.coding.me/res/css/org.css
+           ;;res/css/org.css
+
+           ;; --------------------
+           ;; use coding.me as comment system
+           ;;
+           ;; :html-postamble "<div id=\"gitment-ctn\"></div>
+           ;; <link rel=\"stylesheet\" href=\"https://dn-coding-net-public-file.qbox.me/Coding-Comments/v0.0.3/default.css\">
+           ;; <script src=\"https://dn-coding-net-public-file.qbox.me/Coding-Comments/v0.0.3/gitment.min.js\"></script>
+           ;; <script>
+           ;; var gitment = new Gitment({
+           ;;     owner: 'wolfand11',
+           ;;     repo: 'blog_comments',
+           ;;     oauth: {
+           ;;         client_id: '25bc4077d166c8858dca999bcd070cca',
+           ;;         client_secret: 'c9a758cc154771b25162f537ad711c96ae5ac87c',
+           ;;     },
+           ;; });
+           ;; gitment.render('gitment-ctn')
+           ;; </script>"
+           :html-postamble nil
+
+           :auto-preamble t
+           :auto-sitemap t                  ; Generate sitemap.org automagically...
+           :sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
+           :sitemap-title    "Sitemap"      ; ... with title 'Sitemap'.
+           :sitemap-file-entry-format "%d %t"
+           )
+          ("blog-static"
+           :base-directory "~/Documents/MyProject/Public/wolfand11/_post/"
+           :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|lua\\|py\\|ico"
+           :publishing-directory "~/Documents/MyProject/Public/wolfand11/_site/"
+           :recursive t
+           :publishing-function org-publish-attachment
+           )
+          ("blog" :components ("blog-notes" "blog-static"))
+          ;;
+          ))
 
   ;; define myself todo state
   (setq org-todo-keywords (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
