@@ -22,9 +22,7 @@
                            find-file-in-project
                            prodigy
                            company
-                           htmlize
-                           ox-publish
-                           ox-html))
+                           htmlize))
 
 (defun wolfand11/post-init-find-file-in-project ()
   (progn
@@ -60,14 +58,6 @@
 
 (defun wolfand11/init-htmlize()
   (use-package htmlize
-    :defer t))
-
-(defun wolfand11/init-ox-publish()
-  (use-package ox-publish
-    :defer t))
-
-(defun wolfand11/init-ox-html()
-  (use-package ox-html
     :defer t))
 
 ;; Organize Your Life In Plain Text!
