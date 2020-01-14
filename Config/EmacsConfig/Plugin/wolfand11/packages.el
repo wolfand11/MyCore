@@ -111,7 +111,7 @@
            :publishing-directory "~/Documents/MyProject/Public/wolfand11/_site/"
            :recursive t
            :publishing-function org-html-publish-to-html
-           :html-link-home "https://wolfand11.coding.me"
+           :html-link-home "https://wolfand11.gitee.io"
            :html-link-org-files-as-html org-html-link-org-files-as-html
            :headline-levels 5
            :with-author nil
@@ -127,11 +127,11 @@
            :html-head-include-default-style nil
            :html-head "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" />
            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
-           <link rel=\"stylesheet\" title=\"Standard\" href=\"https://wolfand11.coding.me/res/css/worg.css\" type=\"text/css\" />
-           <link rel=\"alternate stylesheet\" title=\"Zenburn\" href=\"https://wolfand11.coding.me/res/css/worg-zenburn.css\" type=\"text/css\" />
-           <link rel=\"alternate stylesheet\" title=\"Classic\" href=\"https://wolfand11.coding.me/res/css/worg-classic.css\" type=\"text/css\" />
-           <link rel=\"icon\" href=\"http://wolfand11.coding.me/res/favicon.ico\" type=\"image/ico\" />"
-           ;;https://wolfand11.coding.me/res/css/org.css
+           <link rel=\"stylesheet\" title=\"Standard\" href=\"https://wolfand11.gitee.io/res/css/worg.css\" type=\"text/css\" />
+           <link rel=\"alternate stylesheet\" title=\"Zenburn\" href=\"https://wolfand11.gitee.io/res/css/worg-zenburn.css\" type=\"text/css\" />
+           <link rel=\"alternate stylesheet\" title=\"Classic\" href=\"https://wolfand11.gitee.io/res/css/worg-classic.css\" type=\"text/css\" />
+           <link rel=\"icon\" href=\"https://wolfand11.gitee.io/res/favicon.ico\" type=\"image/ico\" />"
+           ;;https://wolfand11.gitee.io/res/css/org.css
            ;;res/css/org.css
 
            ;; --------------------
