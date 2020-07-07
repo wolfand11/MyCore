@@ -24,17 +24,4 @@
       (message "%s copied" new-kill-string)
       (kill-new new-kill-string))))
 
-(defun open-in-finder ()
-  "Open buffer-file in finder"
-  (interactive)
-  (let ((name (if (eq major-mode 'dired-mode)
-		 (dired-get-filename)
-	       (or (buffer-file-name) "./temp.txt")))
-	(open-cmd-str (cond ((eq system-type 'darwin) "open")
-			((eq system-type 'windows-nt) "explorer")
-			((eq system-type 'gnu/linux "nautilus"))
-			(t ""))))    
-    (if (not (string-equal open-cmd-str ""))
-	(shell-command (format "%s %s" open-cmd-str (file-name-directory name))))))
-
 (provide 'init-utility-function)

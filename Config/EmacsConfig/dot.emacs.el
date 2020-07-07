@@ -8,7 +8,7 @@
 ;; You may delete these explanatory comments.
 ;;(package-initialize)
 ;; WINDOWS BUG FIXED: dont remove before comments
-(package-initialize)
+;;(package-initialize)
 
 (message (concat "==== OS-TYPE IS "
                  (symbol-name system-type)
@@ -17,11 +17,12 @@
                  " ===="))
 
 (message "---- load dot_emacs begin ----")
-(let ((main-config-path (concat (cond
-                                 ((string-equal system-type "windows-nt") "D:")
-                                 ((or (string-equal system-type "darwin")
-                                      (string-equal system-type "gnu/linux")) "~"))
-                                "/Documents/MyCore/Config/EmacsConfig/main.el")))
+(setq home-path (cond
+                 ((string-equal system-type "windows-nt") "D:")
+                 ((or (string-equal system-type "darwin")
+                      (string-equal system-type "gnu/linux")) "~")))
+
+(let ((main-config-path (concat home-path "/Documents/MyCore/Config/EmacsConfig/main.el")))
   (if (file-exists-p main-config-path)
       (load main-config-path)))
 
