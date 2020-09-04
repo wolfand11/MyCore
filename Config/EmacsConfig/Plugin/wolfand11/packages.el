@@ -13,7 +13,7 @@
 ;; List of all packages to install and/or initialize. Built-in packages
 ;; which require an initialization must be listed explicitly in the list.
 (setq wolfand11-packages '(;;eshell
-                           ;;org
+                           org
                            cc-mode
                            lua-mode
                            emacs-lisp
@@ -22,7 +22,7 @@
                            ;;find-file-in-project
                            ;;prodigy
                            ;;company
-                           ;;htmlize
+                           htmlize
                            ))
 
 ;; (defun wolfand11/post-init-find-file-in-project ()
@@ -99,11 +99,11 @@
   ;;                                  ("PERSONAL" . ?P) ("STUDY" . ?s) ("LIFE" . ?l)
   ;;                                  (:endgroup . nil)))
   (setq org-publish-project-alist
-        '(
+        `(
           ("blog-notes"
-           :base-directory "~/Documents/MyProject/Public/wolfand11/_post/"
+           :base-directory ,(concat home-path "/Documents/MyProject/Public/wolfand11/_post/")
            :base-extension "org"
-           :publishing-directory "~/Documents/MyProject/Public/wolfand11/_site/"
+           :publishing-directory ,(concat home-path "/Documents/MyProject/Public/wolfand11/_site/")
            :recursive t
            :publishing-function org-html-publish-to-html
            :html-link-home "https://wolfand11.gitee.io"
@@ -147,17 +147,17 @@
            ;; gitment.render('gitment-ctn')
            ;; </script>"
            :html-postamble nil
-
            :auto-preamble t
            :auto-sitemap t                  ; Generate sitemap.org automagically...
+           :sitemap-style list
            :sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
            :sitemap-title    "Sitemap"      ; ... with title 'Sitemap'.
            :sitemap-file-entry-format "%d %t"
            )
           ("blog-static"
-           :base-directory "~/Documents/MyProject/Public/wolfand11/_post/"
+           :base-directory ,(concat home-path "/Documents/MyProject/Public/wolfand11/_post/")
            :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|lua\\|py\\|ico"
-           :publishing-directory "~/Documents/MyProject/Public/wolfand11/_site/"
+           :publishing-directory ,(concat home-path "/Documents/MyProject/Public/wolfand11/_site/")
            :recursive t
            :publishing-function org-publish-attachment
            )
@@ -235,8 +235,8 @@
 ;; (defun lua/post-init-helm-gtags ()
 ;;   (spacemacs/helm-gtags-define-keys-for-mode 'lua-mode))
 
-;; (defun wolfand11/post-init-emacs-lisp ()
-;;   (remove-hook 'emacs-lisp-mode-hook 'auto-compile-mode))
+(defun wolfand11/post-init-emacs-lisp ()
+  (remove-hook 'emacs-lisp-mode-hook 'auto-compile-mode))
 
 ;; (defun wolfand11/post-init-eshell ()
 ;;   (progn

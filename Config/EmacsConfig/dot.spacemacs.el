@@ -39,6 +39,8 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      (auto-completion :variables
+                      auto-completion-private-snippets-directory (concat home-path "/Documents/MyCore/Config/EmacsConfig/Resource/snippets")
+                      spacemacs-default-company-backends '(company-files company-capf)
                       auto-completion-minimum-prefix-length 3
                       auto-completion-idle-delay 0.5)
      ;; better-defaults
