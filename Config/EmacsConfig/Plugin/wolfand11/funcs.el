@@ -24,19 +24,6 @@
       (message "%s copied" new-kill-string)
       (kill-new new-kill-string))))
 
-;; (defun wolfand11/open-in-finder ()
-;;   "Open buffer-file in finder"
-;;   (interactive)
-;;   (let ((name (if (eq major-mode 'dired-mode)
-;; 		 (dired-get-filename)
-;; 	       (or (buffer-file-name) "./temp.txt")))
-;; 	(open-cmd-str (cond ((eq system-type 'darwin) "open")
-;; 			((eq system-type 'windows-nt) "explorer")
-;; 			((eq system-type 'gnu/linux "nautilus"))
-;; 			(t ""))))
-;;     (if (not (string-equal open-cmd-str ""))
-;; 	(shell-command (format "%s %s" open-cmd-str (file-name-directory name))))))
-
 (defun wolfand11/open-in-finder ()
   "Show current file in desktop.
  (Mac Finder, Windows Explorer, Linux file manager)
@@ -87,8 +74,22 @@ Version 2020-02-13"
       (copy-file from-path to-path t))))
 
 (defun wolfand11/get-comment-str(count)
+  "get code comment string"
   (let ((coment-str))
     (if comment-start
         (setq comment-str comment-start)
       (setq comment-str "//"))
     (apply 'concat (make-list count (string-trim comment-str)))))
+
+(defun wolfand11/republish-my-blog-notes()
+  "re publish my blog. not include static files"
+  (interactive)
+  (progn
+    (org-publish "blog-notes" t)))
+
+(defun wolfand11/republish-my-blog-all()
+  "re publish my blog. include static files"
+  (interactive)
+  (progn
+    (org-publish "blog" t)))
+

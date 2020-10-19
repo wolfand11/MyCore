@@ -149,7 +149,7 @@
            :html-postamble nil
            :auto-preamble t
            :auto-sitemap t                  ; Generate sitemap.org automagically...
-           :sitemap-style list
+           ;;:sitemap-style list
            :sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
            :sitemap-title    "Sitemap"      ; ... with title 'Sitemap'.
            :sitemap-file-entry-format "%d %t"
