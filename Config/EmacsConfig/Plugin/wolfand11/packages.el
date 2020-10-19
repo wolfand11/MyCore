@@ -13,6 +13,7 @@
 ;; List of all packages to install and/or initialize. Built-in packages
 ;; which require an initialization must be listed explicitly in the list.
 (setq wolfand11-packages '(;;eshell
+                           ;;org-static-blog
                            org
                            cc-mode
                            lua-mode
@@ -147,12 +148,31 @@
            ;; gitment.render('gitment-ctn')
            ;; </script>"
            :html-postamble nil
-           :auto-preamble t
-           :auto-sitemap t                  ; Generate sitemap.org automagically...
-           ;;:sitemap-style list
-           :sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
-           :sitemap-title    "Sitemap"      ; ... with title 'Sitemap'.
-           :sitemap-file-entry-format "%d %t"
+           :auto-preamble nil
+           ;;:auto-sitemap t                  ; Generate sitemap.org automagically...
+           ;;:sitemap-style tree
+           ;;:sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
+           ;;:sitemap-title    "Sitemap"      ; ... with title 'Sitemap'.
+           ;;:sitemap-file-entry-format "%d %t"
+           )
+          ("blog-sitemap"
+           :base-directory ,(concat home-path "/Documents/MyProject/Public/wolfand11/_post/")
+           :base-extension "org"
+           :exclude "about.org"
+           :publishing-directory ,(concat home-path "/Documents/MyProject/Public/wolfand11/_site/")
+           :recursive nil
+           :publishing-function org-html-publish-to-html
+           :html-link-home "https://wolfand11.gitee.io"
+           :html-link-org-files-as-html org-html-link-org-files-as-html
+           :html-postamble nil
+           :auto-preamble nil
+           :html-head-include-default-style nil
+           :html-head "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" />
+           <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+           <link rel=\"stylesheet\" title=\"Standard\" href=\"https://wolfand11.gitee.io/res/css/worg.css\" type=\"text/css\" />
+           <link rel=\"alternate stylesheet\" title=\"Zenburn\" href=\"https://wolfand11.gitee.io/res/css/worg-zenburn.css\" type=\"text/css\" />
+           <link rel=\"alternate stylesheet\" title=\"Classic\" href=\"https://wolfand11.gitee.io/res/css/worg-classic.css\" type=\"text/css\" />
+           <link rel=\"icon\" href=\"https://wolfand11.gitee.io/res/favicon.ico\" type=\"image/ico\" />"
            )
           ("blog-static"
            :base-directory ,(concat home-path "/Documents/MyProject/Public/wolfand11/_post/")
@@ -170,9 +190,35 @@
                                   (sequence "WAITING(w@/!)" "HOLD(h@/!)" "DISCUSS(D@/!)" "|"
                                             "CANCELLED(c@/!)" ))))
 
-  ;; (evil-leader/set-key "oaoa" 'org-agenda "oaoc"
-  ;;   'org-capture)
-  )
+;;   ;; (evil-leader/set-key "oaoa" 'org-agenda "oaoc"
+;;   ;;   'org-capture)
+)
+
+;; (defun wolfand11/init-org-static-blog()
+;;   (use-package org-static-blog
+;;     :init
+;;     (setq org-static-blog-publish-title "wolfand11's blog")
+;;     (setq org-static-blog-publish-url "https://wolfand11.gitee.io/")
+;;     (setq org-static-blog-publish-directory (concat home-path "/Documents/MyProject/Public/wolfand11/_site/"))
+;;     (setq org-static-blog-posts-directory (concat home-path "/Documents/MyProject/Public/wolfand11/_post/"))
+;;     (setq org-static-blog-drafts-directory (concat home-path "/Documents/MyProject/Public/wolfand11/_drafts/"))
+;;     (setq org-static-blog-enable-tags t)
+;;     (setq org-export-with-toc t)
+;;     (setq org-export-with-section-numbers nil)
+;;     (setq org-static-blog-page-header
+;;           "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" />
+;;           <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+;;           <link rel=\"stylesheet\" title=\"Standard\" href=\"https://wolfand11.gitee.io/res/css/worg.css\" type=\"text/css\" />
+;;           <link rel=\"alternate stylesheet\" title=\"Zenburn\" href=\"https://wolfand11.gitee.io/res/css/worg-zenburn.css\" type=\"text/css\" />
+;;           <link rel=\"alternate stylesheet\" title=\"Classic\" href=\"https://wolfand11.gitee.io/res/css/worg-classic.css\" type=\"text/css\" />
+;;           <link rel=\"icon\" href=\"https://wolfand11.gitee.io/res/favicon.ico\" type=\"image/ico\" />"
+;;           )
+;;     (setq org-static-blog-page-postamble
+;;           "<div id=\"archive\">
+;;             <a href=\"https://wolfand11.gitee.io/sitemap.html\">Other posts</a>
+;;           </div>"
+;;           )
+;;     :defer t))
 
 (defun wolfand11/post-init-cc-mode ()
   (setq c-basic-offset 4))

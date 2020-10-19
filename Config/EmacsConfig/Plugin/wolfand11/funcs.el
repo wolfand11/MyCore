@@ -80,16 +80,3 @@ Version 2020-02-13"
         (setq comment-str comment-start)
       (setq comment-str "//"))
     (apply 'concat (make-list count (string-trim comment-str)))))
-
-(defun wolfand11/republish-my-blog-notes()
-  "re publish my blog. not include static files"
-  (interactive)
-  (progn
-    (org-publish "blog-notes" t)))
-
-(defun wolfand11/republish-my-blog-all()
-  "re publish my blog. include static files"
-  (interactive)
-  (progn
-    (org-publish "blog" t)))
-
