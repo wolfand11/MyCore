@@ -24,6 +24,7 @@
                            ;;prodigy
                            ;;company
                            htmlize
+                           treemacs
                            ))
 
 ;; (defun wolfand11/post-init-find-file-in-project ()
@@ -283,6 +284,12 @@
 
 (defun wolfand11/post-init-emacs-lisp ()
   (remove-hook 'emacs-lisp-mode-hook 'auto-compile-mode))
+
+(defun wolfand11/post-init-treemacs ()
+  (setq treemacs-python-executable (cond
+                                    ((string-equal system-type "windows-nt") "D:/Applications/Python/treemacs_py3/")
+                                    ((or (string-equal system-type "darwin")
+                                         (string-equal system-type "gnu/linux")) (treemacs--find-python3)))))
 
 ;; (defun wolfand11/post-init-eshell ()
 ;;   (progn
