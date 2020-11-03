@@ -14,10 +14,11 @@ def ParseOption():
     parser = OptionParser(usage="%prog [options]")
     parser.add_option("--OrgExportSitemap", action="store_true", dest="export_blog_sitemap", help="export my blog sitemap")
     parser.add_option("-p", "--paths", dest="path_arr", help="path array args")
+    parser.add_option("--InitConfig", action="store_true", dest="init_config", help="init my blog priority config")
     options,args = parser.parse_args()
 
     if options.export_blog_sitemap:
-        GOrgExportSitemap.ExportSitemap(None)
+        GOrgExportSitemap.ExportSitemap(None, options.init_config)
         pass
     return options,args
 
