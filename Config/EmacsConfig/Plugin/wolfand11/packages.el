@@ -289,7 +289,7 @@
   (setq treemacs-python-executable (cond
                                     ((string-equal system-type "windows-nt") "D:/Applications/Python/treemacs_py3/")
                                     ((or (string-equal system-type "darwin")
-                                         (string-equal system-type "gnu/linux")) (treemacs--find-python3)))))
+                                         (string-equal system-type "gnu/linux")) nil))))
 
 ;; (defun wolfand11/post-init-eshell ()
 ;;   (progn
