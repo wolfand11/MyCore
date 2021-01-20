@@ -177,7 +177,7 @@
            )
           ("blog-static"
            :base-directory ,(concat home-path "/Documents/MyProject/Public/wolfand11/_post/")
-           :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|txt\\|lua\\|py\\|ico"
+           :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|txt\\|lua\\|webm\\|py\\|ico"
            :publishing-directory ,(concat home-path "/Documents/MyProject/Public/wolfand11/_site/")
            :recursive t
            :publishing-function org-publish-attachment
