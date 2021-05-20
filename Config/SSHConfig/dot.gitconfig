@@ -1,0 +1,11 @@
+[user]
+	email = smile_guodong@163.com
+	name = wolfand11
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	br = branch
+	last = log -1
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	unstage = reset HEAD
