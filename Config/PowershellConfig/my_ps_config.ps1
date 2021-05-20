@@ -25,7 +25,7 @@ echo "Smile to the world!"
 function CheckExecutionPolicy
 {
     $cur_policy = Get-ExecutionPolicy
-	if($cur_policy -ne "Unrestricted")
+    if($cur_policy -ne "Unrestricted")
     {
         echo("ExecutionPolicy = "+$cur_policy)
     }

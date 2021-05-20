@@ -1,2 +1,11 @@
+# OSX or Linux
+Host git-huge.xindong.com
+     IdentityFile ~/.ssh/20210519-xd-ssh-key
 Host *
-     IdentityFile ~/.ssh/id_rsa
+     IdentityFile ~/.ssh/20210519-id_rsa
+
+# Windows
+Host git-huge.xindong.com
+     IdentityFile D:/.ssh/20210519-xd-ssh-key
+Host *
+     IdentityFile D:/.ssh/20210519-id_rsa
