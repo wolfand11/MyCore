@@ -3,6 +3,8 @@ source D:\_vimrc
 "------ open file
 noremap <leader>ff :action GotoFile<CR>
 noremap <leader>fr :action RecentFiles<CR>
+noremap <leader>fyy : action CopyFileName<CR>
+noremap <leader>fyY : action CopyAbsolutePath<CR> 
 
 "------ open folder
 noremap <leader>fo :action ShowFilePath<CR>
@@ -13,8 +15,13 @@ noremap zr :action ExpandAllRegions<CR>
 noremap zc :action CollapseRegion<CR>
 noremap zm :action CollapseAllRegions<CR>
 
+"------ project file tree
+noremap <leader>ft :action SelectInProjectView<CR>
+
 "------ file structure
 noremap <leader>sj :action FileStructurePopup<CR>
+noremap <leader>sJ :action ActivateStructureToolWindow<CR>
 
 "------ find symble
 noremap <leader>sgp :action FindInPath<CR>
+noremap <leader>s : action SearchEverywhere<CR>
