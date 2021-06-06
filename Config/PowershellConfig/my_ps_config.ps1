@@ -3,6 +3,12 @@
 new-alias -Name open -Value Invoke-Item
 
 # cd shortcut
+function cd..  { set-location .. }
+function cd...
+{
+    set-location ..
+    set-location ..
+}
 function cd-home { set-location "D:" }
 function cd-desktop { set-location($HOME+"/Desktop/") }
 function cd-res { set-location "D:/Documents/MyResource" }
@@ -39,3 +45,6 @@ cd-home
 
 # 设置Terminal路径显示
 #TODO:
+
+# 设置z.lua
+Invoke-Expression (& { (lua D:/Applications/z.lua/z.lua --init powershell) -join "`n" })
