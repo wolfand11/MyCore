@@ -12,7 +12,7 @@
 
 ;; List of all packages to install and/or initialize. Built-in packages
 ;; which require an initialization must be listed explicitly in the list.
-(setq wolfand11-packages '(;;eshell
+(setq wolfand11-packages '(eshell
                            ;;org-static-blog
                            org
                            cc-mode
@@ -287,35 +287,32 @@
 
 (defun wolfand11/post-init-treemacs ()
   (setq treemacs-python-executable (cond
-                                    ((string-equal system-type "windows-nt") "D:/Applications/Python/treemacs_py3/")
+                                    ((string-equal system-type "windows-nt") "d:/Applications/treemacs_py3/python.exe")
                                     ((or (string-equal system-type "darwin")
                                          (string-equal system-type "gnu/linux")) nil))))
 
-;; (defun wolfand11/post-init-eshell ()
-;;   (progn
-;;     (defun wolfand11/init-eshell-atlas ()
-;;       ;; shortcut for normal
-;;       (eval-after-load "em-alias"
-;;         '(progn
-;;            (eshell/alias "ll" "ls -lh $*")
-;;            (eshell/alias "la" "ls -a $*")
-;;            (eshell/alias "lla" "ls -alh $*")
-;;            (eshell/alias "ff" "find-file $1")))
-;;       ;; shortcut for my toolkit
-;;       (eval-after-load "em-alias"
-;;         '(progn
-;;            (eshell/alias "cd-desktop" "cd ~/Desktop")
-;;            (eshell/alias "cd-cloud" "cd ~/Documents/MyCloud")
-;;            (eshell/alias "cd-test" "cd ~/Documents/MyCloud/360Cloud/MyTestProject")
-;;            (eshell/alias "cd-core" "cd ~/Documents/MyCore")
-;;            (eshell/alias "cd-config" "cd ~/Documents/MyCore/Config")
-;;            (eshell/alias "cd-doc" "cd ~/Documents/MyCore/Document")
-;;            (eshell/alias "cd-toolkit" "cd ~/Documents/MyToolkit")
-;;            (eshell/alias "cd-gtd" "cd ~/Documents/MyGTD")
-;;            (eshell/alias "cd-project" "cd ~/Documents/MyProject")
-;;            (eshell/alias "cd-blog" "cd ~/Documents/MyProject/Public/wolfand11/source/_posts")
-;;            (eshell/alias "cd-study" "cd ~/Documents/MyProject/Public/StudyProjects"))))
-;;     (wolfand11/init-eshell-atlas)))
+(defun wolfand11/post-init-eshell ()
+  (progn
+    (defun wolfand11/init-eshell-atlas ()
+      ;; shortcut for normal
+      (eval-after-load "em-alias"
+        '(progn
+           (eshell/alias "ll" "ls -lh $*")
+           (eshell/alias "la" "ls -a $*")
+           (eshell/alias "lla" "ls -alh $*")
+           (eshell/alias "ff" "find-file $1")))
+      ;; shortcut for my toolkit
+      (eval-after-load "em-alias"
+        '(progn
+           (eshell/alias "cd-desktop" "cd ~/Desktop")
+           (eshell/alias "cd-core" "cd ~/Documents/MyCore")
+           (eshell/alias "cd-config" "cd ~/Documents/MyCore/Config")
+           (eshell/alias "cd-doc" "cd ~/Documents/MyCore/Document")
+           (eshell/alias "cd-toolkit" "cd ~/Documents/MyToolkit")
+           (eshell/alias "cd-project" "cd ~/Documents/MyProject")
+           (eshell/alias "cd-blog" "cd ~/Documents/MyProject/Public/wolfand11/_posts")
+           (eshell/alias "cd-study" "cd ~/Documents/MyProject/Public/StudyProjects"))))
+    (wolfand11/init-eshell-atlas)))
 
 ;; (defun wolfand11/post-init-prodigy ()
 ;;   (progn
