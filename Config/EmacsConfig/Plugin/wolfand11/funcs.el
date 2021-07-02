@@ -80,3 +80,31 @@ Version 2020-02-13"
         (setq comment-str comment-start)
       (setq comment-str "//"))
     (apply 'concat (make-list count (string-trim comment-str)))))
+
+(defun wolfand11/cd_res()
+  (interactive)
+  (find-file "~/Documents/MyResource"))
+
+(defun wolfand11/cd_proj()
+  (interactive)
+  (find-file "~/Documents/MyProject"))
+
+(defun wolfand11/cd_study()
+  (interactive)
+  (find-file "~/Documents/MyProject/Public/StudyProjects"))
+
+(defun wolfand11/cd_blog()
+  (interactive)
+  (find-file "~/Documents/MyProject/Public/wolfand11/_post"))
+
+(defun wolfand11/cd_book()
+  (interactive)
+  (find-file "~/Documents/MyResource/Readings"))
+
+(defun wolfand11/cd_core()
+  (interactive)
+  (find-file "~/Documents/MyCore"))
+
+(defun wolfand11/cd_config()
+  (interactive)
+  (find-file "~/Documents/MyCore/Config"))

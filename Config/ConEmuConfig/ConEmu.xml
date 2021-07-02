@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2021-07-01 21:00:14" build="210627">
+		<key name=".Vanilla" modified="2021-07-01 22:01:08" build="210627">
 			<value name="Language" type="string" data="en"/>
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
-			<value name="StartTasksName" type="string" data="{Bash::Msys2-64}"/>
+			<value name="StartTasksName" type="string" data="{Fish::Msys2-64}"/>
 			<value name="StartFarFolders" type="hex" data="00"/>
 			<value name="StartFarEditors" type="hex" data="00"/>
 			<value name="StartCreateDelay" type="ulong" data="100"/>
@@ -139,8 +139,8 @@
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd X" type="long" data="1110"/>
-			<value name="ConWnd Y" type="long" data="664"/>
+			<value name="ConWnd X" type="long" data="1636"/>
+			<value name="ConWnd Y" type="long" data="665"/>
 			<value name="LastMonitor" type="string" data="0,0,3840,2100"/>
 			<value name="ConWnd Width" type="dword" data="0000008f"/>
 			<value name="ConWnd Height" type="dword" data="00000026"/>
@@ -604,8 +604,8 @@
 				<value name="Key.EditMenu" type="dword" data="00000000"/>
 				<value name="Key.EditMenu2" type="dword" data="00000000"/>
 			</key>
-			<key name="Tasks" modified="2021-07-01 21:00:14" build="210627">
-				<value name="Count" type="long" data="17"/>
+			<key name="Tasks" modified="2021-07-01 22:01:08" build="210627">
+				<value name="Count" type="long" data="18"/>
 				<key name="Task1" modified="2021-07-01 21:00:14" build="210627">
 					<value name="Name" type="string" data="{Bash::Git bash}"/>
 					<value name="Flags" type="dword" data="00000004"/>
@@ -759,6 +759,15 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd /k ""C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat"" x64 -new_console:t:"VS 2019" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll"'/>
+				</key>
+				<key name="Task18" modified="2021-07-01 22:01:08" build="210627">
+					<value name="Name" type="string" data="{Fish::Msys2-64}"/>
+					<value name="Flags" type="dword" data="00000005"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+					<value name="Cmd1" type="string" data='set CHERE_INVOKING=1 &amp; set "PATH=%ConEmuDrive%\Applications\msys64\usr\bin;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-msys2-64.exe -new_console:p %ConEmuDrive%\Applications\msys64\usr\bin\fish.exe --login -i -new_console:C:"%ConEmuDrive%\Applications\msys64\msys2.ico"'/>
 				</key>
 			</key>
 			<key name="Apps" modified="2020-03-23 11:55:43" build="191012">
