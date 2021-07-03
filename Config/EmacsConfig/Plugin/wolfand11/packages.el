@@ -12,9 +12,9 @@
 
 ;; List of all packages to install and/or initialize. Built-in packages
 ;; which require an initialization must be listed explicitly in the list.
-(setq wolfand11-packages '(eshell
+(setq wolfand11-packages '(org
+                           ;;eshell
                            ;;org-static-blog
-                           org
                            cc-mode
                            lua-mode
                            emacs-lisp
