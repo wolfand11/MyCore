@@ -39,10 +39,17 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      (auto-completion :variables
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-complete-with-key-sequence nil
+                      auto-completion-complete-with-key-sequence-delay 0.1
+                      auto-completion-minimum-prefix-length 2
+                      auto-completion-idle-delay 0.5
                       auto-completion-private-snippets-directory (concat home-path "/Documents/MyCore/Config/EmacsConfig/Resource/snippets")
-                      spacemacs-default-company-backends '(company-files company-capf)
-                      auto-completion-minimum-prefix-length 3
-                      auto-completion-idle-delay 0.5)
+                      auto-completion-enable-snippets-in-popup nil
+                      auto-completion-enable-help-tooltip nil
+                      auto-completion-use-company-box nil
+                      auto-completion-enable-sort-by-usage nil)
      ;; better-defaults
      spacemacs-navigation
      ;; spacemacs-editing
@@ -60,7 +67,8 @@ This function should only modify configuration layer settings."
      ;; lsp
      (lsp :variables
           lsp-modeline-diagnostics-scope :file
-          lsp-lens-enable t)
+          ;;lsp-lens-enable t
+          )
      ;; markdown
      multiple-cursors
      org
@@ -534,7 +542,9 @@ before packages are loaded."
   (setq powerline-default-separator 'bar)
   (spacemacs//set-monospaced-font   "Source Code Pro" "Microsoft YaHei" 14 16)
   (setq dotspacemacs-enable-paste-micro-state t)
-  (setq tab-width 4)
+  (setq-default c-default-style "bsd")
+  (setq-default c-basic-offset 4)
+  (setq-default tab-width 4)
   (require 'org-tempo)
   )
 
