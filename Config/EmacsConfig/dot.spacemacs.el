@@ -32,7 +32,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(shell-scripts
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -44,25 +44,46 @@ This function should only modify configuration layer settings."
                       auto-completion-minimum-prefix-length 3
                       auto-completion-idle-delay 0.5)
      ;; better-defaults
+     spacemacs-navigation
      ;; spacemacs-editing
      emacs-lisp
      chinese
-     ;; git
      ;;helm
      ivy
-     (vinegar :variables vinegar-reuse-dired-buffer nil)
+     (vinegar :variables vinegar-reuse-dired-buffer t)
+     (ranger :variables
+             ranger-override-dired 'ranger
+             ranger-show-preview t
+             ranger-cleanup-on-disable t
+             ranger-max-preview-size 3
+             ranger-enter-with-minus 'ranger)
      ;; lsp
+     (lsp :variables
+          lsp-modeline-diagnostics-scope :file
+          lsp-lens-enable t)
      ;; markdown
      multiple-cursors
      org
      html
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     pdf
+     (cmake :variables
+            cmake-backend 'lsp
+            cmake-enable-cmake-ide-support t)
+     (c-c++ :variables
+            c-c++-lsp-enable-semantic-highlight 'rainbow
+            c-c++-adopt-subprojects t
+            c-c++-enable-clang-format-on-save t
+            c-c++-backend 'lsp-clangd)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
-     (treemacs :variables treemacs-use-follow-mode t)
+     (treemacs :variables
+               treemacs-use-follow-mode t
+               treemacs-use-git-mode 'deferred
+               treemacs-lock-width t)
      wolfand11
      )
 
@@ -519,3 +540,23 @@ before packages are loaded."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(evil-want-Y-yank-to-eol nil)
+ '(package-selected-packages
+   '(insert-shebang helm-gtags helm helm-core ggtags flycheck-bashate fish-mode counsel-gtags company-shell yasnippet-snippets xterm-color which-key wgrep web-mode web-beautify use-package treemacs-projectile treemacs-icons-dired treemacs-evil toc-org terminal-here tagedit smex slim-mode shell-pop shader-mode scss-mode sass-mode quickrun pyim pug-mode prettier-js pdf-view-restore pcre2el pangu-spacing overseer org-superstar org-rich-yank org-present org-pomodoro org-mime org-download org-cliplink org-brain nameless multi-term macrostep lsp-ui lsp-origami lsp-ivy ivy-yasnippet ivy-xref ivy-rtags ivy-hydra ivy-avy impatient-mode hybrid-mode helm-make google-c-style gnuplot fuzzy flycheck-ycmd flycheck-rtags flycheck-pos-tip flycheck-package flycheck-elsa flx find-by-pinyin-dired evil-org evil-mc eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav dotenv-mode disaster diminish dap-mode csharp-mode cpp-auto-include counsel-css company-ycmd company-web company-rtags company-c-headers cmake-mode cmake-ide chinese-conv ccls bind-map auto-yasnippet auto-compile ace-pinyin ac-ispell)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
