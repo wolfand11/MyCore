@@ -1,0 +1,20 @@
+alias ll ls -lh $*
+alias la ls -a $*
+alias lla ls -alh $*
+alias ff find-file $1
+alias rg ranger $*
+
+alias cd-desktop cd C:/Users/xd/Desktop
+alias cd-core cd ~/Documents/MyCore
+alias cd-config cd ~/Documents/MyCore/Config
+alias cd-proj cd ~/Documents/MyProject
+alias cd-blog cd ~/Documents/MyProject/Public/wolfand11/_post
+alias cd-study cd ~/Documents/MyProject/Public/StudyProjects
+
+# emacs
+alias cd-ealias cd ~/.emacs.d/.cache/eshell/alias
+alias cd-elpa cd ~/.emacs.d/elpa
+
+# local alias
+alias cd-xd-proj cd C:\_HumanProj
+alias cd-xd-pp cd C:\_HumanProj\PP_URP
