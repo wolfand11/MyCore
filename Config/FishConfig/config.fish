@@ -1,11 +1,26 @@
+# -------------------------INIT-------------------------
+# 设置变量
+# MYOS_TYPE osx windows linux
+set -x MYOS_TYPE osx
+
+# -------------------------PATH-------------------------
+# 设置PATH
+switch $MYOS_TYPE
+case windows
+     # TODO
+case osx
+     fish_add_path -P /opt/local/bin /opt/local/sbin
+case linux
+     # TODO
+end
 
 # -------------------------SHORTCUT-------------------------
 # cd shortcut
-switch (uname)
-    case Linux Darwin FreeBSD NetBSD DragonFly
-        alias cd-desktop='cd ~/Desktop/'
-    case '*'
-        alias cd-desktop='cd /c/Users/$USER/Desktop'
+switch $MYOS_TYPE
+case windows
+     alias cd-desktop='cd /c/Users/$USER/Desktop'
+case '*'
+     alias cd-desktop='cd ~/Desktop/'
 end
 
 alias cd-res='        cd ~/Documents/MyResource'
@@ -21,8 +36,12 @@ alias open='doublecmd -C -R ./'
 alias rg='ranger'
 
 # ------------------------Show SETTING--------------------
-# 欢迎文字
-echo "Smile to the world!"
+# 关闭默认终端提示语
+function fish_greeting
+end
+# 新的终端提示语
+echo "Smile to the world! OS is $MYOS_TYPE"
 
 # 设置默认启动目录
 cd ~
+
