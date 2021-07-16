@@ -66,7 +66,8 @@ This function should only modify configuration layer settings."
              ranger-enter-with-minus 'ranger)
      ;; lsp
      (lsp :variables
-          lsp-modeline-diagnostics-scope :file
+          ;; :global/:workspace/:file
+          lsp-modeline-diagnostics-scope :workspace
           ;;lsp-lens-enable t
           )
      ;; markdown
