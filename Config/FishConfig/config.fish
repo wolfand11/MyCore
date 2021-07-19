@@ -14,6 +14,11 @@ case linux
      # TODO
 end
 
+# ------------------------- APP ------------------------
+# Init pyenv
+status is-interactive; and pyenv init --path | source
+pyenv init - | source
+
 # -------------------------SHORTCUT-------------------------
 # cd shortcut
 switch $MYOS_TYPE

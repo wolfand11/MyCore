@@ -66,6 +66,8 @@
 ;; Organize Your Life In Plain Text!
 ;; http://doc.norang.ca/org-mode.html
 (defun wolfand11/post-init-org ()
+  (setq org-edit-src-content-indentation 0
+        org-src-preserve-indentation t)
   ;; enable org indent
   ;; (setq org-startup-indented t)
   ;; define the refile targets
