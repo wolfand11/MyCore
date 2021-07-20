@@ -10,12 +10,13 @@ alias cd-config cd ~/Documents/MyCore/Config
 alias cd-proj cd ~/Documents/MyProject
 alias cd-blog cd ~/Documents/MyProject/Public/wolfand11/_post
 alias cd-study cd ~/Documents/MyProject/Public/StudyProjects
+alias cd-res cd ~/Documents/MyResource
+alias cd-readings cd ~/Documents/MyResource/Readings
 
 # emacs
-alias cd-ealias cd ~/.emacs.d/.cache/eshell/alias
+alias ff-eshell-alias find-file ~/.emacs.d/eshell/alias
 alias cd-elpa cd ~/.emacs.d/elpa
 
 # local alias
-alias cd-hero2-b cd ~/Documents/MyProject/Private/hero2/client_svn/branches
-alias cd-hero2-t cd ~/Documents/MyProject/Private/hero2/client_svn/trunk
-alias cd-hero2 cd ~/Documents/MyProject/Private/hero2/client_svn
+#alias cd-xd-proj cd C:/_HumanProj
+#alias cd-xd-pp cd C:/_HumanProj/PP_URP
