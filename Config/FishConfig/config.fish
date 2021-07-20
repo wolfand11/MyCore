@@ -28,11 +28,11 @@ case '*'
      alias cd-desktop='cd ~/Desktop/'
 end
 
-alias cd-res='        cd ~/Documents/MyResource'
 alias cd-proj='       cd ~/Documents/MyProject/'
 alias cd-study='      cd ~/Documents/MyProject/Public/StudyProjects'
 alias cd-blog='       cd ~/Documents/MyProject/Public/wolfand11/_post'
-alias cd-book='       cd ~/Documents/MyResource/Readings'
+alias cd-res='        cd ~/Documents/MyResource'
+alias cd-readings='   cd ~/Documents/MyResource/Readings'
 alias cd-core='       cd ~/Documents/MyCore'
 alias cd-config='     cd ~/Documents/MyCore/Config'
 
