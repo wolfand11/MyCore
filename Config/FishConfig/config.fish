@@ -15,9 +15,16 @@ case linux
 end
 
 # ------------------------- APP ------------------------
-# Init pyenv
-status is-interactive; and pyenv init --path | source
-pyenv init - | source
+switch $MYOS_TYPE
+case windows
+    # TODO
+case osx
+    # Init pyenv
+    status is-interactive; and pyenv init --path | source
+    pyenv init - | source
+case linux
+    # TODO
+end
 
 # -------------------------SHORTCUT-------------------------
 # cd shortcut
@@ -49,4 +56,3 @@ echo "Smile to the world! OS is $MYOS_TYPE"
 
 # 设置默认启动目录
 cd ~
-
